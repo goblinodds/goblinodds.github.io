@@ -1,0 +1,13 @@
+.Footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 3vmin;
+    font-size: 2.5vmin;
+    width: 100%;
+}
+
+  a {
+    color: yellow;
+  }

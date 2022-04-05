@@ -1,0 +1,36 @@
+ a {
+    text-decoration: none;
+  }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.navLeft {
+    line-height: 2em;
+    margin: 0 2em;
+}
+
+.navLeft h1:hover {
+  color: yellow;
+}
+
+.navRight {
+  margin: 0 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  margin: 1em;
+  line-height: 1em;
+  color: white;
+}
+
+.navHome {
+  color: white;
+}
