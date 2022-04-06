@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cdb4d640.css",
+    "main.js": "/static/js/main.626c213c.js",
+    "static/media/portfolio_BusyBee.png": "/static/media/portfolio_BusyBee.697a6ded46e55b8e1599.png",
+    "static/media/portfolio_CSOSummer2022.png": "/static/media/portfolio_CSOSummer2022.dad62a4ad5b637f800b0.png",
+    "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.ba806ed54dade822964f.png",
+    "static/media/portfolio_LegallySpeaking.png": "/static/media/portfolio_LegallySpeaking.146a21effb8e72021cf6.png",
+    "index.html": "/index.html",
+    "main.cdb4d640.css.map": "/static/css/main.cdb4d640.css.map",
+    "main.626c213c.js.map": "/static/js/main.626c213c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdb4d640.css",
+    "static/js/main.626c213c.js"
+  ]
+}
