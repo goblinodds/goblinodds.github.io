@@ -9,12 +9,22 @@
 a:hover {
   background-color: yellow;
   color: black;
+  text-decoration: none;
 }
 
 body {
+  color: black;
   background-color: #FFFFFF;
   font-size: 4vmin;
   line-height: 1em;
+}
+
+p a {
+  color:black;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
 }
 
 h1 {

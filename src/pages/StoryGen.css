@@ -1,0 +1,13 @@
+#themeGenButton {
+    margin: 0.5em 0;
+    font-family:  'Bebas Neue', sans-serif;
+    font-size:  10vmin;
+    padding: 0.5em;
+    border-radius: 0px;
+    border: transparent;
+    background-color: #D9D9D9;
+}
+
+#themeGenButton:hover{
+    background-color: yellow;
+}

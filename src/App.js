@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Video from './pages/Video';
+import StoryGen from './pages/StoryGen';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -21,6 +22,9 @@ export function App() {
           </Route>
           <Route>
             <Route path='/video' element={<Video />}/>
+          </Route>
+          <Route>
+            <Route path='/storyGen' element={<StoryGen />}/>
           </Route>
         </Routes>
         <Footer />
