@@ -1,17 +1,17 @@
 {
-  "files": {
-    "main.css": "/static/css/main.3e819b7c.css",
-    "main.js": "/static/js/main.851e04eb.js",
-    "static/media/portfolio_BusyBee.png": "/static/media/portfolio_BusyBee.92681b0afcec49ff86c9.png",
-    "static/media/portfolio_CSOSummer2022.png": "/static/media/portfolio_CSOSummer2022.7e23c19fdfc431192644.png",
-    "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.b0c9449e2cece2ab4167.png",
-    "static/media/portfolio_LegallySpeaking.png": "/static/media/portfolio_LegallySpeaking.96bf65cd6b97032d8afc.png",
-    "index.html": "/index.html",
-    "main.3e819b7c.css.map": "/static/css/main.3e819b7c.css.map",
-    "main.851e04eb.js.map": "/static/js/main.851e04eb.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.3e819b7c.css",
-    "static/js/main.851e04eb.js"
-  ]
+  "main.css": "/static/css/main.8c8c59d3.chunk.css",
+  "main.js": "/static/js/main.415e3e86.chunk.js",
+  "main.js.map": "/static/js/main.415e3e86.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.9b981cee.chunk.js": "/static/js/2.9b981cee.chunk.js",
+  "static/js/2.9b981cee.chunk.js.map": "/static/js/2.9b981cee.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.84d93a9c95e1ce0f418a67d1b434ed37.js": "/precache-manifest.84d93a9c95e1ce0f418a67d1b434ed37.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.8c8c59d3.chunk.css.map": "/static/css/main.8c8c59d3.chunk.css.map",
+  "static/media/portfolio_BusyBee.png": "/static/media/portfolio_BusyBee.e02a220b.png",
+  "static/media/portfolio_CSOSummer2022.png": "/static/media/portfolio_CSOSummer2022.0d1c620e.png",
+  "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.8e5e5ba0.png",
+  "static/media/portfolio_LegallySpeaking.png": "/static/media/portfolio_LegallySpeaking.6cadf49b.png"
 }
