@@ -1,13 +1,26 @@
-#themeGenButton {
-    margin: 0.5em 0;
+.genButton {
+    margin: 0.3em;
+    padding: 3vmin;
     font-family:  'Bebas Neue', sans-serif;
-    font-size:  10vmin;
-    padding: 0.5em;
+    font-size:  5vmin;
     border-radius: 0px;
     border: transparent;
     background-color: #D9D9D9;
 }
 
-#themeGenButton:hover{
+.genButton:hover{
     background-color: yellow;
+}
+
+.StoryGen {
+    margin: 1em 7vmin;
+    font-size: 3vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Credits {
+    font-size: 2.5vmin;
 }

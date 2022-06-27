@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Video from './pages/Video';
 import StoryGen from './pages/StoryGen';
+// import ReadingSpeed from './pages/ReadingSpeed';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -26,6 +27,9 @@ export function App() {
           <Route>
             <Route path='/storyGen' element={<StoryGen />}/>
           </Route>
+          {/* <Route>
+            <Route path='/readingSpeed' element={<ReadingSpeed />}/>
+          </Route> */}
         </Routes>
         <Footer />
       </BrowserRouter>

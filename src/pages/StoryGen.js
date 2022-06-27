@@ -1,14 +1,18 @@
 import './StoryGen.css';
-import Archetype from '../components/StoryGen/Archetype';
-
-// TO DO: make a StoryGen folder in COMPONENTS, split functions off into individual js pages
-// import via "import x from y"
-// do the <Tag /> thing to get 'em in here
+import { ArchetypeButton, InternalConflictButton, GoalButton } from '../components/StoryGen/GeneratorButtons';
 
 export default function StoryGen() {
     return (
         <div>
-            <Archetype />
+            <div>
+                <h1>CENTRAL CONFLICT</h1>
+            </div>
+            <div className='StoryGen'>
+                Will <ArchetypeButton /> overcome their <InternalConflictButton /> and <GoalButton />?
+            </div>
+            <div className='Credits'>
+                <p>sources: <a href='https://www.enneagraminstitute.com/' target='_blank' rel='noopener noreferrer'>Enneagram types</a></p>
+            </div>
         </div>
     );
 }

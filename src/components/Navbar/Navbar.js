@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -20,6 +20,7 @@ function Navbar() {
                 {
                     show?<div className='navBottomText'>
                         <Link className='navLink' to='storyGen'>storyGen (WIP)</Link>
+                        {/* <Link className='navLink' to='readingSpeed'>reading speed (WIP)</Link> */}
                         <a className='navLink' href="https://github.com/goblinodds" target='_blank' rel='noopener noreferrer'>github</a>     
                     </div>:null 
                 }
