@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a72b731353b9d97588bf",
+    "revision": "b708c46554ae87a9d5e7",
     "url": "/static/css/main.8c8c59d3.chunk.css"
   },
   {
-    "revision": "a72b731353b9d97588bf",
-    "url": "/static/js/main.415e3e86.chunk.js"
+    "revision": "b708c46554ae87a9d5e7",
+    "url": "/static/js/main.7a08a3ed.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/portfolio_LegallySpeaking.6cadf49b.png"
   },
   {
-    "revision": "dcc36ec0dcc84f55c3e7bdc2b23a1305",
+    "revision": "8e843a5475434da4a9001b61d700d03e",
     "url": "/index.html"
   }
 ];
