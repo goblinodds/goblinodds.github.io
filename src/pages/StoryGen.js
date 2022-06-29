@@ -1,3 +1,4 @@
+import React from 'react';
 import './StoryGen.css';
 import { ArchetypeButton, InternalConflictButton, GoalButton } from '../components/StoryGen/GeneratorButtons';
 

@@ -1,11 +1,14 @@
 .AllVideos {
     margin: 3vmin 0 20vmin 0;
+}
+
+.VideoList{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
-.VideoWrapper {
+.GigWrapper {
     padding: 2vmin 0;
     height: 25vmin;
     width: 70vmin;

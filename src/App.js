@@ -1,8 +1,10 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Video from './pages/Video';
+import Illustration from './pages/Illustration';
 import StoryGen from './pages/StoryGen';
 // import ReadingSpeed from './pages/ReadingSpeed';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
@@ -23,6 +25,9 @@ export function App() {
           </Route>
           <Route>
             <Route path='/video' element={<Video />}/>
+          </Route>
+          <Route>
+            <Route path='/illustration' element={<Illustration />}/>
           </Route>
           <Route>
             <Route path='/storyGen' element={<StoryGen />}/>

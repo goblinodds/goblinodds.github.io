@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -12,7 +13,7 @@ function Navbar() {
                 </div>
                 <div className='navRight'>
                     <Link className='navLink' to='video'>video</Link>
-                    <a className='navLink' href="https://www.instagram.com/goblinodds/" target='_blank' rel='noopener noreferrer'>illustration</a>
+                    <Link className='navLink' to='illustration'>illustration</Link>
                     <button className='navButton' onClick={()=>setShow(!show)}><a href="#0">dev</a></button>
                 </div>
             </div>

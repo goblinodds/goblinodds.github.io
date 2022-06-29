@@ -1,0 +1,56 @@
+/* .Gallery {
+    padding: 2vmin 0 12vmin 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Gallery img:hover {
+    opacity: 0.5;
+} */
+
+.image-card {
+    width: 25vmin;
+    height: 25vmin;
+    object-fit: cover;
+    border-radius: 25%;
+    padding: 1vmin;
+}
+
+.image-card:hover {
+    opacity: 0.5;
+}
+
+#Gallery {
+    padding: 2vmin 0 10vmin 0;
+}
+
+#LightboxImage {
+    max-width: 70%;
+    max-height: 90%;
+}
+
+#Lightbox {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Lightbox button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    padding: 2vmin;
+    font-size: 8vmin;
+}
+
+#Lightbox button:hover {
+    opacity: 0.5;
+}
