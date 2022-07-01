@@ -1,3 +1,9 @@
+@media (max-width: 460px) {
+  .Footer p {
+    font-size: 4vmin;
+  }
+}
+
 .Footer {
     background-color: black;
     color: white;

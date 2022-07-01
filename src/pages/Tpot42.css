@@ -1,0 +1,16 @@
+.Header {
+    line-height: 0;
+}
+
+.Directory {
+    padding: 1vmin 0 3vmin 0;
+}
+
+.Name {
+    padding: 0 0 0 20vmin;
+    text-align: left;
+}
+
+.Name a {
+    text-decoration: none;
+}

@@ -1,14 +1,3 @@
-/* .Gallery {
-    padding: 2vmin 0 12vmin 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.Gallery img:hover {
-    opacity: 0.5;
-} */
-
 .image-card {
     width: 25vmin;
     height: 25vmin;
@@ -22,7 +11,7 @@
 }
 
 #Gallery {
-    padding: 2vmin 0 10vmin 0;
+    padding: 0vmin 0 10vmin 0;
 }
 
 #LightboxImage {

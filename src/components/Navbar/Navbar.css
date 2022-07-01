@@ -1,76 +1,120 @@
- a {
+a {
     text-decoration: none;
   }
 
-.navTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar {
   background-color: black;
   color: white;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbarOptions {
+  z-index: 99;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navLeft {
-  line-height: 2em;
-  margin: 0 2em;
+  margin: 0 6vmin;
+}
+
+.navLeft h1 {
+  color:white;
 }
 
 .navLeft h1:hover {
   color: yellow;
 }
 
-.navRight {
-  margin: 1em 2em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .navLink {
-  margin: 1em;
-  line-height: 1em;
+  margin: 1vmin;
   color: white;
 }
 
-.navHome {
-  color: white;
+.menuBar {
+  width: 5vmin;
+  height: 1vmin;
+  background-color: white;
+  margin: 1vmin;
 }
 
-.navButton {
-  background-color: transparent;
+.menuButton {
+  background: none;
   border: none;
   font-family: 'Lato', sans-serif;
-  font-size: 4vmin;
-  /* stops "dev" button from wrapping oddly  */
-  padding: .5em 1em;
+  padding: 6vmin;
 }
 
-.navButton a {
+.menuButton a {
   color:white;
 }
 
-.navButton a:hover {
+.menuButton a:hover {
   color:black;
 }
 
-.navBottom {
+#dropdown {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
+}
+
+.menuItems {
+  margin: 0 5vmin 0 5vmin;
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  margin: 3vmin 7vmin;
+  text-align: left;
+  font-size: 5vmin;
+  line-height: 5vmin;
+}
+
+.navLinkButton {
+  /* -1vmin left margin bc it's offset for... button... reasons */
+  margin: 3vmin 7vmin 3vmin 6vmin;
+  text-align: left;
+  font-size: 5vmin;
+  line-height: 5vmin;
+  color: white;
+}
+
+.navLinkButton:hover {
   color: black;
-  background-color:#ffffa1;
+  background-color: yellow;
 }
 
-.navBottom a {
-  color:black;
+/* FOR SMALLER SCREEN SIZES */
+
+@media (max-width: 460px) {
+  .navLeft h1 {
+    font-size: 15vmin;
 }
 
-.navBottom a:hover {
-    background-color: transparent;
-    color:white;
-}
+  .menuBar {
+    width: 7.5vmin;
+    height: 1.5vmin;
+    margin: 1.5vmin;
+  }
 
-.navBottomText {
-  line-height: 1em;
-  margin: 0.5em 2em;
+  .navLink {
+    margin: 5vmin 10vmin;
+    text-align: left;
+    font-size: 7vmin;
+    line-height: 7vmin;
+  }
+
 }

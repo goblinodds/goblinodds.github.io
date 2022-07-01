@@ -1,5 +1,5 @@
 .AllVideos {
-    margin: 3vmin 0 20vmin 0;
+    padding: 0vmin 0 10vmin 0;
 }
 
 .VideoList{
@@ -32,7 +32,6 @@
   background-color: transparent;
 }
 
-
 .TextBox {
     padding: 0 0 0 3vmin;
     height: 100%;
@@ -44,10 +43,6 @@
 
 .TextBox a {
     color: black;
-}
-
-.TextBox a:hover {
-    background-color: yellow;
 }
 
 .TextBox h1 {

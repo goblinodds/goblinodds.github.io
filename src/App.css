@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Lato', sans-serif;
+  padding: 21vmin 0 10vmin 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
@@ -15,7 +16,7 @@ a:hover {
 body {
   color: black;
   background-color: #FFFFFF;
-  font-size: 4vmin;
+  font-size: 3vmin;
   line-height: 1em;
 }
 
@@ -38,6 +39,13 @@ h2 {
   font-weight: lighter;
 }
 
+button {
+  background: none;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+}
+
 .Section {
   line-height: 1em;
   font-family:  'Bebas Neue', sans-serif;
@@ -49,3 +57,8 @@ span:hover {
   background-color: yellow;
 }
 
+@media (max-width: 460px) {
+  .App {
+      padding: 25vmin 0 10vmin 0;
+  }
+}
