@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c9bdc6c92c187e36a0df",
+    "revision": "a4ffd2fcbdedd182ef62",
     "url": "/static/css/main.02e3eca1.chunk.css"
   },
   {
-    "revision": "c9bdc6c92c187e36a0df",
-    "url": "/static/js/main.70ffa07e.chunk.js"
+    "revision": "a4ffd2fcbdedd182ef62",
+    "url": "/static/js/main.0755b3f5.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/static/media/tinna.26ff5078.jpeg"
   },
   {
-    "revision": "256298be320c7463f68c2c20497ae5f3",
+    "revision": "3c6d7772b6d94634d7a1fd16965cdf7e",
     "url": "/index.html"
   }
 ];
