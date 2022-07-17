@@ -4,16 +4,27 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+
     const [showDropdown, setShowDropdown]=useState(false);
 
+    const MenuItems = (props) => {
+        return (
+            <Link className='navLink' to={props.link} onClick={e =>setShowDropdown(false)}>{props.title}</Link>
+        )
+    }
+    
     return (
         <div className='navbar'>
             <div className='navbarOptions'>
+
+                {/* "GOBLINODDS" TITLE/HOME BUTTON */}
                 <div className='navLeft'>
                     <Link to='/'><h1>goblinodds</h1></Link>
                 </div>
+
+                {/* HAMBURGER MENU */}
                 <div className='navRight'>
-                    <button className='menuButton' onClick={()=>setShowDropdown(!showDropdown)}>
+                    <button className='menuButton' onClick={e =>setShowDropdown(!showDropdown)}>
                         <a href="#0">
                             <div className='menuBar'></div>
                             <div className='menuBar'></div>
@@ -22,15 +33,20 @@ function Navbar() {
                     </button>
                 </div>
             </div>
+            {/* ON HAMBURGER MENU CLICK, DISPLAYS OR HIDES MENU */}
             <div>
             {
-                showDropdown?<div id='dropdown'>
+                showDropdown ? <div id='dropdown'>
                         <div className='menuItems'>
-                            <Link className='navLink' to='video' onClick={()=>setShowDropdown(false)}>video</Link>
-                            <Link className='navLink' to='illustration' onClick={()=>setShowDropdown(false)}>illustration</Link>
-                            <Link className='navLink' to='tpot42' onClick={()=>setShowDropdown(false)}>tpot for two</Link>
+                            <MenuItems link='video'
+                                title='video'/>
+                            <MenuItems link='illustration' 
+                                title='illustration' />
+                            {/* <div className='navSublink'>projects</div> */}
+                            <MenuItems link='tpot42'
+                                title='tpot for two' />
                         </div>
-                    </div>:null 
+                    </div> : null 
             }
             </div>
         </div>

@@ -12,7 +12,7 @@ a {
 }
 
 .navbarOptions {
-  z-index: 99;
+  z-index: 2;
   position: sticky;
   display: flex;
   align-items: center;
@@ -71,9 +71,13 @@ a {
 }
 
 .menuItems {
-  margin: 0 5vmin 0 5vmin;
   display: flex;
   flex-direction: column;
+}
+
+.navLink:hover {
+  background-color: yellow;
+  color:black;
 }
 
 .navLink {
@@ -83,8 +87,21 @@ a {
   line-height: 5vmin;
 }
 
-.navLinkButton {
-  /* -1vmin left margin bc it's offset for... button... reasons */
+.navSublink:hover {
+  background-color: yellow;
+  color:black;
+  cursor: pointer;
+}
+
+.navSublink {
+  margin: 3vmin 7vmin;
+  text-align: left;
+  font-size: 5vmin;
+  line-height: 5vmin;
+}
+
+/* -1vmin left margin bc it's offset for... button... reasons */
+/* .navLinkButton {
   margin: 3vmin 7vmin 3vmin 6vmin;
   text-align: left;
   font-size: 5vmin;
@@ -95,7 +112,7 @@ a {
 .navLinkButton:hover {
   color: black;
   background-color: yellow;
-}
+} */
 
 /* FOR SMALLER SCREEN SIZES */
 

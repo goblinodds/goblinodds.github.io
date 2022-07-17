@@ -1,46 +1,174 @@
 import React from 'react';
+import { useState } from 'react';
 import './Tpot42.css';
+import ProfilesF from '../components/Tpot42/ProfilesF.js';
+import ProfilesM from '../components/Tpot42/ProfilesM.js';
+import ProfilesNB from '../components/Tpot42/ProfilesNB.js';
+import Directories from '../components/Tpot42/Directories.js';
 
-const Profile = (props) => {
-    return (
-        <div classname='ProfileWrapper'>
-            <div className='Name'>
-            <p>⇨ <a href={props.dateme} target='_blank' rel='noopener noreferrer'>
-                {props.name}
-                </a></p>
-            </div>
+// creates an array called "entries" of each object in Profiles
+// by iterating and pushing current "profile" to the "entries" array
+
+const entriesF = ProfilesF.map((profile) => (
+
+        <div className='Name'>
+            <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
+                {profile.name}
+                </a>
+            </p>
+            {/* if key exists, display (FIGURE OUT HOW TO DO THIS MORE CLEANLY, PROBABLY BY ITERATING OVER EACH OBJECT?) 
+            but it won't let me declare variables inside any part of this...return function?*/}
+            {
+                profile.twitter ? (
+                    <p className='Info'>↳ <a href={profile.twitter} target='_blank' rel='noopener noreferrer'>twitter</a></p> ) :
+                    null
+            }
+            {
+                profile.featuredTweet ? (
+                    <p className='Info'>↳ <a href={profile.featuredTweet} target='_blank' rel='noopener noreferrer'>featured tweet</a></p> ) :
+                    null
+            }
+            {
+                profile.notes ? (
+                    <p className='Info'>↳ {profile.notes}</p> ) :
+                    null
+            }            
+            {
+                profile.location ? (
+                    <p className='Info'>↳ {profile.location}</p> ) :
+                    null
+            }
         </div>
-    );
-}
+    )
+)
+
+const entriesNB = ProfilesNB.map((profile) => (
+
+    <div className='Name'>
+        <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
+            {profile.name}
+            </a>
+        </p>
+        {/* if key exists, display (FIGURE OUT HOW TO DO THIS MORE CLEANLY, PROBABLY BY ITERATING OVER EACH OBJECT?) 
+        but it won't let me declare variables inside any part of this...return function?*/}
+        {
+            profile.twitter ? (
+                <p className='Info'>↳ <a href={profile.twitter} target='_blank' rel='noopener noreferrer'>twitter</a></p> ) :
+                null
+        }
+        {
+            profile.featuredTweet ? (
+                <p className='Info'>↳ <a href={profile.featuredTweet} target='_blank' rel='noopener noreferrer'>featured tweet</a></p> ) :
+                null
+        }
+        {
+            profile.notes ? (
+                <p className='Info'>↳ {profile.notes}</p> ) :
+                null
+        }            
+        {
+            profile.location ? (
+                <p className='Info'>↳ {profile.location}</p> ) :
+                null
+        }
+    </div>
+)
+)
+
+const entriesM = ProfilesM.map((profile) => (
+    <div className='Name'>
+        <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
+            {profile.name}
+            </a>
+        </p>
+        {/* if key exists, display (FIGURE OUT HOW TO DO THIS MORE CLEANLY, PROBABLY BY ITERATING OVER EACH OBJECT?) 
+        but it won't let me declare variables inside any part of this...return function?*/}
+        {
+            profile.twitter ? (
+                <p className='Info'>↳ <a href={profile.twitter} target='_blank' rel='noopener noreferrer'>twitter</a></p> ) :
+                null
+        }
+        {
+            profile.featuredTweet ? (
+                <p className='Info'>↳ <a href={profile.featuredTweet} target='_blank' rel='noopener noreferrer'>featured tweet</a></p> ) :
+                null
+        }
+        {
+            profile.notes ? (
+                <p className='Info'>↳ {profile.notes}</p> ) :
+                null
+        }            
+        {
+            profile.location ? (
+                <p className='Info'>↳ {profile.location}</p> ) :
+                null
+        }
+
+    </div>
+)
+)
+
+const directories = Directories.map((directory) => (
+    <div className='Name'>
+        <p>⇨ <a href={directory.link} target='_blank' rel='noopener noreferrer'>{directory.name}</a></p>
+    </div>
+    )
+)
 
 function Tpot42() {
+
+    const [showDropdownF, setShowDropdownF] = useState(false);
+    const [showDropdownNB, setShowDropdownNB] = useState(false);
+    const [showDropdownM, setShowDropdownM] = useState(false);
+    const [turnArrowF, setTurnArrowF] = useState(false);
+    const [turnArrowNB, setTurnArrowNB] = useState(false);
+    const [turnArrowM, setTurnArrowM] = useState(false);
+
+
     return (
-        <div>
+        <div className='Directories'>
             <div className='Header'>
                 <h1>TPOT for two</h1>
                 <p>an ingroup "date me" directory</p>
             </div>
             <div className='Directory'>
-                <Profile dateme={'https://twitter.com/lovetheusers'}
-                name={'lovetheusers'} />
-                <Profile dateme={'http://orbnet.net'}
-                name={'orb'} />
-                <Profile dateme={'https://t.co/aJ0C2FzDBK'}
-                name={'guilherme'} />
-                <Profile dateme={'https://docs.google.com/document/d/1ircYicvNaC3-ijI1lMBL0xP5rvSKwlKpXepXO-tbH48/edit?usp=sharing'}
-                name={'aella'} />
-            </div>
-            <h1>MORE DIRECTORIES</h1>
-            <div className='Directory'>
-                <Profile dateme={'https://twitter.com/i/lists/1459953976305065985'}
-                name={"@gptbrooke's twitter dating market"} />
-                <Profile dateme={'https://twitter.com/ChanaMessinger/status/1372220440295407625?s=20&t=of75HWTw59EnOmKRrcraTA'}
-                name={"@chanamessinger's dating profiles thread"} />
+                <h2 className='Dropdown' onClick={e => { setShowDropdownF(!showDropdownF); setTurnArrowF(!turnArrowF) }}>
+                    <div className='Arrows'>
+                        {turnArrowF ? (<div>▼</div>) : (<div>▶</div>)}
+                    </div>
+                    WOMEN
+                </h2>
+                {showDropdownF && entriesF}
             </div>
 
-            
+            <div className='Directory'>
+                <h2 className='Dropdown' onClick={e => { setShowDropdownNB(!showDropdownNB); setTurnArrowNB(!turnArrowNB) }}>
+                    <div className='Arrows'>
+                        {turnArrowNB ? (<div>▼</div>) : (<div>▶</div>)}
+                    </div>
+                    ENBIES
+                </h2>
+                {showDropdownNB && entriesNB}
+            </div>
+
+            <div className='Directory'>
+                <h2 className='Dropdown' onClick={e => { setShowDropdownM(!showDropdownM); setTurnArrowM(!turnArrowM) }}>
+                    <div className='Arrows'>
+                        {turnArrowM ? (<div>▼</div>) : (<div>▶</div>)}
+                    </div>
+                    MEN
+                </h2>
+                {showDropdownM && entriesM}
+            </div>
+
+            <div className='Header'>
+                <h1>MORE DIRECTORIES</h1>
+            </div>
+            <div className='Directory'>
+                {directories}
+            </div>
         </div>
-    );
+    )
 }
 
 export default Tpot42;
