@@ -5,14 +5,19 @@ import Profiles from '../components/Tpot42/Profiles.js';
 import Directories from '../components/Tpot42/Directories.js';
 
 /* TODO
-    - figure out how to do an "or" option if you want to select multiple things like "male and female"
-    - build the I AM (GENDER) submenu
-    - ask people currently on the list for details
-    - figure out the database thing
-    - create a form for new entries
+    - TRY PUSHING TO AN ARRAY RATHER THAN SPLICING FROM AN ARRAY?? maybe it'll be less broken/easier to fix
+    - when you're done, restore the rest of the list! there are only 7 rn
+    - TYPE and GENDER interact with each other in a broken way
+        - POLYAMOROUS FEMALE WORKS FINE IN BOTH DIRECTIONS
+        - FEMALE TO UNSPECIFIED WORKS
+        - UNSPECIFIED or MONOGAMOUS or POLYAMOROUS to ANY GENDER BREAKS
+        - NONBINARY or MALE to ANY TYPE BREAKS
+
     - figure out why showEntries is broken... (if you use it instead of profileDisplay and then try to use a filter everything goes white)
       and why you need it, if you do
-    - once we have enough people, build a LOCATION submenu
+    - build the I AM (GENDER) submenu
+    - build a LOCATION submenu
+    - figure out how to do an "or" option if you want to select multiple things like "male and female"
     - search for "REFACTOR" in this doc (but really consider refactoring everything)
     - consider adding some sort of "sorry, no results" (need to put a conditional into jsx??)
 */
@@ -21,8 +26,19 @@ import Directories from '../components/Tpot42/Directories.js';
  MAIN FILTER
 *************/
 
-// QUESTION: is it better to use the "includes" method or to loop manually
-    /* HOW sullyj3 DID IT
+// TODO: SULLY SUGGESTS ADDING TO A NEW ARRAY RATHER THAN SPLICING FROM AN OLD ARRAY
+/* this requires telling it to push only once at the end IF and ONLY IF all the filters match*/
+// TODO: JOSHUA SUGGESTS making all values arrays ['M'] and not just ['M', 'F']
+
+// gives us an editable array of all the profiles in Profiles.js
+// if profiles = Profiles then it starts removing things from Profiles so you need to do it this way
+let profiles = Profiles.slice();
+
+let filterParameters = {};
+
+function typeFilter () {
+
+    /* HOW JAMESSULLY DID IT
         // Function that takes a profile and returns a boolean
         // Note that I changed all types and genders to arrays for uniformity.
         // Things are much easier to process when they're all the same type
@@ -39,46 +55,76 @@ import Directories from '../components/Tpot42/Directories.js';
         console.log(profiles);
     */
 
-// gives us an editable array of all the profiles in Profiles.js
-// if profiles = Profiles then it starts removing things from Profiles so you need to do it this way
-let profiles = [];
+    // resets to the full, unfiltered list of profiles
+    profiles = Profiles.slice();
 
-let filterParameters = {};
-
-function typeFilter () {
-
-    // resets to an empty list of profiles
-    profiles = [];
-
-    // iterates over each profile
-    for (let i = 0; i < Profiles.length; i++)
-    {        
-        // number of filter parameters
-        let filterCount = Object.keys(filterParameters).length;
-        
-        let matchCount = 0;
+    // iterates over each profile (BACKWARDS)
+    // to preserve the index as you splice out profiles
+    for (let i = profiles.length - 1; i >= 0; i--)
+    {
+        // this runs 1x PER FILTER selected, which maybe fucks up index when spliced??
 
         // iterate over the KEYS in filterParameters
         for (let key in filterParameters) {
 
             let filterValue = filterParameters[key];
 
-            // loops over the current profile's key: value pairs to find matches
-            for (let key2 in Profiles[i][key]) {
-                    if (filterValue === Profiles[i][key][key2]) {
-                        // if one of the vaues matches the filter's value, increments matchCount
+            /*
+            profiles[i]
+            becomes undefined
+            then it tries to access the property
+            undefined doesn’t have the property
+            results in an error
+            where it breaks depends on which filters we're using ??
+            */
+
+            // THIS PART WORKS
+            // checks whether the current profile key has multiple values
+            if (typeof profiles[i][key] === 'object') {
+
+                let matchCount = 0;
+                // loops over the current profile's key: value pairs to find matches
+
+                for (let key2 in profiles[i][key]) {
+                    if (filterValue === profiles[i][key][key2]) {
                         matchCount++;
-                        break;
                     }
+                }
+
+                // if there are no matches, deletes current profile from array
+                if (matchCount === 0) {
+                    // removes the current profile from the array
+                    profiles.splice(i, 1);
+                }
+
             }
-         
+
+            // checks whether the filter value matches the profile's value
+            else if (filterValue !== profiles[i][key]) {
+                
+                // removes the current profile from the array
+                profiles.splice(i, 1);
+
+            }  
+
+            if (profiles[i] === undefined) {
+                profiles[i] = {};
+            }
         }
 
-        if (filterCount === matchCount) {
-            // adds the current profile to profiles
-            profiles.push(Profiles[i]);
-        }
     }
+
+    console.log(profiles);
+    let lastProfile = profiles[profiles.length-1];
+    let firstProfile = profiles[0];
+    console.log('first: ' + firstProfile.name + ' / last: ' + lastProfile.name);
+
+    if (lastProfile.name === undefined) {
+        profiles.splice(lastProfile, 1);
+        console.log('spliced');
+        console.log(profiles);
+    }
+
 }
 
 
@@ -97,7 +143,7 @@ function Tpot42() {
         delete filterParameters.type;
 
         if (isActiveMono === false) {
-            filterParameters.type = 'monogamous';
+            filterParameters.type = ['monogamous'];
         }
 
         typeFilter();
@@ -112,7 +158,7 @@ function Tpot42() {
         delete filterParameters.type;
 
         if (isActivePoly === false) {
-            filterParameters.type = 'polyamorous';
+            filterParameters.type = ['polyamorous'];
         }
 
         typeFilter();
@@ -127,7 +173,7 @@ function Tpot42() {
         delete filterParameters.type;
 
         if (isActiveUnspecified === false) {
-            filterParameters.type = 'unspecified';
+            filterParameters.type = ['unspecified'];
         }
 
         typeFilter();
@@ -142,7 +188,7 @@ function Tpot42() {
         delete filterParameters.gender;
 
         if (isActiveFemale === false) {
-            filterParameters.gender = 'F';
+            filterParameters.gender = ['F'];
         }
 
         typeFilter();
@@ -158,7 +204,7 @@ function Tpot42() {
         delete filterParameters.gender;
 
         if (isActiveNonbinary === false) {
-            filterParameters.gender = 'NB'
+            filterParameters.gender = ['NB']
         }
 
         typeFilter();
@@ -173,7 +219,7 @@ function Tpot42() {
         delete filterParameters.gender;
 
         if (isActiveMale === false) {
-            filterParameters.gender = 'M'
+            filterParameters.gender = ['M']
         }
 
         typeFilter();

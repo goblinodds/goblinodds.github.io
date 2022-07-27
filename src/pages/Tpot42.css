@@ -28,6 +28,26 @@
     cursor: pointer;
 }
 
+.FilterMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15vmin;
+    height: 6vmin;
+}
+
+h3:hover {
+    background-color: yellow;
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.FilterSentence {
+    font-family:  'Bebas Neue', sans-serif;
+    opacity: 30%;
+    padding: .75vmin .75vmin 0 .75vmin;
+}
+
 .Header {
     line-height: 0;
 }
