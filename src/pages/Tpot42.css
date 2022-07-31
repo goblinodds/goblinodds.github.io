@@ -1,9 +1,3 @@
-.Arrows {
-    font-size: 4vmin;
-    /* stops the dimensions from changing when the arrow changes */
-    width: 4vmin;
-    margin: 0 1vmin 0 0;
-}
 .Directories {
     margin: 0 0 5vmin 0;
 }
@@ -36,20 +30,38 @@
     height: 6vmin;
 }
 
+
 h3:hover {
     background-color: yellow;
-    opacity: 100%;
+    color: black;
     cursor: pointer;
 }
 
-.FilterSentence {
+h3.FilterMenu:hover {
+    color:black;
+}
+
+p.FilterSentence {
     font-family:  'Bebas Neue', sans-serif;
-    opacity: 30%;
+    font-size:  5vmin;
+    line-height: 5vmin;
+    color: #b3b3b3;
     padding: .75vmin .75vmin 0 .75vmin;
 }
 
 .Header {
     line-height: 0;
+}
+
+h3.MenuItem {
+    color: white;
+    background-color: #b3b3b3;
+    margin: 2px;
+}
+
+h3.MenuItem:hover {
+    color: black;
+    background-color: yellow;
 }
 
 .Name {
@@ -81,6 +93,23 @@ h3:hover {
 
     .Directory {
         margin: 0 10vmin 15vmin 0vmin;
+    }
+
+    .FilterMenu {
+        margin: 3vmin 0;
+    }
+
+    p.FilterSentence {
+        font-size:  8vmin;
+    }
+
+    h3 {
+        font-size:  8vmin;
+      }
+
+    .MenuItem {
+        line-height: 7.25vmin;
+        margin: 0 2vmin;
     }
 
   }
