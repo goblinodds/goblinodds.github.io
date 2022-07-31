@@ -132,6 +132,11 @@ function Tpot42() {
 
     const profileDisplay = profiles.map((profile) => {
 
+        // SET AGE
+        // current year
+        let date = new Date().getFullYear();
+        let age = date - profile.born;
+
         // TODO / QUESTION: can/should these two functions be combined?
             // https://twitter.com/MattiasInSpace/status/1553217802839896065?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
         // if it exists in current profile, display value at key //
@@ -155,6 +160,7 @@ function Tpot42() {
                 </p>
                 {displayLink(profile.twitter, 'twitter')}
                 {displayLink(profile.featuredTweet, 'featured tweet')}
+                {displayItem(age)}
                 {displayItem(profile.notes)}            
                 {displayItem(profile.location)}
             </div>
@@ -310,17 +316,16 @@ function Tpot42() {
 
         </div>
     )
-     
 
     const dropdownType = (
         <div className='FilterMenu'>
 
-            <h3 className='MenuItem' onClick={() => {filterClick (...monoSpread); filter('type', isActiveMono, 'monogamous')}} style={{
+            <h3 className='MenuItem' onClick={() => {filterClick (...monoSpread); filter('type', isActiveMono, 'mono')}} style={{
                 color: colorChange(isActiveMono),
                 background: backgroundChange(isActiveMono),
                 borderStyle: borderChange(isActiveMono)
             }}>MONO</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...polySpread); filter('type', isActivePoly, 'polyamorous')}} style={{
+            <h3 className='MenuItem' onClick={() => {filterClick (...polySpread); filter('type', isActivePoly, 'poly')}} style={{
                 color: colorChange(isActivePoly),
                 background: backgroundChange(isActivePoly),
                 borderStyle: borderChange(isActivePoly)

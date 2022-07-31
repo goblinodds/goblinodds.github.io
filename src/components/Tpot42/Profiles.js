@@ -7,14 +7,14 @@ const Profiles = [
         link: 'https://twitter.com/lovetheusers',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous']
+        type: ['mono', 'poly']
     },
     {
         name: 'orb',
         link: 'http://orbnet.net',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous']
+        type: ['mono']
     },
     {
         name: 'guilherme',
@@ -22,7 +22,7 @@ const Profiles = [
         twitter: 'https://twitter.com/_sulfUr0',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous'],
+        type: ['mono', 'poly'],
         location: 'Sao Paolo / long distance ok'
     },
     {
@@ -30,7 +30,7 @@ const Profiles = [
         link: 'https://twitter.com/FractalAuth/status/1449966081490046977',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous'],
+        type: ['mono', 'poly'],
         notes: 'cishet / (mostly) monogamous / long distance is scary but maybe?',
         location: 'Colorado'
     },
@@ -50,14 +50,14 @@ const Profiles = [
         link: 'https://twitter.com/joshuayn514/status/1516414741547294728',
         gender: ['M'],
         attracted: ['F'],
-        type: ['polyamorous'],
+        type: ['poly'],
         location: 'Austin, TX'
     },
     {
         name: 'cris p. wicks',
         link: 'https://twitter.com/CrispyWicks',
         gender: ['M'],
-        type: ['monogamous', 'polyamorous'],
+        type: ['mono', 'poly'],
         location: 'Chicago'
     },
     {
@@ -65,7 +65,7 @@ const Profiles = [
         link: 'https://twitter.com/pieratttt',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous'],
+        type: ['mono'],
         location: 'Boston(ish)'
     },
     {
@@ -73,7 +73,7 @@ const Profiles = [
         link: 'https://twitter.com/kumbuchaqueen/status/1531790619940560896',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous'],
+        type: ['mono', 'poly'],
     },
     // TODO: UPDATE WITH ATTRACTED + TYPE
     {
@@ -87,7 +87,7 @@ const Profiles = [
         link: 'https://www.twitch.tv/matthewskala/',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous']
+        type: ['mono']
     },
     // TODO: UPDATE WITH ATTRACTED + TYPE
     {
@@ -101,7 +101,7 @@ const Profiles = [
         link: 'https://www.lord-enki.net/',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous']
+        type: ['mono', 'poly']
     },
     // TODO: UPDATE WITH ATTRACTED + TYPE
     {
@@ -124,7 +124,7 @@ const Profiles = [
         link: 'https://twitter.com/zmavli',
         gender: ['M'],
         attracted: ['M'],
-        type: ['monogamous'],
+        type: ['mono'],
         // TODO: can delete this note once the filter is up
         notes: 'interested in men'
     },
@@ -132,7 +132,7 @@ const Profiles = [
         name: 'wiskerz',
         link: 'https://wiskerz.me/date/',
         gender: ['M'],
-        type: ['monogamous'],
+        type: ['mono'],
         attracted: ['F'],
         // TODO: can delete this note once the filter is up
         notes: 'interested in women',
@@ -143,7 +143,7 @@ const Profiles = [
         link: 'https://lioninawhat.com/love',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous'],
+        type: ['mono'],
         notes: '(mostly) interested in women / (mostly) monogamous'
     },
     {
@@ -151,15 +151,14 @@ const Profiles = [
         link: 'https://docs.google.com/document/d/1ircYicvNaC3-ijI1lMBL0xP5rvSKwlKpXepXO-tbH48/edit?usp=sharing',
         gender: ['F'],
         attracted: ['M'],
-        type: ['polyamorous'],
-        notes: 'interested in men'
+        type: ['poly']
     },
     {
         name: 'laura sofia',
         link: 'https://twitter.com/owlsarepurple',
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
-        type: ['polyamorous'],
+        type: ['poly'],
         location: 'Ivory Coast'
     },
     {
@@ -167,7 +166,7 @@ const Profiles = [
         link: 'https://twitter.com/ALadyJewel',
         gender: ['F', 'NB'],
         attracted: ['F', 'NB', 'M'],
-        type: ['polyamorous'],
+        type: ['poly'],
         notes: '"if i don\'t communicate queer trans bi ADHD solo-poly by the end of the first date, i didn\'t overshare properly"',
         location: 'Bay Area'
     },
@@ -176,37 +175,55 @@ const Profiles = [
         link: 'https://patrickdfarley.com/contact/',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous'],
-        notes: 'long distance ok',
-        location: 'NYC'
+        type: ['mono', 'poly'],
+        location: 'NYC / long distance ok'
     },
     {
         name: 'brooke',
         link: 'https://twitter.com/gptbrooke/status/1286058376489660416?s=20&t=FiL3NG0ZkSCvLnZoEKLwJQ',
         gender: ['F'],
         attracted: ['M'],
-        type: ['monogamous'],
+        type: ['mono'],
         notes: 'long distance ok / location flexible',
         location: 'California',
-        notes: '"If the right person comes along and they don\'t check some of those boxes then I will change my boxes"'
+        notes: '"if the right person comes along and they don\'t check some of those boxes then i will change my boxes"'
     },
     {
         name: 'josh mcmichael',
         link: 'twitter.com/jmcmichael',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous', 'polyamorous'],
+        type: ['mono', 'poly'],
         notes: 'interested in relationship as a container for growth, recovery, companionship, exploration',
-        location: 'St. Lous, MO (no long distance)'
+        location: 'St. Lous, MO / no long distance'
     },
     {
         name: 'andrew',
         link: 'https://twitter.com/filomusus',
         gender: ['M'],
         attracted: ['F'],
-        type: ['monogamous'],
+        type: ['mono'],
         notes: 'long distance ok',
-        location: 'Ann Arbor, MI'
+        location: 'Ann Arbor, MI / long distance ok'
+    },
+    {
+        name: 'bruno',
+        link: 'https://twitter.com/bruno_wilhelm',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['poly'],
+        born: '1982',
+        location: 'Cincinnati, OH / long distance ok'
+
+    },
+    {
+        name: 'violet',
+        link: 'https://twitter.com/violetvariant',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1984',
+        location: 'Minneapolis / flexible / long distance ok'
     }
 ]
 
