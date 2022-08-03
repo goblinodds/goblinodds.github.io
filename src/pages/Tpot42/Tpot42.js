@@ -5,34 +5,24 @@ import Profiles from '../../components/Tpot42/Profiles.js';
 import Directories from '../../components/Tpot42/Directories.js';
 
 /* TODO
-    - set up tests
-    - refactor so it's LEGIBLE TO YOU
+    - refactor useStates or... idk that whole thing looks like a mess
     - make it a "FILTER IF YOU WANT TO SEE THINGS" situation so the other categories (directories, etc) are visible
     - add a "location" filter - fixed / flexible / unspecified
-
-    - add a section for MATCHMAKERS (hobbyist/professional?)
-
-    - HEK SUGGESTS
-        - soliciting private entries
-        - using google form --> airtable
-        - charging fee to try to match people
+    LATER
+        - maybe: add a section for MATCHMAKERS (hobbyist/professional? first gotta see who's interested in doing this)
+        - HEK SUGGESTS
+            - soliciting private entries
+            - using google form --> airtable
+            - charging fee to try to match people
     - DATABASE
         - EXPRESS + NODE tutorial
         START HERE: https://www.youtube.com/watch?v=SccSCuHhOw0&ab_channel=WebDevSimplified
         - https://twitter.com/spephton/status/1553586538587762688?s=20&t=WCJkKoSDMNpDm7Tne4icbg
-    - REFACTORING:
-        - are there things you can/should break out of the main exported function?
-        - are there components you can/should put on their own pages?
-        - use the filter method for your main filter
-        - arrow functions.... maybe
-        SUGGESTION
-        - https://twitter.com/Phreekedelic/status/1553228085297831936?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
-    - set up a database that?? pushes to an array of objects <_< then you can update entries directly in the database, much easier
-    - ask if you can add people who already have dating profiles
-    - some way to add location/whether long distance is ok
+    SUGGESTION but idk wtf this means
+    - https://twitter.com/Phreekedelic/status/1553228085297831936?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
+    - DM people who you know already have dating profiles, ask if you can add them to the directory
     - figure out why showEntries is broken... (if you use it instead of profileDisplay and then try to use a filter everything goes white)
       and why you need it, if you do
-    - once we have enough people, build a LOCATION submenu
     - consider adding some sort of "sorry, no results" (need to put a conditional into jsx??)
     - eventually, maybe: figure out how to do an "or" option if you want to select multiple things like "male and female" or "mono and unspecified"
 */
@@ -221,7 +211,7 @@ function Tpot42() {
 
     // ENTRIES DISPLAY
 
-        // TODO / QUESTION: current error is that "showEntries" is never used
+        // QUESTION: current error is that "showEntries" is never used
               // I can replace "profiles.map" with "showEntries.map"...
               // but then the error is "showEntries" was used before it was defined
               // if i fix this, then "profileDisplay" was used before it was defined
@@ -258,21 +248,23 @@ function Tpot42() {
     **********/
 
     // [current sate, function that updates the current state]
+
     // TODO: REFACTOR??
     // QUESTION: BUT HOW??? IS THIS POSSIBLE?
         // https://twitter.com/astralpajamas/status/1553216907838472193?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
         // https://twitter.com/astralpajamas/status/1552813924906668032?s=20&t=1__04qle0keqMRpuQDJKXg
-
-    // RELATIONSHIP TYPE
-
-    const [isActiveMono, setIsActiveMono] = useState(false);
-    const [isActivePoly, setIsActivePoly] = useState(false);
-    const [isActiveUnspecified, setIsActiveUnspecified] = useState(false);
+        // https://blog.logrocket.com/using-react-usestate-object/
 
     // PROFILE IS GENDER
     const [isActiveF, setIsActiveF] = useState(false);
     const [isActiveNB, setIsActiveNB] = useState(false);
     const [isActiveM, setIsActiveM] = useState(false);
+
+    // RELATIONSHIP TYPE
+    const [isActiveMono, setIsActiveMono] = useState(false);
+    const [isActivePoly, setIsActivePoly] = useState(false);
+    const [isActiveUnspecified, setIsActiveUnspecified] = useState(false);
+
 
     // PROFILE IS ATTRACTED TO GENDER
     const [isActiveUserF, setIsActiveUserF] = useState(false);
@@ -299,10 +291,10 @@ function Tpot42() {
     /***********************************************************
      FILTER ONCLICK BEHAVIORS:
      - TURN OFF OTHER FILTERS IN CATEGORY or RESET FILTER TITLE
-     - SET TO "ACTIVE"
+     - SET TO "ACTIVE" if previously inactive (and vice versa)
     ************************************************************/
 
-    // TODO: REFACTOR
+    // TODO: REFACTOR ???
 
     function filterClick (isActiveType, setInactiveType1, setInactiveType2, setShow, subFilter, filter, setIsActiveType){
         // if (clicked filter option, e.g. WOMEN) isn't currently active...
