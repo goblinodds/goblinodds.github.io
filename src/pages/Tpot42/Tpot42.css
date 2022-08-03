@@ -26,7 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15vmin;
+    margin: 1vmin 15vmin 0 15vmin;
     height: 6vmin;
 }
 
@@ -92,7 +92,11 @@ h3.MenuItem:hover {
     }
 
     .Directory {
-        margin: 0 10vmin 15vmin 0vmin;
+        margin: 0 0 15vmin 0;
+    }
+
+    p.Directory {
+        margin: 0 10vmin 0 0;
     }
 
     .FilterMenu {
@@ -105,6 +109,7 @@ h3.MenuItem:hover {
 
     h3 {
         font-size:  8vmin;
+        line-height: 7vmin;
       }
 
     .MenuItem {
