@@ -16,7 +16,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "stable": "^0.1.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack-node-externals": "^3.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",

@@ -8,7 +8,7 @@ import { App } from './App';
 // currently breaks EVERYTHING
 // NPM START and look at the warnings
 // try to solve those
-/*
+
 const express = require('express')
 const app = express()
 
@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
 })
 
 app.listen(3000)
-*/
+
 
 // REACTJS
 const root = ReactDOM.createRoot(document.getElementById('root'));

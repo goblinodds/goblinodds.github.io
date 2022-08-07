@@ -407,9 +407,6 @@ const Profiles = [
         location: 'Boston, MA / flexible'
     }
 
-// waiting to confirm
-    // dan elton #20?
-
 // SUGGESTIONS
     // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions
 

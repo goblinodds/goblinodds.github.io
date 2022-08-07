@@ -6,7 +6,7 @@ import Directories from '../../components/Tpot42/Directories.js';
 
 /* TODO
     - make it less confusing whether you've selected "gender" or "interested in"
-        - easy way: swap positions of interested in and one of the bottom row
+        - easy way: swap positions of interested in and one of the bottom 
         - better? way: set it up so the border is only there when the submenu is closed
     - DATABASE
         - un-comment the server stuff in index.js and then fix all the errors
