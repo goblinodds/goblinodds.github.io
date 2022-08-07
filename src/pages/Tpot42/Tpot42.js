@@ -5,6 +5,15 @@ import Profiles from '../../components/Tpot42/Profiles.js';
 import Directories from '../../components/Tpot42/Directories.js';
 
 /* TODO
+    - make it less confusing whether you've selected "gender" or "interested in"
+        - easy way: swap positions of interested in and one of the bottom row
+        - better? way: set it up so the border is only there when the submenu is closed
+    - DATABASE
+        - un-comment the server stuff in index.js and then fix all the errors
+        - EXPRESS + NODE tutorial
+        START HERE: https://www.youtube.com/watch?v=SccSCuHhOw0&ab_channel=WebDevSimplified
+        - https://twitter.com/spephton/status/1553586538587762688?s=20&t=WCJkKoSDMNpDm7Tne4icbg
+
     - refactor useStates or... idk that whole thing looks like a mess
     - make it a "FILTER IF YOU WANT TO SEE THINGS" situation so the other categories (directories, etc) are visible
     - add a "location" filter - fixed / flexible / unspecified
@@ -14,10 +23,7 @@ import Directories from '../../components/Tpot42/Directories.js';
             - soliciting private entries
             - using google form --> airtable
             - charging fee to try to match people
-    - DATABASE
-        - EXPRESS + NODE tutorial
-        START HERE: https://www.youtube.com/watch?v=SccSCuHhOw0&ab_channel=WebDevSimplified
-        - https://twitter.com/spephton/status/1553586538587762688?s=20&t=WCJkKoSDMNpDm7Tne4icbg
+
     SUGGESTION but idk wtf this means
     - https://twitter.com/Phreekedelic/status/1553228085297831936?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
     - DM people who you know already have dating profiles, ask if you can add them to the directory

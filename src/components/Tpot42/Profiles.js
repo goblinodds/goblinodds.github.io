@@ -364,24 +364,51 @@ const Profiles = [
         ldr: ['unspecified'],
         location: 'Germany'
         // location FIXED
+    },
+    {
+        name: 'sophie',
+        link: 'https://twitter.com/SyzygyCoiled',
+        gender: ['F'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['mono'],
+        born: '1993',
+        ldr: ['Y'],
+        location: 'Qc, flexible'
+    },
+    {
+        name: 'lex',
+        link: 'https://twitter.com/doseofzero',
+        gender: ['F'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['mono', 'poly'],
+        born: '2001',
+        ldr: ['Y'],
+        notes: 'open to monogamy and polyamory. long distance is kinda scary but im willing to try it out:) hoping to find a partner i can call both my best friend and lover',
+        location: 'Quezon City, Philippines / flexible'
+    },
+    {
+        name: 'harlan',
+        link: 'https://twitter.com/harlanonym',
+        gender: ['F'],
+        attracted: ['F', 'M'],
+        type: ['mono', 'poly'],
+        born: '1997',
+        ldr: ['Y'],
+        location: 'Pittsburgh, PA / will probably move back to LA at some point / flexible'
+    },
+    {
+        name: 'dan elton',
+        link: 'https://www.okcupid.com/profile/delton137',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono', 'poly'],
+        born: '1988',
+        ldr: ['Y'],
+        location: 'Boston, MA / flexible'
     }
 
-
-    // {
-    //     name: 'harlan',
-    //     link: 'https://twitter.com/harlanonym',
-    //     gender: ['F'],
-    //     attracted: ['F', 'M'],
-    //     type: ['mono', 'poly'],
-    //     born: '1997',
-    //     ldr: ['Y'],
-    //     location: 'Pittsburgh, PA / will probably move back to LA at some point / flexible'
-    // }
-
 // waiting to confirm
-    // doseofzero #15
-    // SyzygyCoiled #16
-    // harlan #19
+    // dan elton #20?
 
 // SUGGESTIONS
     // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions

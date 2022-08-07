@@ -10,6 +10,7 @@ import Tpot42 from './pages/Tpot42/Tpot42';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// APP
 export function App() {
   return (
     <div className="App">
