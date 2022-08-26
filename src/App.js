@@ -23,7 +23,7 @@ export function App() {
             {/* / is "home," exact component is "just this route, not multiple" */}
             {/* component is what you want to render when someone accesses this route */}
             <Route path='/' element={<Home />}/>
-          </Route>
+          </Route>q
           <Route>
             <Route path='/video' element={<Video />}/>
           </Route>
@@ -32,9 +32,6 @@ export function App() {
           </Route>
           <Route>
             <Route path='/tpot42' element={<Tpot42 />}/>
-          </Route>
-          <Route>
-            <Route path='/storyGen' element={<StoryGen />}/>
           </Route>
         </Routes>
         <Footer />

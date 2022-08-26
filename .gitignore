@@ -7,7 +7,6 @@
 
 # testing
 /coverage
-/src/pages/Tpot42.test.js
 
 # production
 /build

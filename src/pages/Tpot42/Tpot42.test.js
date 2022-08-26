@@ -27,8 +27,6 @@ describe('description of the function?', () => {
     
 })
 
-// REMOVE THIS FILE FROM .GITIGNORE
-
 // TESTS YOU MIGHT WANT
     // TPOT42
         // check for typos in profile keys in components/Tpot42/Profiles.js

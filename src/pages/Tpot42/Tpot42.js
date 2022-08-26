@@ -4,464 +4,104 @@ import './Tpot42.css';
 import Profiles from '../../components/Tpot42/Profiles.js';
 import Directories from '../../components/Tpot42/Directories.js';
 
-/* TODO
-    - make it less confusing whether you've selected "gender" or "interested in"
-        - easy way: swap positions of interested in and one of the bottom 
-        - better? way: set it up so the border is only there when the submenu is closed
-    - DATABASE
-        - un-comment the server stuff in index.js and then fix all the errors
-        - EXPRESS + NODE tutorial
-        START HERE: https://www.youtube.com/watch?v=SccSCuHhOw0&ab_channel=WebDevSimplified
-        - https://twitter.com/spephton/status/1553586538587762688?s=20&t=WCJkKoSDMNpDm7Tne4icbg
+// TODO
+//  TANUKI suggestion re: CSS
+//      https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
+//  black borders around menu names onclick
+// scrolling (or pages) so you can see there are other directories
+// come up with an ordering scheme
 
-    - refactor useStates or... idk that whole thing looks like a mess
-    - make it a "FILTER IF YOU WANT TO SEE THINGS" situation so the other categories (directories, etc) are visible
-    - add a "location" filter - fixed / flexible / unspecified
-    LATER
-        - maybe: add a section for MATCHMAKERS (hobbyist/professional? first gotta see who's interested in doing this)
-        - HEK SUGGESTS
-            - soliciting private entries
-            - using google form --> airtable
-            - charging fee to try to match people
+// UPDATE W NEW PROFILES
+// PUSH TO PROD W COMMENTs
 
-    SUGGESTION but idk wtf this means
-    - https://twitter.com/Phreekedelic/status/1553228085297831936?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
-    - DM people who you know already have dating profiles, ask if you can add them to the directory
-    - figure out why showEntries is broken... (if you use it instead of profileDisplay and then try to use a filter everything goes white)
-      and why you need it, if you do
-    - consider adding some sort of "sorry, no results" (need to put a conditional into jsx??)
-    - eventually, maybe: figure out how to do an "or" option if you want to select multiple things like "male and female" or "mono and unspecified"
-*/
-
-/************************************************
- FILTER - PUSHES FILTER MATCHES TO PROFILE ARRAY
-*************************************************/
-
-// gives us an editable array of all the profiles in Profiles.js
-// if profiles = Profiles then it starts removing things from Profiles so you need to do it this way
-let profiles = Profiles;
-
-let filterParameters = {};
-
-// compares filter values to each profile
-// pushes matching profiles to the "profiles" array
-function pushMatches() {
-    // for each profile...
-    for (let i = 0; i < Profiles.length; i++)
-    {        
-        // number of filter parameters
-        let filterCount = Object.keys(filterParameters).length;
-        
-        let matchCount = 0;
-
-        const currentProfile = Profiles[i];
-
-        // iterates over the KEYS in filterParameters
-        // e.g. "gender"
-        for (let key in filterParameters) {
-
-            let filterValue = filterParameters[key];
-
-            // do the values at e.g. 'gender: ' match?
-                // breaks if a key/value pair is missing from a profile
-            if (currentProfile[key].includes(filterValue)) {
-                matchCount++;
-            }
-        }
-
-        // does the # of filter parameters = the # of matched filter parameters? 
-        if (filterCount === matchCount) {
-            // adds the current profile to 'profiles'
-            profiles.push(currentProfile);
-        }
-    }
+const menuOptions = {
+    gender: [
+        { label: 'WOMEN', value: 'F' },
+        { label: 'ENBIES', value: 'NB' },
+        { label: 'MEN', value: 'M' }
+    ],
+    attracted: [
+        { label: 'WOMEN', value: 'F' },
+        { label: 'ENBIES', value: 'NB' },
+        { label: 'MEN', value: 'M' }
+    ],
+    type: [
+        { label: 'MONO', value: 'mono' },
+        { label: 'POLY', value: 'poly' },
+        { label: 'UNKNOWN', value: 'unspecified' }
+    ],
+    ldr: [
+        { label: 'LDR OK', value: 'Y' },
+        { label: 'NO LDR', value: 'N' },
+        { label: 'UNKNOWN', value: 'unspecified' }
+    ],
+    loctype: [
+        { label: 'FIXED', value: 'fixed'},
+        { label: 'FLEXIBLE', value: 'flexible'},
+        { label: 'UNKNOWN', value: 'unspecified' }
+    ]
 }
 
-/******************
- EXPORTED FUNCTION
-*******************/
+export default function Tpot42() {
 
-function Tpot42() {
+    // arrays of directory entries to display
+    // array being iterated over.map(format of individual item in array)
+    const directoryDisplay = Directories.map(Directory);
 
-    /*******
-     FILTER
-    ********/
-
-    function newFilter(parameter, isActiveType, value) {
-
-        // clears the current parameter from filterParameters
-            // so you can't accidentally stack filters from the same category
-            // e.g. it won't skip both 'mono' and 'poly' people if you filter for 'poly' and then filter for 'mono'
-        delete filterParameters[parameter];
-
-        // creates a new filter
-            // by setting filterParameter's value at (parameter) to (value)
-        if (isActiveType === false) {
-            filterParameters[parameter] = value;
-        }
-
-        // resets to an empty list of profiles
-        profiles = [];
-
-        // adds matches that pass the filter to the empty profiles array
-        pushMatches();
-
-        // updates what gets displayed
-        // TODO / QUESTION: this seems to work the same way whether it's 'profileDisplay' or 'profiles'
-            // WHY?? and which is better?
-        setShowEntries(profiles);
-
-    }
-
-    /*********
-     SETS AGE
-    **********/
-
-     function displayAge(profile) {
-        // current year
-        let date = new Date().getFullYear();
-        // approximate age based on birth year
-        let age = date - profile.born;
-
-        let ageDisplayed = 'age: ';
-
-        // no minors allowed, no ancients expected
-        if (age < 18 || age > 99) {
-            ageDisplayed = '(this entry is broken, please notify goblin)';
-        }        
-
-        // creates an 'early/mid/late teens/20s, etc.' string
-        let ageString = age.toString();
-        let firstDigit = ageString[0];
-        let secondDigit = ageString[1];
-
-        if (secondDigit <= 3) {
-            ageDisplayed = ageDisplayed + 'early '
-        } else if (secondDigit >= 4 && secondDigit <= 6) {
-            ageDisplayed = ageDisplayed + 'mid '
-        } else if (secondDigit >= 7) {
-            ageDisplayed = ageDisplayed + 'late '
-        }
-
-        if (firstDigit === 1) {
-            ageDisplayed = ageDisplayed + ' teens'
-        } else {
-            ageDisplayed = ageDisplayed + firstDigit + '0s'
-        }
-
-        return ageDisplayed;
-    }
-
-    /**************
-     BULLET POINTS
-    ***************/
-
-    // if it exists in current profile, display value at key
-    function displayLink (item, text){
-        return (item ? (
-            <p className='Info'>↳ <a href={item} target='_blank' rel='noopener noreferrer'>{text}</a></p> ) :
-            null)
-    }
-
-    function displayItem (item){
-        return (item ? (
-            <p className='Info'>↳ {item}</p> ) :
-            null)
-    }    
-
-    /***************
-     PROFILE RENDERS
-    ****************/
-
-    // creates an array of each object in the "profileDisplay" varable
-    // by iterating and pushing current "profile" to the "profileDisplay" array
-    // maps each profile to a new jsx component
-
-    const profileDisplay = profiles.map((profile) => {
-
-        return (
-            <div className='Name'>
-                {/* NAME with LINK */}
-                <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
-                    {profile.name}
-                    </a>
-                </p>
-                {/* TWITTER */}
-                {displayLink(profile.twitter, 'twitter')}
-                {/* FEATURED TWEET */}
-                {displayLink(profile.featuredTweet, 'featured tweet')}
-                {/* INSTAGRAM */}
-                {displayLink(profile.insta, 'instagram')}
-                {/* AGE */}
-                {(profile.born ? (<p className='Info'>↳ {displayAge(profile)}</p> ) :
-                null)}
-                {/* NOTES */}
-                {displayItem(profile.notes)}  
-                {/* LOCATION */}
-                {displayItem(profile.location)}
-            </div>
-        )
-    }
-    )
-
-    // creates an array called "directories" of each object in Directories
-    // by iterating and pushing current "directory" to the "directories" array
-    // maps each directory to a new jsx component
-
-    const directories = Directories.map((directory) => (
-        <div className='Name'>
-            <p>⇨ <a href={directory.link} target='_blank' rel='noopener noreferrer'>{directory.name}</a></p>
-        </div>
-        )
-    )
-
-    // ENTRIES DISPLAY
-
-        // QUESTION: current error is that "showEntries" is never used
-              // I can replace "profiles.map" with "showEntries.map"...
-              // but then the error is "showEntries" was used before it was defined
-              // if i fix this, then "profileDisplay" was used before it was defined
-        // can replace useState(profileDisplay) with useState('') and...
-            // the filter can setShowEntries(profileDisplay) and...
-            // the thing that ultimately shows up can be {showEntries} instead of {profileDisplay}...
-            // but then everything breaks in weird ways
-
-    const [showEntries, setShowEntries] = useState(profileDisplay);
-
-    /**********
-     MENU NAMES
-    ***********/
-
-    const typeMono = 'MONO';
-    const typePoly = 'POLY';
-    const typeUnspec = '-';
-    
-    const genderF = 'WOMEN';
-    const genderNB = 'ENBIES';
-    const genderM = 'MEN';
-    
-    const longY = 'LDR OK';
-    const longN = 'NO LDR';
-    const longNA = '-';
-
-    const menuGender = 'GENDER';
-    const menuType = 'MONO/POLY';
-    const menuInterested = 'INTERESTED IN';
-    const menuLDR = 'LONG DISTANCE?';
-
-    /*********
-     USESTATE
-    **********/
-
-    // [current sate, function that updates the current state]
-
-    // TODO: REFACTOR??
-    // QUESTION: BUT HOW??? IS THIS POSSIBLE?
-        // https://twitter.com/astralpajamas/status/1553216907838472193?s=20&t=9qOnhXEYp2HSeXM4IYvtmQ
-        // https://twitter.com/astralpajamas/status/1552813924906668032?s=20&t=1__04qle0keqMRpuQDJKXg
-        // https://blog.logrocket.com/using-react-usestate-object/
-
-    // PROFILE IS GENDER
-    const [isActiveF, setIsActiveF] = useState(false);
-    const [isActiveNB, setIsActiveNB] = useState(false);
-    const [isActiveM, setIsActiveM] = useState(false);
-
-    // RELATIONSHIP TYPE
-    const [isActiveMono, setIsActiveMono] = useState(false);
-    const [isActivePoly, setIsActivePoly] = useState(false);
-    const [isActiveUnspecified, setIsActiveUnspecified] = useState(false);
-
-
-    // PROFILE IS ATTRACTED TO GENDER
-    const [isActiveUserF, setIsActiveUserF] = useState(false);
-    const [isActiveUserNB, setIsActiveUserNB] = useState(false);
-    const [isActiveUserM, setIsActiveUserM] = useState(false);
-
-    // LONG DISTANCE?
-    const [isActiveLongY, setIsActiveLongY] = useState(false);
-    const [isActiveLongN, setIsActiveLongN] = useState(false);
-    const [isActiveLongNA, setIsActiveLongNA] = useState(false);
-
-    // FILTER DROPDOWN BUTTONS - DROPDOWN
-    const [showUserGenderDropdown, setShowUserGenderDropdown] = useState(false);
-    const [showTypeDropdown, setShowTypeDropdown] = useState(false);
-    const [showProfileGenderDropdown, setShowProfileGenderDropdown] = useState(false);
-    const [showLDRDropdown, setShowLDRDropdown] = useState(false);
-
-    // FILTER DROPDOWN BUTTONS - TITLES
-    const [showUserGender, setShowUserGender] = useState(menuInterested);
-    const [showRelationshipType, setShowRelationshipType] = useState(menuType);
-    const [showProfileGender, setShowProfileGender] = useState(menuGender);
-    const [showLDR, setShowLDR] = useState(menuLDR);
-
-    /***********************************************************
-     FILTER ONCLICK BEHAVIORS:
-     - TURN OFF OTHER FILTERS IN CATEGORY or RESET FILTER TITLE
-     - SET TO "ACTIVE" if previously inactive (and vice versa)
-    ************************************************************/
-
-    // TODO: REFACTOR ???
-
-    function filterClick (isActiveType, setInactiveType1, setInactiveType2, setShow, subFilter, filter, setIsActiveType){
-        // if (clicked filter option, e.g. WOMEN) isn't currently active...
-        if (isActiveType === false) {
-            // e.g. GENDER to {genderF} ('WOMEN')
-            setShow(subFilter);
-        } else {
-            // e.g. resets GENDER to {menuInterested} ('INTERESTED IN')
-            setShow(filter);
-        }
-        
-        // sets other options to inactive...
-        setInactiveType1(false);
-        setInactiveType2(false);
-        // sets (clicked filter option, e.g. WOMEN) to 'active'
-        setIsActiveType(!isActiveType);        
-    }    
-
-    // GENDER
-    const femaleSpread = [isActiveF, setIsActiveNB, setIsActiveM, setShowProfileGender, genderF, menuGender, setIsActiveF];
-    const nonbinarySpread = [isActiveNB, setIsActiveF, setIsActiveM, setShowProfileGender, genderNB, menuGender, setIsActiveNB];
-    const maleSpread = [isActiveM, setIsActiveF, setIsActiveNB, setShowProfileGender, genderM, menuGender, setIsActiveM];
-
-    // INTERESTED IN
-    const userFSpread = [isActiveUserF, setIsActiveUserNB, setIsActiveUserM, setShowUserGender, 'INTERESTED IN ' + genderF, menuInterested, setIsActiveUserF];
-    const userNBSpread = [isActiveUserNB, setIsActiveUserF, setIsActiveUserM, setShowUserGender, 'INTERESTED IN ' + genderNB, menuInterested, setIsActiveUserNB];
-    const userMSpread = [isActiveUserM, setIsActiveUserF, setIsActiveUserNB, setShowUserGender, 'INTERESTED IN ' + genderM, menuInterested, setIsActiveUserM];
-
-    // MONO/POLY
-    const monoSpread = [isActiveMono, setIsActivePoly, setIsActiveUnspecified, setShowRelationshipType, typeMono, menuType, setIsActiveMono];
-    const polySpread = [isActivePoly, setIsActiveMono, setIsActiveUnspecified, setShowRelationshipType, typePoly, menuType, setIsActivePoly];
-    const unspecSpread = [isActiveUnspecified, setIsActiveMono, setIsActivePoly, setShowRelationshipType, typeUnspec, menuType, setIsActiveUnspecified];
-
-    // LONG DISTANCE
-    const longYSpread = [isActiveLongY, setIsActiveLongN, setIsActiveLongNA, setShowLDR, longY, menuLDR, setIsActiveLongY];
-    const longNSpread = [isActiveLongN, setIsActiveLongY, setIsActiveLongNA, setShowLDR, longN, menuLDR, setIsActiveLongN];
-    const longNASpread = [isActiveLongNA, setIsActiveLongY, setIsActiveLongN, setShowLDR, longNA, menuLDR, setIsActiveLongNA];
-
-    // FIRST 2 arguments are the dropdown being shown; THE REST are the dropdowns being hidden
-    const dropdownInterestedSpread = [setShowUserGenderDropdown, showUserGenderDropdown, setShowProfileGenderDropdown, setShowTypeDropdown, setShowLDRDropdown]
-    const dropdownTypeSpread = [setShowTypeDropdown, showTypeDropdown, setShowUserGenderDropdown, setShowProfileGenderDropdown, setShowLDRDropdown];
-    const dropdownGenderSpread = [setShowProfileGenderDropdown, showProfileGenderDropdown, setShowUserGenderDropdown, setShowTypeDropdown, setShowLDRDropdown];
-    const dropdownLDRSpread = [setShowLDRDropdown, showLDRDropdown, setShowUserGenderDropdown, setShowProfileGenderDropdown, setShowTypeDropdown]
-
-    /****************
-     TOGGLE DROPDOWNS
-    *****************/
-
-    // TOGGLES RATHER THAN STACKING DROPDOWN BUTTONS
-    // TODO: figure out how to replace all these "hiddens" with something that's like
-    // anything that isn't the selected one, hide it
-    function toggleDropdown (toggledTo, toggledFrom, hidden1, hidden2, hidden3) {
-    
-        // useState is set either to TRUE or FALSE
-        // FALSE by default
-        // set(whatever) to false
-
-        // if the dropdown is visible, hide it / if the dropdown is hidden, make it visible
-        toggledTo(!toggledFrom);
-
-        // hide all other dropdowns
-        hidden1(false);
-        hidden2(false);
-        hidden3(false);
-    }
-
-    // CHANGES FILTER COLOR DEPENDING ON WHETHER IT'S ACTIVE OR INACTIVE
-    function colorChange(isActiveType){
-        return (isActiveType ? 'black' : '')
-    }
-
-    // overrides grey background
-    function backgroundChange(isActiveType){
-        return (isActiveType ? 'none' : '')
-    }
-
-    function borderChange(isActiveType){
-        return (isActiveType ? 'solid' : '')
-    }
-
-    /******************
-     DROPDOWN MENU JSX
-    *******************/
-
-    /* TODO: REFACTOR?? */
-
-    const dropdownGender = (
-        <div className='FilterMenu'>
-            <h3 className='MenuItem' onClick={() => {filterClick (...femaleSpread); newFilter('gender', isActiveF, 'F')}} style={{
-                color: colorChange(isActiveF),
-                background: backgroundChange(isActiveF)
-            }}>{genderF}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...nonbinarySpread); newFilter('gender', isActiveNB, 'NB')}} style={{
-                color: colorChange(isActiveNB),
-                background: backgroundChange(isActiveNB)
-            }}>{genderNB}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...maleSpread); newFilter('gender', isActiveM, 'M')}} style={{
-                color: colorChange(isActiveM),
-                background: backgroundChange(isActiveM)
-            }}>{genderM}</h3>
-        
-        </div>
-    )
-
-    const dropdownInterested = (
-        <div className='FilterMenu'>
-            <h3 className='MenuItem' onClick={() => {filterClick (...userFSpread); newFilter('attracted', isActiveUserF, 'F')}} style={{
-                color: colorChange(isActiveUserF),
-                background: backgroundChange(isActiveUserF)
-            }}>{genderF}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...userNBSpread); newFilter('attracted', isActiveUserNB, 'NB')}} style={{
-                color: colorChange(isActiveUserNB),
-                background: backgroundChange(isActiveUserNB)
-            }}>{genderNB}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...userMSpread); newFilter('attracted', isActiveUserM, 'M')}} style={{
-                color: colorChange(isActiveUserM),
-                background: backgroundChange(isActiveUserM)
-            }}>{genderM}</h3>
-
-        </div>
-    )
-
-    const dropdownType = (
-        <div className='FilterMenu'>
-            <h3 className='MenuItem' onClick={() => {filterClick (...monoSpread); newFilter('type', isActiveMono, 'mono')}} style={{
-                color: colorChange(isActiveMono),
-                background: backgroundChange(isActiveMono)
-            }}>MONO</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...polySpread); newFilter('type', isActivePoly, 'poly')}} style={{
-                color: colorChange(isActivePoly),
-                background: backgroundChange(isActivePoly)
-            }}>POLY</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...unspecSpread); newFilter('type', isActiveUnspecified, 'unspecified')}} style={{
-                color: colorChange(isActiveUnspecified),
-                background: backgroundChange(isActiveUnspecified)
-            }}>UNSPECIFIED</h3>
-
-        </div>
-    )
-
+    //
+    // SETS FILTERS
     // 
-    const dropdownLDR = (
-        <div className='FilterMenu'>
-            <h3 className='MenuItem' onClick={() => {filterClick (...longYSpread); newFilter('ldr', isActiveLongY, 'Y')}} style={{
-                color: colorChange(isActiveLongY),
-                background: backgroundChange(isActiveLongY)
-            }}>{longY}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...longNSpread); newFilter('ldr', isActiveLongN, 'N')}} style={{
-                color: colorChange(isActiveLongN),
-                background: backgroundChange(isActiveLongN)
-            }}>{longN}</h3>
-            <h3 className='MenuItem' onClick={() => {filterClick (...longNASpread); newFilter('ldr', isActiveLongNA, 'unspecified')}} style={{
-                color: colorChange(isActiveLongNA),
-                background: backgroundChange(isActiveLongNA)
-            }}>UNSPECIFIED</h3>       
-        </div>
-    )
+    // default set of filters is empty
+    const [filters, setFilters] = useState({
+        gender: null,
+        attracted: null,
+        type: null,
+        ldr: null
+    });
 
-    /*************
-     RENDERED JSX
-    **************/
+    //
+    // TOGGLES DROPDOWN MENUS
+    // 
+    // sets which dropdown is open (if any)
+    const [activeDropdown, setActiveDropdown] = useState(null);
+
+    // changes the value in the active filter
+    // 'option' can be replaced with any word here
+    // this works bc it's called *inside the map function*
+    const filterUpdate = option => setFilters({ ...filters, [activeDropdown]: option })
+
+    const currentDropdown = activeDropdown && <Submenu
+        currentValue={filters[activeDropdown]}
+        options={menuOptions[activeDropdown]}
+        onSelect={filterUpdate}
+    />;
+
+    // clicking on an open dropdown closes it
+    // clicking on a closed dropdown opens it
+    function toggleDropdown(submenu) {
+        // if what's in the dropdown menu matches 'dropdown', hide the dropdown menu
+        // else show the dropdown menu
+        setActiveDropdown(submenu === activeDropdown ? null : submenu);
+    }
+
+    // display the current value or a default for the menu item
+    const menuDisplay = (key, defaultValue) => {
+        // if the listed key exists in the current set of filters
+        if (filters[key]) {
+            // return, from the submenu items, the first item...
+            // whose value matches the item at the filter's key
+            let newMenuLabel = menuOptions[key].find(option => option.value === filters[key]);
+
+            return newMenuLabel.label
+        }
+        else {
+            return defaultValue
+        }
+    }
+
+    //
+    // RENDERED JSX
+    //
 
     return (
         <div className='Directories'>
@@ -471,46 +111,189 @@ function Tpot42() {
             </div>
 
             <div className='FilterMenu'>
-                {/* TODO: find out why this also works with e instead of () */}
-                {/* GENDER */}
-                <h3 onClick={() => {toggleDropdown (...dropdownGenderSpread)}} style={{
-                    color: colorChange(isActiveF || isActiveNB || isActiveM),
-                    border: borderChange(isActiveF || isActiveNB || isActiveM)}}>{showProfileGender}</h3>
-                <p className='FilterSentence'> // </p>
-                <h3 onClick={() => {toggleDropdown (...dropdownInterestedSpread)}} style={{
-                    color: colorChange(isActiveUserF || isActiveUserNB || isActiveUserM),
-                    border: borderChange(isActiveUserF || isActiveUserNB || isActiveUserM)}}>{showUserGender}</h3>
+                <h3 onClick={() => { toggleDropdown('gender') }} style={activeMenuStyle(filters['gender'])}>{menuDisplay('gender', 'GENDER')}</h3>
+                <p className='FilterSentence'>//</p>
+                <h3 onClick={() => { toggleDropdown('ldr') }} style={activeMenuStyle(filters['ldr'])}>{menuDisplay('ldr', 'LDR?')}</h3>                
+                <p className='FilterSentence'>//</p>
+                <h3 onClick={() => { toggleDropdown('loctype') }} style={activeMenuStyle(filters['loctype'])}>{menuDisplay('loctype', 'LOCATION')}</h3>
             </div>
 
-            {showProfileGenderDropdown && dropdownGender}
-            {showUserGenderDropdown && dropdownInterested}
+            {(activeDropdown === 'gender' || activeDropdown === 'ldr' || activeDropdown === 'loctype') && currentDropdown}
 
             <div className='FilterMenu'>
-                <h3 onClick={() => {toggleDropdown (...dropdownTypeSpread)}} style={{
-                    color: colorChange(isActiveMono || isActivePoly || isActiveUnspecified),
-                    border: borderChange(isActiveMono || isActivePoly || isActiveUnspecified)
-                    }}>{showRelationshipType}</h3>
-                <p className='FilterSentence'> // </p>
-                <h3 onClick={() => {toggleDropdown (...dropdownLDRSpread)}} style={{
-                    color: colorChange(isActiveLongY || isActiveLongN || isActiveLongNA),
-                    border: borderChange(isActiveLongY || isActiveLongN || isActiveLongNA)}}>{showLDR}</h3>
+                <h3 onClick={() => { toggleDropdown('attracted') }} style={activeMenuStyle(filters['attracted'])}>{menuDisplay('attracted', 'ATTRACTED TO')}</h3>
+                <p className='FilterSentence'>//</p>
+                <h3 onClick={() => { toggleDropdown('type') }} style={activeMenuStyle(filters['type'])}>{menuDisplay('type', 'MONO/POLY')}</h3>
             </div>
 
-            {showTypeDropdown && dropdownType}
-            {showLDRDropdown && dropdownLDR}
+            {(activeDropdown === 'attracted' || activeDropdown === 'type') && currentDropdown}
+
 
             <div className='Directory'>
-                {profileDisplay}
+                {Profiles
+                    // creates a shallow copy of a portion of Profiles
+                    // filtered down just to elements that pass the function's test
+                    .filter(profile => matchesFilters(profile, filters))
+                    .map(profile => <Profile key={profile.link} {...profile} />)}
             </div>
 
             <div className='Header'>
                 <h1>MORE DIRECTORIES</h1>
             </div>
             <div className='Directory'>
-                {directories}
+                {directoryDisplay}
             </div>
+        </div>
+    )
+
+}
+
+//
+// COMPONENTS AND HELPER FUNCTIONS
+// components capitalized / functions lowercase
+//
+
+// Does the profile match the filters?
+function matchesFilters(profile, filters) {
+    return Object
+        // returns an array of the property names (keys) in the current filters
+        .keys(filters) // each of the filters (gender, attracted...)
+        // tests whether all elements in the array pass the test of the function within it
+        .every(filter =>  // whole thing is true if it's true for every filter
+            filters[filter] === null || // true if the filter is empty
+            // !profile[filter] || // or if the profile doesn't have that key
+            // profile[filter].includes('unspecified') || // or the profile is unspecified
+            profile[filter].includes(filters[filter]) // or the profile matches the filter
+        )
+}
+
+// what the submenu actually displays
+function Submenu({ currentValue, options, onSelect }) {
+    return (
+        <div className='FilterMenu'>
+            {options && options.map(function (option) {
+                // e.g. if the value that corresponds to the current submenu title, e.g. 'F'...
+                // matches currentValue (which gets set to filters[activeDropdown]), then...
+                // isActive = true, else isActive = false
+                // NOTE: we're passing currentValue instead of just using filters[activeDropdown] bc of scope
+                // + to keep this function neat and separate
+                let isActive = option.value === currentValue;
+                return (
+                    <h3
+                        key={option.label}
+                        className='MenuItem'
+                        // clicking again on the currently selected item unsets it
+                        // if the submenu item is already active,
+                        // then the filter gets set to nothing
+                        // if it's not active, it gets set to the current option's value
+                        onClick={() => onSelect(isActive ? null : option.value)}
+                        style={{
+                            color: color(isActive),
+                            background: background(isActive)
+                          }}
+                    >
+                        {option.label}
+                    </h3>
+                );
+            })}
+        </div>
+    );
+}
+
+// TODO
+// see if you can find a cleverer way to execute earlyMidLate
+// without referencing Rob's notes!
+
+function Age({ born }) {
+    // current year
+    let date = new Date().getFullYear();
+    // approximate age based on birth year
+    let age = date - born;
+
+    // no minors allowed, no ancients expected
+    if (age < 18 || age > 99) {
+        return '(this entry is broken, please notify goblin)';
+    }
+
+    return 'age: ' + earlyMidLate(age) + ' ' + decade(age);
+}
+
+const earlyMidLate = (age) => {
+
+    let secondDigit = age.toString()[1];
+
+    if (secondDigit <= 3) {
+        return 'early';
+    } else if (secondDigit >= 4 && secondDigit <= 6) {
+        return 'mid';
+    } else {
+        return 'late';
+    }
+
+}
+
+const decade = (age) => {
+    if (age < 20) {
+        return 'teens';
+    } else {
+        // returns the first digit of the listed age
+        return age.toString()[0] + '0s';
+    }
+}
+
+//
+//  PROFILES JSX
+//
+// if (item) exists in the current profile, returns that information
+function Profile(profile) {
+    return (
+        <div key={profile.link} className='Name'>
+            {/* NAME with LINK */}
+            <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
+                {profile.name}
+            </a>
+            </p>
+            <Link item={profile.twitter} text='twitter' />
+            <Link item={profile.featuredTweet} text='featured tweet' />
+            <Link item={profile.insta} text='instagram' />
+            {/* AGE, if listed */}
+            {(profile.born ? (<p className='Info'>↳ <Age born={profile.born} /></p>) :
+                null)}
+            <Item item={profile.notes} />
+            <Item item={profile.location} />
         </div>
     )
 }
 
-export default Tpot42;
+function Item({ item }) {
+    return (item ? (
+        <p className='Info'>↳ {item}</p>
+    ) : null)
+}
+
+function Link({ item, text }) {
+    return (item ? (
+        <p className='Info'>↳ <a href={item} target='_blank' rel='noopener noreferrer'>{text}</a></p>
+    ) : null)
+}
+
+//
+// DIRECTORIES JSX
+//
+function Directory(directory) {
+    return (
+        <div key={directory.link} className='Name'>
+            <p>⇨ <a href={directory.link} target='_blank' rel='noopener noreferrer'>{directory.name}</a></p>
+        </div>
+    )
+}
+
+//
+// STYLING
+//
+// active is e.g. filters['gender'], which might be null or it might be something else
+// if it's truthy (i.e. not 'null') then the text color becomes black; else it's not changed
+const color = (active) => active ? 'black' : '';
+const background = (active) => active ? 'none' : '';
+const border = (active) => active ? 'solid' : '';
+const activeMenuStyle = (active) => ({ color: color(active), border: border(active) })
