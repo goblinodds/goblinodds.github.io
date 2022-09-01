@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d90dac77.css",
-    "main.js": "/static/js/main.a9f83445.js",
+    "main.css": "/static/css/main.511b7e2d.css",
+    "main.js": "/static/js/main.67c3144d.js",
     "static/media/lolly.png": "/static/media/lolly.1a8360ac877b4b70bd1f.png",
     "static/media/simler.jpg": "/static/media/simler.f2b913860232ae867739.jpg",
     "static/media/chalion.jpg": "/static/media/chalion.6764fe6e2e5ea6f07314.jpg",
@@ -15,16 +15,25 @@
     "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.b0c9449e2cece2ab4167.png",
     "static/media/ripper.jpg": "/static/media/ripper.aa51f1479f8a8b5d1b66.jpg",
     "static/media/portfolio_LegallySpeaking.png": "/static/media/portfolio_LegallySpeaking.96bf65cd6b97032d8afc.png",
+    "static/media/ronitbaranga.png": "/static/media/ronitbaranga.a8900742cfd409de7738.png",
     "static/media/meron.jpg": "/static/media/meron.328b26a1c5e3a06595cf.jpg",
     "static/media/tinna.jpeg": "/static/media/tinna.aae20c0a3b8cf203371a.jpeg",
+    "static/media/headempty.png": "/static/media/headempty.71c9df712bc18cb9475c.png",
     "static/media/rowan.jpeg": "/static/media/rowan.e6d9a7c143c685384011.jpeg",
     "static/media/petrin.png": "/static/media/petrin.35fda5f13a4513afedcc.png",
+    "static/media/scorpios.jpeg": "/static/media/scorpios.aa4e3a780bbeb061c1d4.jpeg",
+    "static/media/fightclub.jpg": "/static/media/fightclub.4f84557bd7fe03b15c7b.jpg",
+    "static/media/autismspeaks.jpg": "/static/media/autismspeaks.e8444ca5078adfaeb621.jpg",
+    "static/media/insane.jpg": "/static/media/insane.118524d68d9ec0c2201b.jpg",
+    "static/media/legalreasons.JPG": "/static/media/legalreasons.dd56b79f8069f717266a.JPG",
+    "static/media/onlyposting.png": "/static/media/onlyposting.c4d6fd481c80e43a7acb.png",
+    "static/media/atmylimit.jpg": "/static/media/atmylimit.316eef206e8633d3f21e.jpg",
     "index.html": "/index.html",
-    "main.d90dac77.css.map": "/static/css/main.d90dac77.css.map",
-    "main.a9f83445.js.map": "/static/js/main.a9f83445.js.map"
+    "main.511b7e2d.css.map": "/static/css/main.511b7e2d.css.map",
+    "main.67c3144d.js.map": "/static/js/main.67c3144d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d90dac77.css",
-    "static/js/main.a9f83445.js"
+    "static/css/main.511b7e2d.css",
+    "static/js/main.67c3144d.js"
   ]
 }
