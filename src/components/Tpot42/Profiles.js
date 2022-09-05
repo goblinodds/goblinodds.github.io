@@ -3,9 +3,9 @@
 /****************
  FORMATTING NOTES
 *****************/
-    // any filter (that doesn't get displayed) must be formatted as an ARRAY
-    // if there's a filter for it, there must be a field there, or "includes" breaks
-    // links MUST start with http:// or https://
+// any filter (that doesn't get displayed) must be formatted as an ARRAY
+// if there's a filter for it, there must be a field there, or "includes" breaks
+// links MUST start with http:// or https://
 
 const Profiles = [
     {
@@ -525,101 +525,258 @@ const Profiles = [
         loctype: ['fixed'],
         location: 'London, UK'
     },
-// alex is #27
-{
-    name: 'kaixi',
-    link: 'kaixiyang.com',
-    twitter: 'https://twitter.com/kaixiyang_',
-    gender: ['F'],
-    attracted: ['M'],
-    type: ['mono'],
-    born: '1998',
-    ldr: ['Y'],
-    loctype: ['flexible'],
-    notes: 'uhhhh 6 foot at least, and really gorgeous goofy ambitious and genius creative men onlyyyy',
-    location: 'Bay Area / LA'
-},
-{
-    name: 'renee',
-    link: 'https://twitter.com/reneesolana',
-    gender: ['F'],
-    attracted: ['M'],
-    type: ['mono'],
-    born: '1989',
-    ldr: ['Y'],
-    loctype: ['fixed'],
-    location: 'Chicago'
-},
-{
-    name: 'kevin walker',
-    link: 'https://twitter.com/Reccamn?t=7vJVKqKSLJPOI1Cu-mSXiA&s=09',
-    gender: ['M'],
-    attracted: ['F'],
-    type: ['mono'],
-    born: '1989',
-    ldr: ['Y'],
-    loctype: ['flexible'],
-    notes: 'INFJ / sad about the past and worried for the future, but just living for tomorrow.',
-    location: 'San Diego'
-},
-{
-    name: 'ava',
-    link: 'https://twitter.com/postc_vi',
-    gender: ['F', 'NB'],
-    attracted: ['F', 'NB', 'M'],
-    type: ['mono', 'poly'],
-    born: '2000',
-    ldr: ['Y'],
-    loctype: ['flexible'],
-    location: 'Virginia'
-},
-{
-    name: 'mercer',
-    link: 'https://docs.google.com/document/d/1FUcf4P06yVo4bJB0lRYiq_gn-0cE0glo1YNAWO0jz4g/edit?usp=sharing',
-    gender: ['M'],
-    attracted: ['F'],
-    type: ['mono', 'poly'],
-    born: '1999',
-    ldr: ['Y'],
-    loctype: ['fixed'],
-    location: 'NYC'
-},
-{
-    name: 'delen',
-    link: 'https://twitter.com/dheisman',
-    gender: ['M'],
-    attracted: ['F'],
-    type: ['mono'],
-    born: '1983',
-    ldr: ['Y'],
-    loctype: ['fixed'],
-    notes: "i'm pretty cool",
-    location: 'Philadelphia'
-},
-{
-    name: 'shailja',
-    link: 'https://twitter.com/shailja_0_',
-    gender: ['F', 'NB'],
-    attracted: ['F', 'NB'],
-    type: ['mono'],
-    born: '2002',
-    ldr: ['Y'],
-    loctype: ['fixed'],
-    location: 'Mumbai'
-},
-{
-    name: 'hek',
-    link: 'https://twitter.com/hekatonsure',
-    gender: ['M'],
-    attracted: ['F', 'NB'],
-    type: ['mono', 'poly'],
-    born: '1998',
-    ldr: ['Y'],
-    loctype: ['flexible'],
-    notes: 'i bounce up and down the WC all the time, looking to split living between LA and PNW - open to BC coastal. Freq. climber/hiker/camping/hang gliding.',
-    location: 'West Coast'
-}
-// SUGGESTIONS
+    {
+        name: 'kaixi',
+        link: 'https://kaixiyang.com/',
+        twitter: 'https://twitter.com/kaixiyang_',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1998',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        notes: 'uhhhh 6 foot at least, and really gorgeous goofy ambitious and genius creative men onlyyyy',
+        location: 'Bay Area / LA'
+    },
+    {
+        name: 'renee',
+        link: 'https://twitter.com/reneesolana',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1989',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Chicago'
+    },
+    {
+        name: 'kevin walker',
+        link: 'https://twitter.com/Reccamn?t=7vJVKqKSLJPOI1Cu-mSXiA&s=09',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1989',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        notes: 'INFJ / sad about the past and worried for the future, but just living for tomorrow.',
+        location: 'San Diego'
+    },
+    {
+        name: 'mercer',
+        link: 'https://docs.google.com/document/d/1FUcf4P06yVo4bJB0lRYiq_gn-0cE0glo1YNAWO0jz4g/edit?usp=sharing',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        born: '1999',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'NYC'
+    },
+    {
+        name: 'delen',
+        link: 'https://twitter.com/dheisman',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1983',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        notes: "i'm pretty cool",
+        location: 'Philadelphia'
+    },
+    {
+        name: 'shailja',
+        link: 'https://twitter.com/shailja_0_',
+        gender: ['F', 'NB'],
+        attracted: ['F', 'NB'],
+        type: ['mono'],
+        born: '2002',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Mumbai'
+    },
+    {
+        name: 'hek',
+        link: 'https://twitter.com/hekatonsure',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono', 'poly'],
+        born: '1998',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        notes: 'i bounce up and down the WC all the time, looking to split living between LA and PNW - open to BC coastal. Freq. climber/hiker/camping/hang gliding.',
+        location: 'West Coast'
+    },
+    {
+        name: 'braverius',
+        link: 'https://twitter.com/braverius',
+        gender: ['M'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['mono'],
+        born: '1993',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: '~Seattle'
+    },
+    {
+        name: 'graham bessellieu',
+        link: 'https://sites.google.com/view/cgbessellieu-dating/home',
+        gender: ['NB', 'M'],
+        attracted: ['F', 'NB'],
+        type: ['mono'],
+        born: '1988',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Central NJ'
+    },
+    {
+        name: 'chris',
+        link: 'https://twitter.com/mosephos',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono', 'poly'],
+        born: '1993',
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'NYC'
+    },
+    {
+        name: 'tiger',
+        link: 'https://twitter.com/kafkamacchiato',
+        gender: ['F'],
+        attracted: ['F', 'NB'],
+        type: ['poly'],
+        born: '1991',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        notes: 'post-op trans woman who missed out on her teenage years and now wants to fuck around',
+        location: 'Gothenburg, Sweden'
+    },
+    {
+        name: 'brian',
+        link: 'https://twitter.com/LagodaBrian',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono', 'poly'],
+        born: '1992',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        notes: `i love my (in-person) job, but, one way or another, i imagine i'll be free to move someday.`,
+        location: ['Metro DC (Northern Virginia']
+    },
+    {
+        name: 'matthew',
+        link: 'https://twitter.com/Robin_ChillJams',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono'],
+        born: '1989',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        notes: `into left wing politics (though i am a bit idiosyncratic, see my tweets), lover of music (house/techno/ambient really any kind of electronic music). i tend to be a cynical but optimistic person. open to a lot of things but i am primary looking for a loving monogamous relationship.`,
+        location: 'East Tennessee'
+    },
+    {
+        name: 'haarball',
+        link: 'https://twitter.com/haarball_',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1986',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Oslo, Norway'
+    },
+    {
+        name: 'daniel',
+        link: 'https://twitter.com/dangmartin1',
+        gender: ['M'],
+        attracted: ['M'],
+        type: ['mono', 'poly'],
+        born: '1994',
+        ldr: ['N'],
+        loctype: ['flexible'],
+        notes: 'physicist in tech, likes lots of things, fun to talk to',
+        location: 'Oxford, UK'
+    },
+    {
+        name: 'sofy',
+        link: 'https://claritysofy.com/',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1988',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        notes: 'i’m working on a date me doc atm. but in a nutshell i’m looking for a life partner, someone to go on a secular spiritual journey and build an amazing life together filled with love, books and mutual growth and support',
+        location: 'Bay Area'
+    },
+    {
+        name: 'observer of suns',
+        link: 'https://twitter.com/ObserverSuns',
+        featuredTweet: 'https://twitter.com/ObserverSuns/status/1444757512259915781',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono'],
+        born: '1999',
+        ldr: ['N'],
+        loctype: ['fixed'],
+        notes: 'i’m a graduate student in computer science!',
+        location: 'US East Coast (DM for details)'
+    },
+    {
+        name: 'arin',
+        link: 'https://twitter.com/arin_spanner',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '2000',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        notes: `transitioning to blockchain developer. / owns every kind of chapstick. / default optimism. / weeeeeeeeeeee`,
+        location: 'Stanford, CA'
+    },
+    {
+        name: 'jeffrey ladish',
+        link: 'https://jeffreyladish.com/dateme',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        born: '1991',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'SF Bay Area'
+    },
+    {
+        name: 'catherio',
+        link: 'https://cather.io/dateme',
+        gender: ['F'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['mono'],
+        born: '1990',
+        ldr: ['N'],
+        loctype: ['flexible'],
+        location: 'Berkeley'
+    },
+    {
+        name: 'tiffinWA',
+        email: 'tell325 AT wgu DOT edu',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1980',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Washington state'
+    }
+
+    // tiffinWA is #49 in form results - waiting on a link from her (or to figure out the email nonsense)
+    // check email to see if tiffinWA sent a link
+    // if you port the results over directly from form, remove: ava/postci_vi 
+
+    // SUGGESTION
+    // poll twitter to see which is more intuitive??
+    // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
     // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions
 ]
 

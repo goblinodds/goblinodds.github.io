@@ -36,8 +36,8 @@ const menuOptions = {
         { label: 'UNKNOWN', value: 'unspecified' }
     ],
     loctype: [
-        { label: 'FIXED', value: 'fixed'},
-        { label: 'FLEXIBLE', value: 'flexible'},
+        { label: 'FIXED', value: 'fixed' },
+        { label: 'FLEXIBLE', value: 'flexible' },
         { label: 'UNKNOWN', value: 'unspecified' }
     ]
 }
@@ -107,13 +107,13 @@ export default function Tpot42() {
         <div className='Directories'>
             <div className='Header'>
                 <h1>TPOT for two</h1>
-                <p>an ingroup "date me" directory</p>
+                <p>an ingroup "date me" directory with {Profiles.length} entries</p>
             </div>
 
             <div className='FilterMenu'>
                 <h3 onClick={() => { toggleDropdown('gender') }} style={activeMenuStyle(filters['gender'])}>{menuDisplay('gender', 'GENDER')}</h3>
                 <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('ldr') }} style={activeMenuStyle(filters['ldr'])}>{menuDisplay('ldr', 'LDR?')}</h3>                
+                <h3 onClick={() => { toggleDropdown('ldr') }} style={activeMenuStyle(filters['ldr'])}>{menuDisplay('ldr', 'LDR?')}</h3>
                 <p className='FilterSentence'>//</p>
                 <h3 onClick={() => { toggleDropdown('loctype') }} style={activeMenuStyle(filters['loctype'])}>{menuDisplay('loctype', 'LOCATION')}</h3>
             </div>
@@ -190,7 +190,7 @@ function Submenu({ currentValue, options, onSelect }) {
                         style={{
                             color: color(isActive),
                             background: background(isActive)
-                          }}
+                        }}
                     >
                         {option.label}
                     </h3>
@@ -253,6 +253,7 @@ function Profile(profile) {
                 {profile.name}
             </a>
             </p>
+            <Email item={profile.email} text='email'/>
             <Link item={profile.twitter} text='twitter' />
             <Link item={profile.featuredTweet} text='featured tweet' />
             <Link item={profile.insta} text='instagram' />
@@ -274,6 +275,12 @@ function Item({ item }) {
 function Link({ item, text }) {
     return (item ? (
         <p className='Info'>↳ <a href={item} target='_blank' rel='noopener noreferrer'>{text}</a></p>
+    ) : null)
+}
+
+function Email({ item }) {
+    return (item ? (
+        <p className='Info'>↳ email: {item}</p>
     ) : null)
 }
 

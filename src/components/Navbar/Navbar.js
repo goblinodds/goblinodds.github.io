@@ -45,6 +45,8 @@ function Navbar() {
                             {/* <div className='navSublink'>projects</div> */}
                             <MenuItems link='tpot42'
                                 title='tpot for two' />
+                            <MenuItems link='goblinFriender'
+                                title='goblin friender' />
                             <a href='https://github.com/goblinodds' target='_blank' rel='noopener noreferrer' className='navLink' onClick={e =>setShowDropdown(false)}>github</a>
                         </div>
                     </div> : null 

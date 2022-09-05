@@ -1,0 +1,119 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#itemText {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:  4vw;
+    line-height: 4vw;
+    color: #b3b3b3;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vmin;
+    width: 130vmin;
+    margin: 2vmin 4vmin 2vmin 2vmin;
+}
+
+.item {
+    max-height: 45vmin;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* LIKE AND DISLIKE BUTTONS */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    font-family:  'Bebas Neue', sans-serif;
+    font-size:  5vmin;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    border: solid;
+    border-radius: 10px;
+    padding: .5em .75em;
+    margin: 8vmin;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.like {
+    border-color: rgb(139, 196, 218);
+    background-color: rgb(139, 196, 218);
+}
+
+.like:hover{
+    color:rgb(139, 196, 218);
+}
+
+.dislike {
+    border-color: rgb(255, 195, 205);
+    background-color: rgb(255, 195, 205);
+}
+
+.dislike:hover {
+    color:rgb(255, 195, 205);
+}
+
+@media (max-width: 460px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    #content {
+        order: 1;
+        height: 50vmin;
+        width: 80vmin;
+        margin: 0 5vmin;
+        font-size: 5vmin;
+        line-height: 5vmin;
+    }
+
+    .item {
+        max-height: 50vmin;
+        max-width: 80vmin;
+        border-radius: 10px;
+    }
+
+    #itemText {
+        font-size:  5vw;
+        line-height: 5vw;
+    }
+
+    .buttons {
+        order: 2;
+        margin: 2vmin;
+    }
+
+    .button {
+        margin: 0;
+    }
+}
+
+@media (max-width: 355px) {
+
+    #content {
+        height: 75vmin;
+    }
+
+    .item {
+        max-height: 75vmin;
+    }
+
+    .button {
+        font-size: 10vmin;
+    }
+  }

@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Video from './pages/Video';
 import Illustration from './pages/Illustration';
-import StoryGen from './pages/StoryGen';
+import GoblinFriender from './pages/GoblinFriender/GoblinFriender';
 import Tpot42 from './pages/Tpot42/Tpot42';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -32,6 +32,9 @@ export function App() {
           </Route>
           <Route>
             <Route path='/tpot42' element={<Tpot42 />}/>
+          </Route>
+          <Route>
+            <Route path='/goblinFriender' element={<GoblinFriender />}/>
           </Route>
         </Routes>
         <Footer />
