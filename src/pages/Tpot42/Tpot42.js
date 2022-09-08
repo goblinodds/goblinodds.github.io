@@ -4,16 +4,6 @@ import './Tpot42.css';
 import Profiles from '../../components/Tpot42/Profiles.js';
 import Directories from '../../components/Tpot42/Directories.js';
 
-// TODO
-//  TANUKI suggestion re: CSS
-//      https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
-//  black borders around menu names onclick
-// scrolling (or pages) so you can see there are other directories
-// come up with an ordering scheme
-
-// UPDATE W NEW PROFILES
-// PUSH TO PROD W COMMENTs
-
 const menuOptions = {
     gender: [
         { label: 'WOMEN', value: 'F' },
