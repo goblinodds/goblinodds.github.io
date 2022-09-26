@@ -25,29 +25,25 @@ a {
 
 .navLeft h1 {
   color:white;
+  font-size: 5vmin;
 }
 
 .navLeft h1:hover {
   color: yellow;
 }
 
-.navLink {
-  margin: 1vmin;
-  color: white;
-}
-
 .menuBar {
-  width: 5vmin;
-  height: 1vmin;
+  width: 4.25vmin;
+  height: .65vmin;
   background-color: white;
-  margin: 1vmin;
+  margin: .75vmin;
 }
 
 .menuButton {
   background: none;
   border: none;
   font-family: 'Lato', sans-serif;
-  padding: 6vmin;
+  padding: 1vmin 6vmin;
 }
 
 .menuButton a {
@@ -58,64 +54,52 @@ a {
   color:black;
 }
 
+
+/* IF YOU WANT THE FULL BG TO BE BLACK 
 #dropdown {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-}
-
-.menuItems {
-  display: flex;
-  flex-direction: column;
-}
-
-.navLink:hover {
-  background-color: yellow;
-  color:black;
-}
-
-.navLink {
-  margin: 3vmin 7vmin;
-  text-align: left;
-  font-size: 5vmin;
-  line-height: 5vmin;
-}
-
-.navSublink:hover {
-  background-color: yellow;
-  color:black;
-  cursor: pointer;
-}
-
-.navSublink {
-  margin: 3vmin 7vmin;
-  text-align: left;
-  font-size: 5vmin;
-  line-height: 5vmin;
-}
-
-/* -1vmin left margin bc it's offset for... button... reasons */
-/* .navLinkButton {
-  margin: 3vmin 7vmin 3vmin 6vmin;
-  text-align: left;
-  font-size: 5vmin;
-  line-height: 5vmin;
-  color: white;
-}
-
-.navLinkButton:hover {
-  color: black;
-  background-color: yellow;
+  height: 100vh;
 } */
 
-/* FOR SMALLER SCREEN SIZES */
+#subMenu {
+  margin: 0 4rem 1rem 4rem;
+}
 
+#menuItems {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 2rem 0 0 2rem;
+}
+
+#navLink {
+  color: white;
+  display: inline-block;
+  margin: 1rem 2.5rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+#navLink:hover {
+  background-color: yellow;
+  color:black;
+}
+
+.navSubLink {
+  color: white;
+  display: flex;
+  margin: 0;
+  text-align: left;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+.navSubLink:hover {
+  background-color: yellow;
+  color:black;
+}
+
+/* FOR SMALLER SCREEN SIZES */
+/* 
 @media (max-width: 460px) {
   .navLeft h1 {
     font-size: 15vmin;
@@ -130,8 +114,6 @@ a {
   .navLink {
     margin: 5vmin 10vmin;
     text-align: left;
-    font-size: 7vmin;
-    line-height: 7vmin;
   }
 
-}
+} */

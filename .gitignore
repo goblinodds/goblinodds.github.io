@@ -23,4 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # added by goblin
-notes.txt
+# this seems to be deleting your notes for some reason
+# notes.txt
+notesTEST.txt

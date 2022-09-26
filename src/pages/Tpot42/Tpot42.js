@@ -4,6 +4,9 @@ import './Tpot42.css';
 import Profiles from '../../components/Tpot42/Profiles.js';
 import Directories from '../../components/Tpot42/Directories.js';
 
+// shows profiles in a random order on page load
+shuffle(Profiles);
+
 const menuOptions = {
     gender: [
         { label: 'WOMEN', value: 'F' },
@@ -69,12 +72,13 @@ export default function Tpot42() {
     // clicking on an open dropdown closes it
     // clicking on a closed dropdown opens it
     function toggleDropdown(submenu) {
-        // if what's in the dropdown menu matches 'dropdown', hide the dropdown menu
-        // else show the dropdown menu
+        // if the dropdown you've clicked to activate is active, hide it
+        // if it's inactive, show it
         setActiveDropdown(submenu === activeDropdown ? null : submenu);
     }
 
     // display the current value or a default for the menu item
+    // in place of the menu title (e.g. "WOMEN" instead of "GENDER")
     const menuDisplay = (key, defaultValue) => {
         // if the listed key exists in the current set of filters
         if (filters[key]) {
@@ -97,7 +101,7 @@ export default function Tpot42() {
         <div className='Directories'>
             <div className='Header'>
                 <h1>TPOT for two</h1>
-                <p>an ingroup "date me" directory with {Profiles.length} entries</p>
+                <p className='Tagline'>an ingroup "date me" directory with {Profiles.length} entries</p>
             </div>
 
             <div className='FilterMenu'>
@@ -142,6 +146,29 @@ export default function Tpot42() {
 // COMPONENTS AND HELPER FUNCTIONS
 // components capitalized / functions lowercase
 //
+
+function shuffle(array) {
+    let remaining = array.length - 1;
+    let last;
+    let randomIndex;
+
+    // while there are elements left to shuffle
+    while (remaining) {
+        // pick a remaining element
+        randomIndex = Math.floor(Math.random() * remaining);
+        // and swap it with the current element
+        // store the value of the last element in the array
+        last = array[remaining];
+        // swap the last element with the randomly selected elementy by...
+            // replacing the element at array[remaining] with the element at array[randomIndex]
+        array[remaining] = array[randomIndex];
+            // then replacing the element at array[randomIndex] with the value stored in 'last'
+        array[randomIndex] = last;
+        remaining--
+    }
+
+    return array;
+}
 
 // Does the profile match the filters?
 function matchesFilters(profile, filters) {
@@ -191,7 +218,7 @@ function Submenu({ currentValue, options, onSelect }) {
 }
 
 // TODO
-// see if you can find a cleverer way to execute earlyMidLate
+// see if you can find a cleverer way to execute earlyMidLate using modulo
 // without referencing Rob's notes!
 
 function Age({ born }) {

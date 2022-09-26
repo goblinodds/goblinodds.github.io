@@ -419,7 +419,7 @@ const Profiles = [
         born: '2001',
         ldr: ['Y'],
         loctype: ['flexible'],
-        notes: 'open to monogamy and polyamory. long distance is kinda scary but im willing to try it out:) hoping to find a partner i can call both my best friend and lover',
+        notes: 'open to monogamy and polyamory. long distance is kinda scary but im willing to try it out :) hoping to find a partner i can call both my best friend and lover',
         location: 'Quezon City, Philippines'
     },
     {
@@ -768,9 +768,110 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Washington state'
+    },
+    {
+        name: 'naia',
+        link: 'https://twitter.com/nbouscal',
+        gender: ['F'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['poly'],
+        born: '1990',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: ['London']
+    },
+    {
+        name: 'kayla',
+        link: 'https://twitter.com/Estimatrix',
+        gender: ['F'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1974',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Red Bank, New Jersey'
+    },
+    {
+        name: 'btoh',
+        link: 'https://twitter.com/btohtoh',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1998',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'London, UK (but from Singapore)'
+    },
+    {
+        name: 'jade',
+        link: 'https://jadecastillo.squarespace.com/',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1997',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: ['Texas/NY']
+    },
+    {
+        name: 'johnson',
+        link: 'https://twitter.com/justavagrant_',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        born: '1993',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Seattle, France, unknown'
+    },
+    {
+        name: 'dan k',
+        link: 'https://twitter.com/Yozarian22',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['poly'],
+        born: '1988',
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Austin',
+        notes: 'regular in the Texas burner community'
+    },
+    {
+        name: 'maryam',
+        link: 'https://twitter.com/MaryamAli_Khan',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1995',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Oxford',
+        notes: `psychologist doing moral psyc, here for a long-ish time. i make great playlists for everything (really), i think i'm funny, and i have great taste but sometimes i drink huel.`
+    },
+    {
+        name: 'mindfroth',
+        link: 'https://twitter.com/mindfroth',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1982',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Portland, OR'
+    },
+    {
+        name: 'shreeda',
+        link: 'https://cheerful-marmoset-af5.notion.site/Date-Me-09842fd0b938499fbbf82dfb8953e747',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono', 'poly'],
+        born: '1995',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Austin, Texas'
     }
 
-    // tiffinWA is #49 in form results - waiting on a link from her (or to figure out the email nonsense)
+    // mindfroth is #57
     // check email to see if tiffinWA sent a link
     // if you port the results over directly from form, remove: ava/postci_vi 
 

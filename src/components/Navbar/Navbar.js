@@ -3,16 +3,70 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+const menuOptions = {
+    main: [
+        'MEDIA',
+        'PROJECTS',
+        'SOCIAL',
+        'SUPPORT'
+    ],
+    media: [
+        'illustration',
+        'animation'
+    ],
+    projects: [
+        'community map',
+        'dating directory',
+        'compatibility quiz'
+    ],
+    social: [
+        'twitter',
+        'instagram',
+        'youtube'
+    ],
+    support: [
+        'patreon',
+        'ko-fi',
+        'redbubble'
+    ]
+}
 
-    const [showDropdown, setShowDropdown]=useState(false);
+export default function Navbar() {
 
-    const MenuItems = (props) => {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    // menu item JSX
+    const MenuItem = (props) => {
         return (
-            <Link className='navLink' to={props.link} onClick={e =>setShowDropdown(false)}>{props.title}</Link>
+            <Link className='navLink' to={props.link} onClick={() => setShowDropdown(false)}>{props.title}</Link>
         )
     }
-    
+
+    function MainMenu() {
+        return (
+            <div id='dropdown'>
+                <div className='menuItems'>
+                    <MenuItem link='video' title='video' />
+                    <MenuItem link='illustration' title='illustration' />
+                    <MenuItem link='tpot42' title='tpot for two' />
+                    <MenuItem link='goblinFriender' title='goblin friender' />
+                    <a href='https://github.com/goblinodds' target='_blank' rel='noopener noreferrer' className='navLink' onClick={() => setShowDropdown(false)}>github</a>
+                </div>
+            </div>
+        );
+    }
+
+    // CONTROLLED BY showDropdown
+    function Menu() {
+        return (
+            <div>
+                {
+                    showDropdown ? <MainMenu /> : null
+                }
+            </div>
+        )
+    }
+
     return (
         <div className='navbar'>
             <div className='navbarOptions'>
@@ -24,7 +78,8 @@ function Navbar() {
 
                 {/* HAMBURGER MENU */}
                 <div className='navRight'>
-                    <button className='menuButton' onClick={e =>setShowDropdown(!showDropdown)}>
+                    {/* toggles menu */}
+                    <button className='menuButton' onClick={() => setShowDropdown(!showDropdown)}>
                         <a href="#0">
                             <div className='menuBar'></div>
                             <div className='menuBar'></div>
@@ -33,35 +88,8 @@ function Navbar() {
                     </button>
                 </div>
             </div>
-            {/* ON HAMBURGER MENU CLICK, DISPLAYS OR HIDES MENU */}
-            <div>
-            {
-                showDropdown ? <div id='dropdown'>
-                        <div className='menuItems'>
-                            <MenuItems link='video'
-                                title='video'/>
-                            <MenuItems link='illustration' 
-                                title='illustration' />
-                            {/* <div className='navSublink'>projects</div> */}
-                            <MenuItems link='tpot42'
-                                title='tpot for two' />
-                            <MenuItems link='goblinFriender'
-                                title='goblin friender' />
-                            <a href='https://github.com/goblinodds' target='_blank' rel='noopener noreferrer' className='navLink' onClick={e =>setShowDropdown(false)}>github</a>
-                        </div>
-                    </div> : null 
-            }
-            </div>
+            {/* TOGGLED MENU */}
+            <Menu />
         </div>
     );
 }
-
-// links
-    // video
-    // illustration
-    // dev or projects
-        // tpot for two (tpot42)
-        // storyGen (WIP)
-        // github
-
-export default Navbar;

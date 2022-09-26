@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import Navbarv2 from './components/Navbar/Navbarv2';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Video from './pages/Video';
@@ -15,7 +15,7 @@ export function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbarv2 />
         {/* tells us to render only 1 route at a time */}
         {/* all routes in our app */}
         <Routes>

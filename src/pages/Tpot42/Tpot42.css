@@ -73,13 +73,25 @@ h3.MenuItem:hover {
 }
 
 .Info {
-    margin: 0 0 2vmin 1.25em;
+    margin: 0 0 2vmin 1.4em;
+    font-size: 2.3vmin;
 }
 
 @media (max-width: 460px) {
-    .Directories p {
-        font-size: 5vmin;
-        line-height: 5vmin;
+
+    .Name {
+        font-size: 4.25vmin;
+        line-height: 4.25vmin;
+    }
+
+    .Info {
+        font-size: 3.75vmin;
+        line-height: 3.75vmin;
+    }
+
+    .Tagline {
+        font-size: 4.25vmin;
+        line-height: 4.25vmin;
     }
     
     .Directories h1 {
