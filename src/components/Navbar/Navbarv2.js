@@ -140,7 +140,7 @@ function MenuItem ({ option }) {
     );
 }
 
-function SubmenuItem ({ option, setIsMenuOpen, isMenuOpen }) {
+function SubmenuItem ({ option, setIsMenuOpen }) {
 
     if (option.link) {
         return (
