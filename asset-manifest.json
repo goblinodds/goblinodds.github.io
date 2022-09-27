@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa157177.css",
+    "main.css": "/static/css/main.43571351.css",
     "main.js": "/static/js/main.29316b30.js",
     "static/media/lolly.png": "/static/media/lolly.1a8360ac877b4b70bd1f.png",
     "static/media/simler.jpg": "/static/media/simler.f2b913860232ae867739.jpg",
@@ -32,11 +32,11 @@
     "static/media/waterhouse.jpeg": "/static/media/waterhouse.6946c157392d6dd20e5d.jpeg",
     "static/media/atmylimit.jpg": "/static/media/atmylimit.316eef206e8633d3f21e.jpg",
     "index.html": "/index.html",
-    "main.fa157177.css.map": "/static/css/main.fa157177.css.map",
+    "main.43571351.css.map": "/static/css/main.43571351.css.map",
     "main.29316b30.js.map": "/static/js/main.29316b30.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa157177.css",
+    "static/css/main.43571351.css",
     "static/js/main.29316b30.js"
   ]
 }
