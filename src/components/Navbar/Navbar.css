@@ -71,6 +71,7 @@ a {
   margin: .5rem 2.5rem;
   font-size: 5rem;
   line-height: 4.5rem;
+  padding: .75vmin .5vmin 0 .5vmin;
 }
 
 #navLink:hover {
@@ -81,13 +82,15 @@ a {
 .navSubLink {
   color: white;
   display: flex;
-  margin: 0;
-  text-align: left;
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
-.navSubLink:hover {
+a {
+  color: white;
+}
+
+.subLinkText:hover {
   background-color: yellow;
   color:black;
 }
