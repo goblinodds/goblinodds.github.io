@@ -1,24 +1,6 @@
 COMMIT NOTES
 previous commit: shrank header and footer, changed font sizes on Tpot42, introduced random ordering to Tpot 42
-current commit: 
-
-TO DO
-    MENU WITH SUBMENUS or NEW ORG so you can get places easily
-        MEDIA
-            illustration
-            animation
-        PROJECTS
-            ingroup map
-            tpot for two
-            goblin friender
-        SOCIAL
-            twitter <-- link to code twitter
-            instagram
-            youtube
-        SUPPORT
-            patreon
-            ko-fi
-            redbubble
+current commit:
 
     TPOT 42
         add an age filter
