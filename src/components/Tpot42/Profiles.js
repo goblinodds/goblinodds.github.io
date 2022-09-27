@@ -908,7 +908,7 @@ const Profiles = [
     },
     {
         name: 'kirtan',
-        link: 'www.instagram.com/k_s_2802',
+        link: 'https://www.instagram.com/k_s_2802/',
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
