@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
+<<<<<<< HEAD
 const menus = [
     {
         label: 'MEDIA',
@@ -70,6 +71,81 @@ const menus = [
     }
 ]
 
+=======
+// style
+    // seem to need the dropdown to be styled if you want the full bg to be black
+    // but you need to toggle whether the full thing is visible or not if you want the black to go away
+    // when it's closed
+// maybe, animation lol
+
+const menus = [
+    {
+        label: 'MEDIA',
+        submenu: [
+            {
+                label: 'illustration',
+                link: 'illustration'
+            },
+            {
+                label: 'animation',
+                link: 'video'
+            }
+        ]
+    },
+    {
+        label: 'PROJECTS',
+        submenu: [
+            {
+                label: 'community map',
+                href: 'https://twitter.com/goblinodds/status/1399931683969724417?s=20&t=3wD6-6f8IdJTeShAkZqs0Q'
+            },
+            {
+                label: 'dating directory',
+                link: 'tpot42'
+            },
+            {
+                label: 'friendship quiz',
+                link: 'goblinfriender'
+            }
+        ]
+    },
+    {
+        label: 'SOCIAL',
+        submenu: [
+            {
+                label: 'twitter',
+                href: 'https://twitter.com/goblincodes'
+            },
+            {
+                label: 'instagram',
+                href: 'https://www.instagram.com/goblinodds/'
+            },
+            {
+                label: 'youtube',
+                href: 'https://www.youtube.com/c/goblinodds'
+            }
+        ]
+    },
+    {
+        label: 'SUPPORT',
+        submenu: [
+            {
+                label: 'patreon',
+                href: 'https://www.patreon.com/goblinodds'
+            },
+            {
+                label: 'ko-fi',
+                href: 'https://ko-fi.com/goblinodds'
+            },
+            {
+                label: 'redbubble',
+                href: 'https://cescaspecs.redbubble.com'
+            }
+        ]
+    }
+]
+
+>>>>>>> 072c078 (it wants me to commit something here as well)
 // MAIN FUNCTION
 export default function Navbar() {
 
