@@ -1,0 +1,10 @@
+TO DO
+    TPOT 42
+        add an age filter
+        add a second location filter
+        scrolling (or pages) so you can see there are other directories
+        TANUKI suggestion re: CSS
+            https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
+        black borders around menu names onclick
+
+figure out how to ignore notes file without git deleting it 50% of the time TT_TT
