@@ -54,12 +54,6 @@ a {
   color:black;
 }
 
-
-/* IF YOU WANT THE FULL BG TO BE BLACK 
-#dropdown {
-  height: 100vh;
-} */
-
 #subMenu {
   margin: 0 4rem 1rem 4rem;
 }
@@ -74,9 +68,9 @@ a {
 #navLink {
   color: white;
   display: inline-block;
-  margin: 1rem 2.5rem;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  margin: .5rem 2.5rem;
+  font-size: 5rem;
+  line-height: 4.5rem;
 }
 
 #navLink:hover {
@@ -89,8 +83,8 @@ a {
   display: flex;
   margin: 0;
   text-align: left;
-  font-size: 1.75rem;
-  line-height: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .navSubLink:hover {
@@ -99,7 +93,7 @@ a {
 }
 
 /* FOR SMALLER SCREEN SIZES */
-/* 
+
 @media (max-width: 460px) {
   .navLeft h1 {
     font-size: 15vmin;
@@ -111,9 +105,19 @@ a {
     margin: 1.5vmin;
   }
 
-  .navLink {
-    margin: 5vmin 10vmin;
-    text-align: left;
+  #menuItems {
+    margin: 2rem 0 0 0rem;
   }
 
-} */
+  #navLink {
+    margin: .25rem 2.5rem;
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+
+  .navSubLink {
+    font-size: 2.3rem;
+    line-height: 3.25rem;  
+  }
+
+}
