@@ -869,11 +869,59 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Austin, Texas'
+    },
+    {
+        name: 'hormeze',
+        link: 'https://hormeze.com/',
+        twitter: 'https://twitter.com/hormeze',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '1995',
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'Berkeley',
+        notes: 'currently not a face account but u can dm me for pics'
+    },
+    {
+        name: 'leah prime',
+        link: 'https://twitter.com/leahprime',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        born: '1986',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'NY CO … independent',
+        notes: 'three cats, many books'
+    },
+    {
+        name: 're',
+        link: 'https://twitter.com/Actualwebutante',
+        gender: ['F'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['mono', 'poly'],
+        born: '1995',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Washington DC',
+    },
+    {
+        name: 'kirtan',
+        link: 'https://www.instagram.com/k_s_2802/',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        born: '2002',
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Cumming, GA',
+        notes: 'late bloomer ig idk (yes have never been in a relationship before) currently trying to find a mix between grinding for a career in tech and not missing out on life. honestly. long distance seems to be the only option at this time if not anybody around me.'
     }
 
-    // mindfroth is #57
-    // check email to see if tiffinWA sent a link
+    // kirtan is #62
     // if you port the results over directly from form, remove: ava/postci_vi 
+    // AND sk8r/broitrvtrvned (see dms if you can't figure out who this is)
 
     // SUGGESTION
     // poll twitter to see which is more intuitive??

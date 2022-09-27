@@ -138,15 +138,19 @@ function SubmenuItem({ option, setIsMenuOpen }) {
 
     if (option.link) {
         return (
-            <Link className='navSubLink' to={option.link} onClick={() => setIsMenuOpen(false)}>
-                {option.label}
-            </Link>
+            <div className='navSubLink'>
+                <Link className='subLinkText' to={option.link} onClick={() => setIsMenuOpen(false)}>
+                    {option.label}
+                </Link>
+            </div>
         );
     } else {
         return (
-            <a href={option.href} className='navSubLink' target='_blank' rel='noopener noreferrer' >
-                {option.label}
-            </a>
+            <div className='navSubLink'>
+                <a href={option.href} className='navSubLink' target='_blank' rel='noopener noreferrer' >
+                    {option.label}
+                </a>
+            </div>
         );
     }
 }
