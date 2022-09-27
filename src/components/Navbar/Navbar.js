@@ -3,12 +3,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-// style
-    // seem to need the dropdown to be styled if you want the full bg to be black
-    // but you need to toggle whether the full thing is visible or not if you want the black to go away
-    // when it's closed
-// maybe, animation lol
-
 const menus = [
     {
         label: 'MEDIA',
