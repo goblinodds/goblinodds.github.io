@@ -54,11 +54,11 @@ a {
   color:black;
 }
 
-
-IF YOU WANT THE FULL BG TO BE BLACK 
+/* 
 #dropdown {
   height: 100vh;
-}
+  background-color: black;
+} */
 
 #subMenu {
   margin: 0 4rem 1rem 4rem;
@@ -99,7 +99,7 @@ IF YOU WANT THE FULL BG TO BE BLACK
 }
 
 /* FOR SMALLER SCREEN SIZES */
-/* 
+
 @media (max-width: 460px) {
   .navLeft h1 {
     font-size: 15vmin;
@@ -111,9 +111,19 @@ IF YOU WANT THE FULL BG TO BE BLACK
     margin: 1.5vmin;
   }
 
-  .navLink {
-    margin: 5vmin 10vmin;
-    text-align: left;
+  #menuItems {
+    margin: 2rem 0 0 0rem;
   }
 
-} */
+  #navLink {
+    margin: .25rem 2.5rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .navSubLink {
+    font-size: 1.3rem;
+    line-height: 2.25rem;  
+  }
+
+}

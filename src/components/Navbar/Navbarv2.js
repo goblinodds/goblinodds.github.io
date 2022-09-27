@@ -35,7 +35,7 @@ const menus = [
                 link: 'tpot42'
             },
             {
-                label: 'compatibility quiz',
+                label: 'friendship quiz',
                 link: 'goblinfriender'
             }
         ]
@@ -79,9 +79,7 @@ const menus = [
 // MAIN FUNCTION
 export default function Navbar() {
 
-    //
     // TOGGLES DROPDOWN MENUS
-    // 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -95,7 +93,9 @@ export default function Navbar() {
                     <Hamburger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
                 </div>
             </div>
-            <div id='dropdown'>{isMenuOpen && <Menu menus={menus} />}</div>
+            <div id='dropdown' style={activeMenuStyle(isMenuOpen)}>
+                {isMenuOpen && <Menu menus={menus} />}
+            </div>
         </div>
     );
 }
@@ -157,4 +157,7 @@ function SubmenuItem({ option, setIsMenuOpen }) {
     }
 }
 
-
+// STYLING
+const height = (active) => active ? '100vh' : '';
+const background = (active) => active ? 'black' : '';
+const activeMenuStyle = (active) => ({ height: height(active), background: background(active) })
