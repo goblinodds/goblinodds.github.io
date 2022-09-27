@@ -55,10 +55,10 @@ a {
 }
 
 
-/* IF YOU WANT THE FULL BG TO BE BLACK 
+IF YOU WANT THE FULL BG TO BE BLACK 
 #dropdown {
   height: 100vh;
-} */
+}
 
 #subMenu {
   margin: 0 4rem 1rem 4rem;
@@ -74,7 +74,7 @@ a {
 #navLink {
   color: white;
   display: inline-block;
-  margin: 1rem 2.5rem;
+  margin: .5rem 2.5rem;
   font-size: 2.5rem;
   line-height: 2.5rem;
 }

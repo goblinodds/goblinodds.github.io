@@ -3,12 +3,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-// 
-// set it up so when you toggle a submenu it *closes the other submenus*
 // style
     // seem to need the dropdown to be styled if you want the full bg to be black
-        // but you need to toggle whether the full thing is visible or not if you want the black to go away
-        // when it's closed
+    // but you need to toggle whether the full thing is visible or not if you want the black to go away
+    // when it's closed
 // maybe, animation lol
 
 const menus = [
@@ -51,7 +49,7 @@ const menus = [
             },
             {
                 label: 'instagram',
-                href: 'https://www.instagram.com/goblinodds/'                
+                href: 'https://www.instagram.com/goblinodds/'
             },
             {
                 label: 'youtube',
@@ -76,7 +74,7 @@ const menus = [
             }
         ]
     }
-]        
+]
 
 // MAIN FUNCTION
 export default function Navbar() {
@@ -94,7 +92,7 @@ export default function Navbar() {
                     <Link to='/'><h1>goblinodds</h1></Link>
                 </div>
                 <div className='navRight'>
-                    <Hamburger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen}/>
+                    <Hamburger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
                 </div>
             </div>
             <div id='dropdown'>{isMenuOpen && <Menu menus={menus} />}</div>
@@ -103,9 +101,9 @@ export default function Navbar() {
 }
 
 // COMPONENTS
-function Hamburger ({ setIsMenuOpen , isMenuOpen }) {
+function Hamburger({ setIsMenuOpen, isMenuOpen }) {
     return (
-        <button className='menuButton' onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}>
+        <button className='menuButton' onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <a href="#0">
                 <div className='menuBar'></div>
                 <div className='menuBar'></div>
@@ -115,32 +113,34 @@ function Hamburger ({ setIsMenuOpen , isMenuOpen }) {
     );
 }
 
-function Menu ({ menus }) {
+function Menu({ menus }) {
+
+    const [activeMenu, setActiveMenu] = useState(0);
 
     return (
         <div id='menuItems'>
-            { menus && menus.map(menu => <MenuItem option={menu}  key={menu.label}/>) }
+            {menus && menus.map(menu => 
+                <MenuItem key={menu.label} option={menu} isActive={activeMenu === menu.label} setActiveMenu={setActiveMenu} label={menu.label}/>
+            )}
         </div>
     );
 }
 
-function MenuItem ({ option }) {
-
-    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+function MenuItem({ option, isActive, setActiveMenu, label }) {
 
     return (
         <div>
-            <h1 id='navLink' onClick={() => setIsSubmenuOpen(isSubmenuOpen ? false : true)}>
+            <h1 id='navLink' onClick={() => setActiveMenu(isActive ? null : label)}>
                 {option.label}
             </h1>
             <div id='subMenu'>
-                {isSubmenuOpen && option.submenu.map(menu => <SubmenuItem option={menu} key={menu.label} />)}
+                {isActive && option.submenu.map(menu => <SubmenuItem option={menu} key={menu.label} />)}
             </div>
         </div>
     );
 }
 
-function SubmenuItem ({ option, setIsMenuOpen }) {
+function SubmenuItem({ option, setIsMenuOpen }) {
 
     if (option.link) {
         return (
