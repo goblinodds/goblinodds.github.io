@@ -1,5 +1,5 @@
 # source published here (if it's not up to date, contact goblinodds@gmail.com)
-https://github.com/goblinodds/goblinodds.github.io/tree/src
+https://github.com/goblinodds/goblinodds.github.io/tree/source
 
 # Getting Started with Create React App
 
