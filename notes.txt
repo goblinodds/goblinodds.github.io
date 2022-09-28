@@ -1,8 +1,5 @@
 TO DO
 
-#1 TPOT 42
-check out the TODO in "Profiles.js," then get the filter working in Tpot42.js
-
     GOBLINSITE
         figure out why font sizes are wrong
             https://twitter.com/BrendanBycroft/status/1574898323143925760?s=20&t=Nhr0o8WcRWhUxP_BDfcs0A
@@ -18,8 +15,7 @@ check out the TODO in "Profiles.js," then get the filter working in Tpot42.js
 
     TPOT 42
         move entries closer to the left in mobile view
-        add an age filter
-        add a second location filter
+        add a country filter
         scrolling (or pages) so you can see there are other directories
         TANUKI suggestion re: CSS
             https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
