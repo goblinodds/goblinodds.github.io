@@ -80,7 +80,8 @@ const Profiles = [
         type: ['mono', 'poly'],
         ageBracket: 'unspecified',
         loctype: ['unspecified'],
-        location: 'North Carolina'
+        location: 'North Carolina',
+        continent: ['North America']
     },
     {
         name: 'orb',
@@ -91,6 +92,7 @@ const Profiles = [
         type: ['mono'],
         ageBracket: 'unspecified',
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'guilherme',
@@ -102,7 +104,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'Sao Paolo'
+        location: 'Sao Paolo',
+        continent: ['South America']
     },
     {
         name: 'fractal authenticity',
@@ -114,7 +117,8 @@ const Profiles = [
         notes: 'cishet / (mostly) monogamous / long distance is scary but maybe?',
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'Colorado'
+        location: 'Colorado',
+        continent: ['North America']
     },
     {
         name: 'yatharth',
@@ -127,7 +131,8 @@ const Profiles = [
         featuredTweet: 'https://twitter.com/AskYatharth/status/1384028089659707406',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Venice (Los Angeles)'
+        location: 'Venice (Los Angeles)',
+        continent: ['North America']
 
     },
     {
@@ -139,7 +144,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Austin, TX'
+        location: 'Austin, TX',
+        continent: ['North America']
     },
     {
         name: 'cris p. wicks',
@@ -150,7 +156,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Chicago'
+        location: 'Chicago',
+        continent: ['North America']
     },
     {
         name: 'pieratt',
@@ -161,7 +168,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Boston(ish)'
+        location: 'Boston(ish)',
+        continent: ['North America']
     },
     {
         name: 'kumbuchaqueen',
@@ -172,6 +180,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     // TODO: UPDATE WITH ATTRACTED + TYPE
     {
@@ -183,6 +192,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'matthew skala',
@@ -193,6 +203,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'gustavo lacerda',
@@ -203,6 +214,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'john ohno',
@@ -213,6 +225,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'elli',
@@ -223,7 +236,8 @@ const Profiles = [
         attracted: ['unspecified'],
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Massachusetts'
+        location: 'Massachusetts',
+        continent: ['North America']
     },
     {
         name: 'rob hardy',
@@ -236,7 +250,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'might be open to short-term long-distance',
-        location: 'Tucson / actively looking for new places to move and put down roots'
+        location: 'Tucson / actively looking for new places to move and put down roots',
+        continent: ['North America']
     },
     {
         name: 'zmavli caimle',
@@ -246,7 +261,8 @@ const Profiles = [
         type: ['mono'],
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
-        loctype: ['unspecified']
+        loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'wiskerz',
@@ -257,7 +273,8 @@ const Profiles = [
         attracted: ['F'],
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'south of France'
+        location: 'south of France',
+        continent: ['Europe']
     },
     {
         name: 'neil thawani',
@@ -268,6 +285,7 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
+        continent: ['unspecified'],
         notes: '(mostly) interested in women / (mostly) monogamous'
     },
     {
@@ -278,7 +296,8 @@ const Profiles = [
         type: ['poly'],
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
-        loctype: ['unspecified']
+        loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'laura sofia',
@@ -289,7 +308,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
-        location: 'Ivory Coast'
+        location: 'Ivory Coast',
+        continent: ['Africa']
     },
     {
         name: 'jewel andraia',
@@ -301,7 +321,8 @@ const Profiles = [
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         notes: 'if i don\'t communicate queer trans bi ADHD solo-poly by the end of the first date, i didn\'t overshare properly',
-        location: 'Bay Area'
+        location: 'Bay Area',
+        continent: ['North America']
     },
     {
         name: 'patrick farley',
@@ -312,7 +333,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'NYC'
+        location: 'NYC',
+        continent: ['North America']
     },
     {
         name: 'brooke',
@@ -324,7 +346,8 @@ const Profiles = [
         notes: 'if the right person comes along and they don\'t check some of those boxes then i will change my boxes',
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'California'
+        location: 'California',
+        continent: ['North America']
     },
     {
         name: 'josh mcmichael',
@@ -336,7 +359,8 @@ const Profiles = [
         notes: 'interested in relationship as a container for growth, recovery, companionship, exploration',
         ldr: ['N'],
         loctype: ['unspecified'],
-        location: 'St. Lous, MO'
+        location: 'St. Lous, MO',
+        continent: ['North America']
     },
     {
         name: 'andrew',
@@ -347,7 +371,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'Ann Arbor, MI'
+        location: 'Ann Arbor, MI',
+        continent: ['North America']
     },
     {
         name: 'bruno',
@@ -359,8 +384,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1982)}`,
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'Cincinnati, OH'
-
+        location: 'Cincinnati, OH',
+        continent: ['North America']
     },
     {
         name: 'violet',
@@ -372,7 +397,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1984)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Minneapolis'
+        location: 'Minneapolis',
+        continent: ['North America']
     },
     {
         name: 'adam axolotl',
@@ -385,7 +411,8 @@ const Profiles = [
         ldr: ['N'],
         loctype: ['fixed'],
         notes: 'physicist doing AI safety, seeking life partner, can tell you lots more via DM :)',
-        location: 'SF Bay Area (Berkeley)'
+        location: 'SF Bay Area (Berkeley)',
+        continent: ['North America']
     },
     {
         name: 'joyoptimizer',
@@ -395,7 +422,8 @@ const Profiles = [
         type: ['mono'],
         ageBracket: 'unspecified',
         ldr: ['Y'],
-        loctype: ['unspecified']
+        loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'james',
@@ -408,7 +436,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'will be traveling to the west coast in a month or two. no permanent or even semi-permanent residence in my future yet.',
-        location: 'Plattsburgh, NY'
+        location: 'Plattsburgh, NY',
+        continent: ['North America']
     },
     {
         name: 'ethan',
@@ -420,7 +449,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Los Angeles / might be moving soon'
+        location: 'Los Angeles / might be moving soon',
+        continent: ['North America']
     },
     {
         name: 'chris cassano',
@@ -434,7 +464,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'blessed with default happy brain and boundless optimism.  i sing to my cat everyday.',
-        location: 'SF Bay Area / Orlando, FL'
+        location: 'SF Bay Area / Orlando, FL',
+        continent: ['North America']
     },
     {
         name: 'bhargab',
@@ -448,7 +479,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Nepal'
+        location: 'Nepal',
+        continent: ['Asia']
     },
     {
         name: 'tess',
@@ -461,7 +493,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'trans; tech; friendly',
-        location: 'Portland, OR'
+        location: 'Portland, OR',
+        continent: ['North America']
     },
     {
         name: 'catern',
@@ -473,7 +506,8 @@ const Profiles = [
         type: ['mono', 'poly'],
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'NYC'
+        location: 'NYC',
+        continent: ['North America']
     },
     {
         name: 'suru!',
@@ -485,7 +519,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['unspecified'],
-        location: 'Madison, WI at the moment'
+        location: 'Madison, WI at the moment',
+        continent: ['North America']
     },
     {
         name: 'martin',
@@ -496,7 +531,8 @@ const Profiles = [
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['fixed'],
-        location: 'Germany'
+        location: 'Germany',
+        continent: ['Europe']
     },
     {
         name: 'sophie',
@@ -508,7 +544,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Qc'
+        location: 'Qc',
+        continent: ['North America']
     },
     {
         name: 'lex',
@@ -521,7 +558,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'open to monogamy and polyamory. long distance is kinda scary but im willing to try it out :) hoping to find a partner i can call both my best friend and lover',
-        location: 'Quezon City, Philippines'
+        location: 'Quezon City, Philippines',
+        continent: ['Asia']
     },
     {
         name: 'harlan',
@@ -533,7 +571,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Pittsburgh, PA / will probably move back to LA at some point'
+        location: 'Pittsburgh, PA / will probably move back to LA at some point',
+        continent: ['North America']
     },
     {
         name: 'dan elton',
@@ -545,7 +584,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Boston, MA'
+        location: 'Boston, MA',
+        continent: ['North America']
     },
     {
         name: 'jez',
@@ -558,7 +598,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'i identify as the D in D/s',
-        location: 'NYC (actually Jersey City, but close)'
+        location: 'NYC (actually Jersey City, but close)',
+        continent: ['North America']
     },
     {
         name: 'sadmoonanalog',
@@ -571,7 +612,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'avid lifter (🏋️‍♀️), amateur potter (🏺). writer by profession. mid-twenties, swolethicc, & greytribe. may not want kids but still wants to build together.',
-        location: 'Austin, TX'
+        location: 'Austin, TX',
+        continent: ['North America']
     },
     {
         name: 'christine',
@@ -584,7 +626,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'socialist, atheist, optimistic nihilist, spectrum member. into a wide variety of hobbies and esoterica like anime, video games, synthesizers, astronomy, scifi, programming, Magic, etc. no kids, no marriages, easy going. i lift and get outdoors sometimes.',
-        location: 'Seattle'
+        location: 'Seattle',
+        continent: ['North America']
     },
     {
         name: 'golgi',
@@ -596,7 +639,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Detroit, Michigan'
+        location: 'Detroit, Michigan',
+        continent: ['North America']
     },
     {
         name: 'torrel',
@@ -608,7 +652,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Germany'
+        location: 'Germany',
+        continent: ['Europe']
     },
     {
         name: 'j.r.',
@@ -621,7 +666,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'short term long distance okay; likely heading back to the Bay Area in April 2023',
-        location: 'New Zealand'
+        location: 'New Zealand',
+        continent: ['Oceania']
     },
     {
         name: 'alex',
@@ -633,7 +679,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1991)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        location: 'London, UK'
+        location: 'London, UK',
+        continent: ['Europe']
     },
     {
         name: 'kaixi',
@@ -647,7 +694,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'uhhhh 6 foot at least, and really gorgeous goofy ambitious and genius creative men onlyyyy',
-        location: 'Bay Area / LA'
+        location: 'Bay Area / LA',
+        continent: ['North America']
     },
     {
         name: 'renee',
@@ -659,7 +707,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        location: 'Chicago'
+        location: 'Chicago',
+        continent: ['North America']
     },
     {
         name: 'kevin walker',
@@ -672,7 +721,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'INFJ / sad about the past and worried for the future, but just living for tomorrow.',
-        location: 'San Diego'
+        location: 'San Diego',
+        continent: ['North America']
     },
     {
         name: 'mercer',
@@ -684,7 +734,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1999)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        location: 'NYC'
+        location: 'NYC',
+        continent: ['North America']
     },
     {
         name: 'delen',
@@ -697,7 +748,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: "i'm pretty cool",
-        location: 'Philadelphia'
+        location: 'Philadelphia',
+        continent: ['North America']
     },
     {
         name: 'shailja',
@@ -709,7 +761,8 @@ const Profiles = [
         ageBracket: `${ageBracket(2002)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        location: 'Mumbai'
+        location: 'Mumbai',
+        continent: ['Asia']
     },
     {
         name: 'hek',
@@ -722,7 +775,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'i bounce up and down the WC all the time, looking to split living between LA and PNW - open to BC coastal. Freq. climber/hiker/camping/hang gliding.',
-        location: 'West Coast'
+        location: 'West Coast',
+        continent: ['North America']
     },
     {
         name: 'braverius',
@@ -734,7 +788,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: '~Seattle'
+        location: '~Seattle',
+        continent: ['North America']
     },
     {
         name: 'graham bessellieu',
@@ -746,7 +801,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Central NJ'
+        location: 'Central NJ',
+        continent: ['North America']
     },
     {
         name: 'chris',
@@ -758,7 +814,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1993)}`,
         ldr: ['N'],
         loctype: ['fixed'],
-        location: 'NYC'
+        location: 'NYC',
+        continent: ['North America']
     },
     {
         name: 'tiger',
@@ -771,7 +828,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'post-op trans woman who missed out on her teenage years and now wants to fuck around',
-        location: 'Gothenburg, Sweden'
+        location: 'Gothenburg, Sweden',
+        continent: ['Europe']
     },
     {
         name: 'brian',
@@ -784,7 +842,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: `i love my (in-person) job, but, one way or another, i imagine i'll be free to move someday.`,
-        location: ['Metro DC (Northern Virginia']
+        location: 'Metro DC (Northern Virginia',
+        continent: ['North America']
     },
     {
         name: 'matthew',
@@ -797,7 +856,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: `into left wing politics (though i am a bit idiosyncratic, see my tweets), lover of music (house/techno/ambient really any kind of electronic music). i tend to be a cynical but optimistic person. open to a lot of things but i am primary looking for a loving monogamous relationship.`,
-        location: 'East Tennessee'
+        location: 'East Tennessee',
+        continent: ['North America']
     },
     {
         name: 'haarball',
@@ -809,7 +869,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1986)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Oslo, Norway'
+        location: 'Oslo, Norway',
+        continent: ['Europe']
     },
     {
         name: 'daniel',
@@ -822,7 +883,8 @@ const Profiles = [
         ldr: ['N'],
         loctype: ['flexible'],
         notes: 'physicist in tech, likes lots of things, fun to talk to',
-        location: 'Oxford, UK'
+        location: 'Oxford, UK',
+        continent: ['Europe']
     },
     {
         name: 'sofy',
@@ -835,7 +897,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'i’m working on a date me doc atm. but in a nutshell i’m looking for a life partner, someone to go on a secular spiritual journey and build an amazing life together filled with love, books and mutual growth and support',
-        location: 'Bay Area'
+        location: 'Bay Area',
+        continent: ['North America']
     },
     {
         name: 'observer of suns',
@@ -849,7 +912,8 @@ const Profiles = [
         ldr: ['N'],
         loctype: ['fixed'],
         notes: 'i’m a graduate student in computer science!',
-        location: 'US East Coast (DM for details)'
+        location: 'US East Coast (DM for details)',
+        continent: ['North America']
     },
     {
         name: 'arin',
@@ -862,7 +926,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: `transitioning to blockchain developer. / owns every kind of chapstick. / default optimism. / weeeeeeeeeeee`,
-        location: 'Stanford, CA'
+        location: 'Stanford, CA',
+        continent: ['North America']
     },
     {
         name: 'jeffrey ladish',
@@ -874,7 +939,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1991)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'SF Bay Area'
+        location: 'SF Bay Area',
+        continent: ['North America']
     },
     {
         name: 'catherio',
@@ -886,7 +952,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1990)}`,
         ldr: ['N'],
         loctype: ['flexible'],
-        location: 'Berkeley'
+        location: 'Berkeley',
+        continent: ['North America']
     },
     {
         name: 'tiffinWA',
@@ -898,7 +965,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1980)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Washington state'
+        location: 'Washington state',
+        continent: ['North America']
     },
     {
         name: 'naia',
@@ -910,7 +978,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1990)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        location: ['London']
+        location: ['London'],
+        continent: ['Europe']
     },
     {
         name: 'kayla',
@@ -922,7 +991,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1974)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Red Bank, New Jersey'
+        location: 'Red Bank, New Jersey',
+        continent: ['North America']
     },
     {
         name: 'btoh',
@@ -934,7 +1004,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'London, UK (but from Singapore)'
+        location: 'London, UK (but from Singapore)',
+        continent: ['Europe']
     },
     {
         name: 'jade',
@@ -946,7 +1017,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: ['Texas/NY']
+        location: ['Texas/NY'],
+        continent: ['North America']
     },
     {
         name: 'johnson',
@@ -958,7 +1030,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Seattle, France, unknown'
+        location: 'Seattle, France, unknown',
+        continent: ['North America', 'Europe']
     },
     {
         name: 'dan k',
@@ -971,7 +1044,8 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'Austin',
-        notes: 'regular in the Texas burner community'
+        continent: ['North America'],
+        notes: 'regular in the Texas burner community',
     },
     {
         name: 'maryam',
@@ -984,6 +1058,7 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Oxford',
+        continent: ['Europe'],
         notes: `psychologist doing moral psyc, here for a long-ish time. i make great playlists for everything (really), i think i'm funny, and i have great taste but sometimes i drink huel.`
     },
     {
@@ -996,7 +1071,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1982)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Portland, OR'
+        location: 'Portland, OR',
+        continent: ['North America']
     },
     {
         name: 'shreeda',
@@ -1008,7 +1084,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
-        location: 'Austin, Texas'
+        location: 'Austin, Texas',
+        continent: ['North America']
     },
     {
         name: 'hormeze',
@@ -1022,6 +1099,7 @@ const Profiles = [
         ldr: ['N'],
         loctype: ['fixed'],
         location: 'Berkeley',
+        continent: ['North America'],
         notes: 'currently not a face account but u can dm me for pics'
     },
     {
@@ -1035,6 +1113,7 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'NY CO … independent',
+        continent: ['North America'],
         notes: 'three cats, many books'
     },
     {
@@ -1048,6 +1127,7 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Washington DC',
+        continent: ['North America']
     }
 
     // kirtan is #62 (but wanted to be removed)

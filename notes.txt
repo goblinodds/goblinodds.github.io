@@ -14,7 +14,6 @@ TO DO
     IDOL MGR CARD GAME
 
     TPOT 42
-        move entries closer to the left in mobile view
         add a country filter
         scrolling (or pages) so you can see there are other directories
         TANUKI suggestion re: CSS

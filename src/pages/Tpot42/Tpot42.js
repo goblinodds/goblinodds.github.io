@@ -38,6 +38,15 @@ const menuOptions = {
         { label: 'FIXED', value: 'fixed' },
         { label: 'FLEXIBLE', value: 'flexible' },
         { label: '??', value: 'unspecified' }
+    ],
+    continent: [
+        { label: 'AF', value: 'Africa'},
+        { label: 'AS', value: 'Asia'},
+        { label: 'EU', value: 'Europe'},
+        { label: 'NA', value: 'North America'},
+        { label: 'OC', value: 'Oceania'},
+        { label: 'SA', value: 'South America'},
+        { label: '??', value: 'unspecified'}
     ]
 }
 
@@ -128,12 +137,17 @@ export default function Tpot42() {
                 <h3 onClick={() => { toggleDropdown('attracted') }} style={activeMenuStyle(filters['attracted'])}>{menuDisplay('attracted', 'ATTRACTED TO')}</h3>
                 <p className='FilterSentence'>//</p>
                 <h3 onClick={() => { toggleDropdown('type') }} style={activeMenuStyle(filters['type'])}>{menuDisplay('type', 'MONO/POLY')}</h3>
-                <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('ageBracket') }} style={activeMenuStyle(filters['ageBracket'])}>{menuDisplay('ageBracket', 'AGE')}</h3>
             </div>
 
-            {(activeDropdown === 'attracted' || activeDropdown === 'type' || activeDropdown === 'ageBracket') && currentDropdown}
+            {(activeDropdown === 'attracted' || activeDropdown === 'type') && currentDropdown}
 
+            <div className='FilterMenu'>
+            <h3 onClick={() => { toggleDropdown('ageBracket') }} style={activeMenuStyle(filters['ageBracket'])}>{menuDisplay('ageBracket', 'AGE')}</h3>
+                <p className='FilterSentence'>//</p>
+                <h3 onClick={() => { toggleDropdown('continent') }} style={activeMenuStyle(filters['continent'])}>{menuDisplay('continent', 'CONTINENT')}</h3>
+            </div>
+
+            {(activeDropdown === 'ageBracket' || activeDropdown === 'continent') && currentDropdown}
 
             <div className='Directory'>
                 {Profiles
