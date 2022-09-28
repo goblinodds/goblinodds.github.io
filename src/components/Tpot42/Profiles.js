@@ -7,6 +7,69 @@
 // if there's a filter for it, there must be a field there, or "includes" breaks
 // links MUST start with http:// or https://
 
+
+//
+// AGE ESTIMATOR
+//
+// TODO break out the approx age function that's used in both of these
+
+function ageBracket(born) {
+    // current year
+    let date = new Date().getFullYear();
+    // approximate age based on birth year
+    let age = date - born;
+
+    if (age < 30) {
+        return '<30'
+    } else if (age >40) {
+        return '>40'
+    } else {
+        return '30-40'
+    }
+}
+
+// TODO refactor this using modulo
+function ageDisplay(born) {
+    // current year
+    let date = new Date().getFullYear();
+    // approximate age based on birth year
+    let age = date - born;
+
+    // no minors allowed, no ancients expected
+    if (age < 18 || age > 99) {
+        return '(this entry is broken, please notify goblin)';
+    }
+
+    return `${earlyMidLate(age)} ${decade(age)}`;
+}
+
+const earlyMidLate = (age) => {
+
+    let secondDigit = age.toString()[1];
+
+    if (secondDigit <= 3) {
+        return 'early';
+    } else if (secondDigit >= 4 && secondDigit <= 6) {
+        return 'mid';
+    } else {
+        return 'late';
+    }
+
+}
+
+const decade = (age) => {
+    if (age < 20) {
+        return 'teens';
+    } else {
+        // returns the first digit of the listed age
+        return age.toString()[0] + '0s';
+    }
+}
+
+//
+// ENTRIES
+//
+
 const Profiles = [
     {
         name: 'lovetheusers',
@@ -15,6 +78,7 @@ const Profiles = [
         attracted: ['F'],
         ldr: ['unspecified'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         loctype: ['unspecified'],
         location: 'North Carolina'
     },
@@ -25,6 +89,7 @@ const Profiles = [
         attracted: ['F'],
         ldr: ['unspecified'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         loctype: ['unspecified'],
     },
     {
@@ -34,6 +99,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'Sao Paolo'
@@ -44,6 +110,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         notes: 'cishet / (mostly) monogamous / long distance is scary but maybe?',
         ldr: ['Y'],
         loctype: ['unspecified'],
@@ -55,6 +122,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         twitter: 'https://twitter.com/AskYatharth',
         featuredTweet: 'https://twitter.com/AskYatharth/status/1384028089659707406',
         ldr: ['unspecified'],
@@ -68,6 +136,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         location: 'Austin, TX'
@@ -78,6 +147,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         location: 'Chicago'
@@ -88,6 +158,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         location: 'Boston(ish)'
@@ -98,6 +169,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
     },
@@ -108,6 +180,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
     },
@@ -117,16 +190,17 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
     },
-    // TODO: UPDATE WITH ATTRACTED + TYPE
     {
         name: 'gustavo lacerda',
         link: 'https://docs.google.com/document/d/1khmwYjPD7cjIC6ssSdH2pYB9BfGCsKvjbrvZoGThkzc/edit?usp=sharing',
         gender: ['M'],
         attracted: ['unspecified'],
         type: ['unspecified'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
     },
@@ -136,6 +210,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
     },
@@ -144,6 +219,7 @@ const Profiles = [
         link: 'https://timeinsensitive.life/date-me/',
         gender: ['M', 'NB'],
         type: ['unspecified'],
+        ageBracket: 'unspecified',
         attracted: ['unspecified'],
         ldr: ['unspecified'],
         loctype: ['unspecified'],
@@ -156,6 +232,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'might be open to short-term long-distance',
@@ -167,6 +244,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['M'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified']
     },
@@ -175,6 +253,7 @@ const Profiles = [
         link: 'https://wiskerz.me/date/',
         gender: ['M'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         attracted: ['F'],
         ldr: ['unspecified'],
         loctype: ['unspecified'],
@@ -186,6 +265,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         notes: '(mostly) interested in women / (mostly) monogamous'
@@ -196,6 +276,7 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified']
     },
@@ -205,6 +286,7 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         location: 'Ivory Coast'
@@ -215,6 +297,7 @@ const Profiles = [
         gender: ['F', 'NB'],
         attracted: ['F', 'NB', 'M'],
         type: ['poly'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
         notes: 'if i don\'t communicate queer trans bi ADHD solo-poly by the end of the first date, i didn\'t overshare properly',
@@ -226,6 +309,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'NYC'
@@ -236,6 +320,7 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         notes: 'if the right person comes along and they don\'t check some of those boxes then i will change my boxes',
         ldr: ['Y'],
         loctype: ['flexible'],
@@ -247,6 +332,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
+        ageBracket: 'unspecified',
         notes: 'interested in relationship as a container for growth, recovery, companionship, exploration',
         ldr: ['N'],
         loctype: ['unspecified'],
@@ -258,6 +344,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'Ann Arbor, MI'
@@ -268,7 +355,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['poly'],
-        born: '1982',
+        ageDisplay: `${ageDisplay(1982)}`,
+        ageBracket: `${ageBracket(1982)}`,
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'Cincinnati, OH'
@@ -280,7 +368,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1984',
+        ageDisplay: `${ageDisplay(1984)}`,
+        ageBracket: `${ageBracket(1984)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Minneapolis'
@@ -291,7 +380,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono', 'poly'],
-        born: '1993',
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
         ldr: ['N'],
         loctype: ['fixed'],
         notes: 'physicist doing AI safety, seeking life partner, can tell you lots more via DM :)',
@@ -303,6 +393,7 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['Y'],
         loctype: ['unspecified']
     },
@@ -312,7 +403,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['poly'],
-        born: '1994',
+        ageDisplay: `${ageDisplay(1994)}`,
+        ageBracket: `${ageBracket(1994)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'will be traveling to the west coast in a month or two. no permanent or even semi-permanent residence in my future yet.',
@@ -324,7 +416,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono'],
-        born: '1997',
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Los Angeles / might be moving soon'
@@ -336,7 +429,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
-        born: '1988',
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'blessed with default happy brain and boundless optimism.  i sing to my cat everyday.',
@@ -350,7 +444,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Nepal'
@@ -361,7 +456,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB'],
         type: ['mono', 'poly'],
-        born: '1997',
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'trans; tech; friendly',
@@ -372,7 +468,8 @@ const Profiles = [
         link: 'https://twitter.com/zcatern',
         gender: ['M'],
         attracted: ['F', 'NB', 'M'],
-        born: '1994',
+        ageDisplay: `${ageDisplay(1994)}`,
+        ageBracket: `${ageBracket(1994)}`,
         type: ['mono', 'poly'],
         ldr: ['Y'],
         loctype: ['flexible'],
@@ -384,7 +481,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['NB', 'M'],
         type: ['mono', 'poly'],
-        born: '1998',
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'Madison, WI at the moment'
@@ -395,6 +493,7 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
+        ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['fixed'],
         location: 'Germany'
@@ -405,7 +504,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono'],
-        born: '1993',
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Qc'
@@ -416,7 +516,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono', 'poly'],
-        born: '2001',
+        ageDisplay: `${ageDisplay(2001)}`,
+        ageBracket: `${ageBracket(2001)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'open to monogamy and polyamory. long distance is kinda scary but im willing to try it out :) hoping to find a partner i can call both my best friend and lover',
@@ -428,7 +529,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'M'],
         type: ['mono', 'poly'],
-        born: '1997',
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Pittsburgh, PA / will probably move back to LA at some point'
@@ -439,7 +541,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono', 'poly'],
-        born: '1988',
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Boston, MA'
@@ -450,7 +553,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1989',
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'i identify as the D in D/s',
@@ -462,7 +566,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono', 'poly'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'avid lifter (🏋️‍♀️), amateur potter (🏺). writer by profession. mid-twenties, swolethicc, & greytribe. may not want kids but still wants to build together.',
@@ -474,7 +579,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['NB', 'M'],
         type: ['mono', 'poly'],
-        born: '1982',
+        ageDisplay: `${ageDisplay(1982)}`,
+        ageBracket: `${ageBracket(1982)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'socialist, atheist, optimistic nihilist, spectrum member. into a wide variety of hobbies and esoterica like anime, video games, synthesizers, astronomy, scifi, programming, Magic, etc. no kids, no marriages, easy going. i lift and get outdoors sometimes.',
@@ -486,7 +592,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1998',
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Detroit, Michigan'
@@ -497,7 +604,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Germany'
@@ -508,7 +616,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['NB', 'M'],
         type: ['mono', 'poly'],
-        born: '1989',
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'short term long distance okay; likely heading back to the Bay Area in April 2023',
@@ -520,7 +629,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
-        born: '1991',
+        ageDisplay: `${ageDisplay(1991)}`,
+        ageBracket: `${ageBracket(1991)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'London, UK'
@@ -532,7 +642,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1998',
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'uhhhh 6 foot at least, and really gorgeous goofy ambitious and genius creative men onlyyyy',
@@ -544,7 +655,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1989',
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'Chicago'
@@ -555,7 +667,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1989',
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'INFJ / sad about the past and worried for the future, but just living for tomorrow.',
@@ -567,7 +680,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
-        born: '1999',
+        ageDisplay: `${ageDisplay(1999)}`,
+        ageBracket: `${ageBracket(1999)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'NYC'
@@ -578,7 +692,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1983',
+        ageDisplay: `${ageDisplay(1983)}`,
+        ageBracket: `${ageBracket(1983)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: "i'm pretty cool",
@@ -590,7 +705,8 @@ const Profiles = [
         gender: ['F', 'NB'],
         attracted: ['F', 'NB'],
         type: ['mono'],
-        born: '2002',
+        ageDisplay: `${ageDisplay(2002)}`,
+        ageBracket: `${ageBracket(2002)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'Mumbai'
@@ -601,7 +717,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono', 'poly'],
-        born: '1998',
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'i bounce up and down the WC all the time, looking to split living between LA and PNW - open to BC coastal. Freq. climber/hiker/camping/hang gliding.',
@@ -613,7 +730,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono'],
-        born: '1993',
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: '~Seattle'
@@ -624,7 +742,8 @@ const Profiles = [
         gender: ['NB', 'M'],
         attracted: ['F', 'NB'],
         type: ['mono'],
-        born: '1988',
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Central NJ'
@@ -635,7 +754,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono', 'poly'],
-        born: '1993',
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
         ldr: ['N'],
         loctype: ['fixed'],
         location: 'NYC'
@@ -646,7 +766,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB'],
         type: ['poly'],
-        born: '1991',
+        ageDisplay: `${ageDisplay(1991)}`,
+        ageBracket: `${ageBracket(1991)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: 'post-op trans woman who missed out on her teenage years and now wants to fuck around',
@@ -658,7 +779,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono', 'poly'],
-        born: '1992',
+        ageDisplay: `${ageDisplay(1992)}`,
+        ageBracket: `${ageBracket(1992)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: `i love my (in-person) job, but, one way or another, i imagine i'll be free to move someday.`,
@@ -670,7 +792,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono'],
-        born: '1989',
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: `into left wing politics (though i am a bit idiosyncratic, see my tweets), lover of music (house/techno/ambient really any kind of electronic music). i tend to be a cynical but optimistic person. open to a lot of things but i am primary looking for a loving monogamous relationship.`,
@@ -682,7 +805,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1986',
+        ageDisplay: `${ageDisplay(1986)}`,
+        ageBracket: `${ageBracket(1986)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Oslo, Norway'
@@ -693,7 +817,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['M'],
         type: ['mono', 'poly'],
-        born: '1994',
+        ageDisplay: `${ageDisplay(1994)}`,
+        ageBracket: `${ageBracket(1994)}`,
         ldr: ['N'],
         loctype: ['flexible'],
         notes: 'physicist in tech, likes lots of things, fun to talk to',
@@ -705,7 +830,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1988',
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         notes: 'i’m working on a date me doc atm. but in a nutshell i’m looking for a life partner, someone to go on a secular spiritual journey and build an amazing life together filled with love, books and mutual growth and support',
@@ -718,7 +844,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['mono'],
-        born: '1999',
+        ageDisplay: `${ageDisplay(1999)}`,
+        ageBracket: `${ageBracket(1999)}`,
         ldr: ['N'],
         loctype: ['fixed'],
         notes: 'i’m a graduate student in computer science!',
@@ -730,7 +857,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '2000',
+        ageDisplay: `${ageDisplay(2000)}`,
+        ageBracket: `${ageBracket(2000)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         notes: `transitioning to blockchain developer. / owns every kind of chapstick. / default optimism. / weeeeeeeeeeee`,
@@ -742,7 +870,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
-        born: '1991',
+        ageDisplay: `${ageDisplay(1991)}`,
+        ageBracket: `${ageBracket(1991)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'SF Bay Area'
@@ -753,7 +882,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono'],
-        born: '1990',
+        ageDisplay: `${ageDisplay(1990)}`,
+        ageBracket: `${ageBracket(1990)}`,
         ldr: ['N'],
         loctype: ['flexible'],
         location: 'Berkeley'
@@ -764,7 +894,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1980',
+        ageDisplay: `${ageDisplay(1980)}`,
+        ageBracket: `${ageBracket(1980)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Washington state'
@@ -775,7 +906,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['poly'],
-        born: '1990',
+        ageDisplay: `${ageDisplay(1990)}`,
+        ageBracket: `${ageBracket(1990)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: ['London']
@@ -786,7 +918,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1974',
+        ageDisplay: `${ageDisplay(1974)}`,
+        ageBracket: `${ageBracket(1974)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Red Bank, New Jersey'
@@ -797,7 +930,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1998',
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'London, UK (but from Singapore)'
@@ -808,7 +942,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1997',
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: ['Texas/NY']
@@ -819,7 +954,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono', 'poly'],
-        born: '1993',
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Seattle, France, unknown'
@@ -830,7 +966,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F', 'NB'],
         type: ['poly'],
-        born: '1988',
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
         location: 'Austin',
@@ -842,7 +979,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Oxford',
@@ -854,7 +992,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1982',
+        ageDisplay: `${ageDisplay(1982)}`,
+        ageBracket: `${ageBracket(1982)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Portland, OR'
@@ -865,7 +1004,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono', 'poly'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Austin, Texas'
@@ -877,7 +1017,8 @@ const Profiles = [
         gender: ['M'],
         attracted: ['F'],
         type: ['mono'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['N'],
         loctype: ['fixed'],
         location: 'Berkeley',
@@ -889,7 +1030,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['M'],
         type: ['mono'],
-        born: '1986',
+        ageDisplay: `${ageDisplay(1986)}`,
+        ageBracket: `${ageBracket(1986)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'NY CO … independent',
@@ -901,7 +1043,8 @@ const Profiles = [
         gender: ['F'],
         attracted: ['F', 'NB', 'M'],
         type: ['mono', 'poly'],
-        born: '1995',
+        ageDisplay: `${ageDisplay(1995)}`,
+        ageBracket: `${ageBracket(1995)}`,
         ldr: ['Y'],
         loctype: ['flexible'],
         location: 'Washington DC',
