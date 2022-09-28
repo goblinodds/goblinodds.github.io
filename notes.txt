@@ -1,8 +1,35 @@
 TO DO
+
+    GOBLINSITE
+        figure out why font sizes are wrong
+            https://twitter.com/BrendanBycroft/status/1574898323143925760?s=20&t=Nhr0o8WcRWhUxP_BDfcs0A
+            try looking at it locally and remotely in firefox or other browser(s)
+
+    SINECURIS PROJECT!
+
+    START APPLYING FOR JOBS
+
+    WORK WITH PEOPLE IN THE PROGRAMMING DISCORD ON A NEW PROJECT
+
+    IDOL MGR CARD GAME
+
     TPOT 42
-        add an age filter
-        add a second location filter
         scrolling (or pages) so you can see there are other directories
         TANUKI suggestion re: CSS
             https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
         black borders around menu names onclick
+        refactor according to:
+            https://twitter.com/brundolfsmith/status/1574896634516971532?s=20&t=Nhr0o8WcRWhUxP_BDfcs0A
+        see if setting up "anonymous function as a constructor" is good for Profiles.js
+            https://stackoverflow.com/questions/12789141/access-object-properties-within-object
+        get profiles directly from google form??
+
+    GOBLIN FRIENDER
+        graph results in different categories
+        make a single array of all categories and refactor???
+        add more things to vet??
+        find some way to store data + compare to the average respondent ??
+            maybe the total score should just be this
+
+    STORYGEN
+        update it or delete it

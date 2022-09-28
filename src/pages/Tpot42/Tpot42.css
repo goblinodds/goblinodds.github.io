@@ -82,6 +82,7 @@ h3.MenuItem:hover {
     .Name {
         font-size: 4.25vmin;
         line-height: 4.25vmin;
+        margin: 0 10vmin 0 10vmin;
     }
 
     .Info {

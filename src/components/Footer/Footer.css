@@ -1,6 +1,6 @@
 @media (max-width: 460px) {
   .Footer p {
-    font-size: 4vmin;
+    font-size: 3.5vmin;
   }
 }
 
@@ -9,7 +9,7 @@
     color: white;
     position: fixed;
     bottom: 0;
-    font-size: 2.5vmin;
+    font-size: 2vmin;
     width: 100%;
 }
 

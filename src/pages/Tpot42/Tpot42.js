@@ -21,19 +21,37 @@ const menuOptions = {
     type: [
         { label: 'MONO', value: 'mono' },
         { label: 'POLY', value: 'poly' },
-        { label: 'UNKNOWN', value: 'unspecified' }
+        { label: '??', value: 'unspecified' }
+    ],
+    ageBracket: [
+        { label: '<30', value: '<30'},
+        { label: '30-40', value: '30-40'},
+        { label: '>40', value: '>40'},
+        { label: '??', value: 'unspecified'}
     ],
     ldr: [
         { label: 'LDR OK', value: 'Y' },
         { label: 'NO LDR', value: 'N' },
-        { label: 'UNKNOWN', value: 'unspecified' }
+        { label: '??', value: 'unspecified' }
     ],
     loctype: [
         { label: 'FIXED', value: 'fixed' },
         { label: 'FLEXIBLE', value: 'flexible' },
-        { label: 'UNKNOWN', value: 'unspecified' }
+        { label: '??', value: 'unspecified' }
+    ],
+    continent: [
+        { label: 'AF', value: 'Africa'},
+        { label: 'AS', value: 'Asia'},
+        { label: 'EU', value: 'Europe'},
+        { label: 'NA', value: 'North America'},
+        { label: 'OC', value: 'Oceania'},
+        { label: 'SA', value: 'South America'},
+        { label: '??', value: 'unspecified'}
     ]
 }
+
+// TODO add age filter
+// replace "age" in Profiles with output of Age function??
 
 export default function Tpot42() {
 
@@ -49,6 +67,7 @@ export default function Tpot42() {
         gender: null,
         attracted: null,
         type: null,
+        ageBracket: null,
         ldr: null
     });
 
@@ -122,6 +141,13 @@ export default function Tpot42() {
 
             {(activeDropdown === 'attracted' || activeDropdown === 'type') && currentDropdown}
 
+            <div className='FilterMenu'>
+            <h3 onClick={() => { toggleDropdown('ageBracket') }} style={activeMenuStyle(filters['ageBracket'])}>{menuDisplay('ageBracket', 'AGE')}</h3>
+                <p className='FilterSentence'>//</p>
+                <h3 onClick={() => { toggleDropdown('continent') }} style={activeMenuStyle(filters['continent'])}>{menuDisplay('continent', 'CONTINENT')}</h3>
+            </div>
+
+            {(activeDropdown === 'ageBracket' || activeDropdown === 'continent') && currentDropdown}
 
             <div className='Directory'>
                 {Profiles
@@ -171,6 +197,7 @@ function shuffle(array) {
 }
 
 // Does the profile match the filters?
+// returns true/false
 function matchesFilters(profile, filters) {
     return Object
         // returns an array of the property names (keys) in the current filters
@@ -217,52 +244,12 @@ function Submenu({ currentValue, options, onSelect }) {
     );
 }
 
-// TODO
-// see if you can find a cleverer way to execute earlyMidLate using modulo
-// without referencing Rob's notes!
-
-function Age({ born }) {
-    // current year
-    let date = new Date().getFullYear();
-    // approximate age based on birth year
-    let age = date - born;
-
-    // no minors allowed, no ancients expected
-    if (age < 18 || age > 99) {
-        return '(this entry is broken, please notify goblin)';
-    }
-
-    return 'age: ' + earlyMidLate(age) + ' ' + decade(age);
-}
-
-const earlyMidLate = (age) => {
-
-    let secondDigit = age.toString()[1];
-
-    if (secondDigit <= 3) {
-        return 'early';
-    } else if (secondDigit >= 4 && secondDigit <= 6) {
-        return 'mid';
-    } else {
-        return 'late';
-    }
-
-}
-
-const decade = (age) => {
-    if (age < 20) {
-        return 'teens';
-    } else {
-        // returns the first digit of the listed age
-        return age.toString()[0] + '0s';
-    }
-}
-
 //
 //  PROFILES JSX
 //
 // if (item) exists in the current profile, returns that information
 function Profile(profile) {
+    console.log(profile.ageBracket);
     return (
         <div key={profile.link} className='Name'>
             {/* NAME with LINK */}
@@ -274,9 +261,7 @@ function Profile(profile) {
             <Link item={profile.twitter} text='twitter' />
             <Link item={profile.featuredTweet} text='featured tweet' />
             <Link item={profile.insta} text='instagram' />
-            {/* AGE, if listed */}
-            {(profile.born ? (<p className='Info'>↳ <Age born={profile.born} /></p>) :
-                null)}
+            <Item item={profile.ageDisplay} />
             <Item item={profile.notes} />
             <Item item={profile.location} />
         </div>
