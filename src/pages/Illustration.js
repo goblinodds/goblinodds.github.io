@@ -14,8 +14,9 @@ import ripper from '../assets/IMGportfolio/ripper.jpg';
 import rowan from '../assets/IMGportfolio/rowan.jpeg';
 import simler from '../assets/IMGportfolio/simler.jpg';
 import tinna from '../assets/IMGportfolio/tinna.jpeg';
+import visa from '../assets/IMGportfolio/visa.png';
 
-const images = [petrin, fractal, simler, rowan, meron, tinna, lolly, luta, koylee, mermay, chalion, frippery, ripper]
+const images = [visa, petrin, fractal, simler, rowan, meron, tinna, lolly, luta, koylee, mermay, chalion, frippery, ripper]
 
 // MAIN FUNCTION
 // largely lifted from https://codepen.io/aradevich/pen/gOMwxVG?editors=1111
