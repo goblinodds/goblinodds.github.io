@@ -13,23 +13,24 @@ TO DO
 
     IDOL MGR CARD GAME
 
+    GOBLIN FRIENDER
+        https://twitter.com/goblincodes/status/1575616442191343616?s=20&t=9DSOv4dlHMBrKEQqpFzpiA
+        show results in different categories
+        make a single array of all categories and refactor???
+        add more items!!
+        find some way to store data + compare to the average respondent ??
+            maybe the total score should just be this
+
     TPOT 42
         scrolling (or pages) so you can see there are other directories
-        TANUKI suggestion re: CSS
-            https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
-        black borders around menu names onclick
         refactor according to:
             https://twitter.com/brundolfsmith/status/1574896634516971532?s=20&t=Nhr0o8WcRWhUxP_BDfcs0A
+            TANUKI suggestion re: CSS
+                https://twitter.com/goblincodes/status/1563274182439231489?s=20&t=Xu5LFktJAjwNbkvbXRqfhg
+                black borders around menu names onclick
         see if setting up "anonymous function as a constructor" is good for Profiles.js
             https://stackoverflow.com/questions/12789141/access-object-properties-within-object
         get profiles directly from google form??
-
-    GOBLIN FRIENDER
-        graph results in different categories
-        make a single array of all categories and refactor???
-        add more things to vet??
-        find some way to store data + compare to the average respondent ??
-            maybe the total score should just be this
 
     STORYGEN
         update it or delete it

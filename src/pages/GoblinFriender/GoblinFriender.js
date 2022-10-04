@@ -182,7 +182,7 @@ export default function GoblinFriender() {
 
     return (
         <div>
-            <h1>GOBLIN FRIENDER (WIP)</h1>
+            <h1>GOBLIN FRIENDER</h1>
             <div className='wrapper'>
                 <div className='buttons'>
                     {(currentPhase !== 'results') && <LikeButton />}
