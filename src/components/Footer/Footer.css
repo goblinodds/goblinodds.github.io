@@ -1,6 +1,6 @@
 @media (max-width: 460px) {
-  .Footer p {
-    font-size: 3.5vmin;
+  p.footerLink {
+    font-size: 2rem;
   }
 }
 
@@ -9,8 +9,11 @@
     color: white;
     position: fixed;
     bottom: 0;
-    font-size: 2vmin;
     width: 100%;
+}
+
+.footerLink {
+  font-size: 1.5rem;
 }
 
 .footerLink a {
