@@ -1128,15 +1128,24 @@ const Profiles = [
         loctype: ['flexible'],
         location: 'Washington DC',
         continent: ['North America']
+    },
+    {
+        name: 'max',
+        link: 'https://drive.google.com/file/d/1asj142baA-CqW9-MDZmiclXCBkSuKB2X/view?usp=sharing',
+        twitter: 'https://twitter.com/absurdlymax',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(2001)}`,
+        ageBracket: `${ageBracket(2001)}`,
+        ldr: ['Y']
     }
 
-    // kirtan is #62 (but wanted to be removed)
-    // if you port the results over directly from form, remove: ava/postci_vi AND kirtan
+    // max is 61
 
-    // SUGGESTION
-    // poll twitter to see which is more intuitive??
-    // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
-    // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions
+    // SUGGESTIONS
+        // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
+        // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions
 ]
 
 export default Profiles;
