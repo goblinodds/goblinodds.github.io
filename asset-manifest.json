@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bbdddcd9.css",
-    "main.js": "/static/js/main.9df08486.js",
+    "main.css": "/static/css/main.a5e070d5.css",
+    "main.js": "/static/js/main.e5f36bd9.js",
     "static/media/lolly.png": "/static/media/lolly.1a8360ac877b4b70bd1f.png",
     "static/media/simler.jpg": "/static/media/simler.f2b913860232ae867739.jpg",
     "static/media/chalion.jpg": "/static/media/chalion.6764fe6e2e5ea6f07314.jpg",
@@ -10,6 +10,7 @@
     "static/media/koylee.png": "/static/media/koylee.0c70740a54134bc31467.png",
     "static/media/luta.png": "/static/media/luta.a809ef68e6796e6eb6b3.png",
     "static/media/mermay.png": "/static/media/mermay.5f59d162ec402e4b26fc.png",
+    "static/media/visa.png": "/static/media/visa.3f35fed93abe506a964d.png",
     "static/media/portfolio_CSOSummer2022.png": "/static/media/portfolio_CSOSummer2022.7e23c19fdfc431192644.png",
     "static/media/fractal.png": "/static/media/fractal.f3d853ea9f45b63670df.png",
     "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.b0c9449e2cece2ab4167.png",
@@ -32,11 +33,11 @@
     "static/media/waterhouse.jpeg": "/static/media/waterhouse.6946c157392d6dd20e5d.jpeg",
     "static/media/atmylimit.jpg": "/static/media/atmylimit.316eef206e8633d3f21e.jpg",
     "index.html": "/index.html",
-    "main.bbdddcd9.css.map": "/static/css/main.bbdddcd9.css.map",
-    "main.9df08486.js.map": "/static/js/main.9df08486.js.map"
+    "main.a5e070d5.css.map": "/static/css/main.a5e070d5.css.map",
+    "main.e5f36bd9.js.map": "/static/js/main.e5f36bd9.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbdddcd9.css",
-    "static/js/main.9df08486.js"
+    "static/css/main.a5e070d5.css",
+    "static/js/main.e5f36bd9.js"
   ]
 }
