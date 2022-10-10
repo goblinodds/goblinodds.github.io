@@ -3,7 +3,7 @@ import './Video.css';
 import portfolio_BusyBee from '../assets/portfolio_BusyBee.png';
 import portfolio_CSOSummer2022 from '../assets/portfolio_CSOSummer2022.png';
 import portfolio_CalStateActiveShooter from '../assets/portfolio_CalStateActiveShooter.png';
-import portfolio_LegallySpeaking from '../assets/portfolio_LegallySpeaking.png';
+import portfolio_PolarBears from '../assets/portfolio_PolarBears.png';
 
 const Gig = (props) => {
     return (
@@ -55,11 +55,11 @@ function Video() {
                 clientSite={'https://www.dentagency.com/'}
                 client={'DENT Agency'}/>
 
-                {/* LEGALLY SPEAKING */}
-                <Gig video={'https://youtube.com/playlist?list=PLNfeyqXaRNagTTdNn-3V2CA1IXGp3dHsj'}
-                videoImg={portfolio_LegallySpeaking}
-                videoAlt={'drawing of the show host, Lou Perez, dressed as Lady Justice, hairy chest exposed, speaking into a microphone labeled "WTI"'}
-                contribution={'illustration'}
+                {/* POLAR BEARS MUST GO EXTINCT */}
+                <Gig video={'https://youtu.be/IcqqpNvX6-M'}
+                videoImg={portfolio_PolarBears}
+                videoAlt={'motiong graphics-style image drawing of a baby seal with thought bubbles of dead baby seals in various culinary dishes'}
+                contribution={'animation'}
                 clientSite={'https://www.youtube.com/c/WeTheInternetTV'}
                 client={'We The Internet TV'}/>
             </div>
