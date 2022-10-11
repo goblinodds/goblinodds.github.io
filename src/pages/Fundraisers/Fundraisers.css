@@ -1,0 +1,132 @@
+.Directories {
+    margin: 0 0 5vmin 0;
+}
+
+.Directory {
+    margin: 0 20vmin 10vmin 0;
+}
+
+.Directory h1 {
+    text-align: center;
+}
+
+.Directory h2 {
+    text-align: start;
+    margin: 7vmin 0 0 14vmin;
+    font-size: 8vmin;
+    display: flex;
+    align-content: center;
+}
+
+.Dropdown {
+    cursor: pointer;
+}
+
+.FilterMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vmin 15vmin 0 15vmin;
+    height: 6vmin;
+}
+
+h3:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+h3.FilterMenu:hover {
+    color:black;
+}
+
+p.FilterSentence {
+    font-family:  'Bebas Neue', sans-serif;
+    font-size:  5vmin;
+    line-height: 5vmin;
+    color: #b3b3b3;
+    padding: .75vmin .75vmin 0 .75vmin;
+}
+
+.Header {
+    line-height: 0;
+}
+
+h3.MenuItem {
+    color: white;
+    background-color: #b3b3b3;
+    margin: 2px;
+}
+
+h3.MenuItem:hover {
+    color: black;
+    background-color: yellow;
+}
+
+.Name {
+    margin: 0 0 0 20vmin;
+    text-align: start;
+}
+
+.Name a {
+    text-decoration: none;
+}
+
+.Info {
+    margin: 0 0 2vmin 1.4em;
+    font-size: 2.3vmin;
+}
+
+@media (max-width: 460px) {
+
+    .Name {
+        font-size: 4.25vmin;
+        line-height: 4.25vmin;
+        margin: 0 10vmin 0 10vmin;
+    }
+
+    .Info {
+        font-size: 3.75vmin;
+        line-height: 3.75vmin;
+    }
+
+    .Tagline {
+        font-size: 4.25vmin;
+        line-height: 4.25vmin;
+    }
+    
+    .Directories h1 {
+        font-size: 15vmin;
+    }
+
+    .Directories h2 {
+        font-size: 10vmin;
+    }
+
+    .Directory {
+        margin: 0 0 15vmin 0;
+    }
+
+    p.Directory {
+        margin: 0 10vmin 0 0;
+    }
+
+    .FilterMenu {
+        margin: 3vmin 0;
+    }
+
+    p.FilterSentence {
+        font-size:  8vmin;
+    }
+
+    h3 {
+        font-size:  8vmin;
+        line-height: 7vmin;
+      }
+
+    .MenuItem {
+        line-height: 7.25vmin;
+        margin: 0 2vmin;
+    }
+
+  }

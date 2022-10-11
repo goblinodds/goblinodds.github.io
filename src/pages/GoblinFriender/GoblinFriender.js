@@ -1,7 +1,7 @@
 import React from 'react';
 import './GoblinFriender.css';
 import { useState } from 'react';
-import Items from '../../components/GoblinFriender/Items.js';
+import Items from './Items.js';
 
 // TODO make a single array of all categories and refactor???
 let scores = { philosophy: 0, humor: 0, interests: 0, audio: 0, visual: 0 }

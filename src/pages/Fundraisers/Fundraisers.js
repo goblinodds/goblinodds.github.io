@@ -1,59 +1,45 @@
 import React from 'react';
 import { useState } from 'react';
-import './Tpot42.css';
+import './Fundraisers.css';
 import Profiles from './Profiles.js';
 import Directories from './Directories.js';
+
+// TODO
+// ADD LITHROS' PROJECT TO DIRECTORIES.JS
+// ask june and voidpriestess and brooke if u can add them
+// filters:
+    // one-time vs ongoing
+// way to rank these by how soon they're finishing?
+// make them more compact?? eg lump venmo/cashapp together?
+// have venmo/cashapp be formatted like cashapp: $cashapp name, venmo: @venmo
 
 // shows profiles in a random order on page load
 shuffle(Profiles);
 
 const menuOptions = {
-    gender: [
-        { label: 'WOMEN', value: 'F' },
-        { label: 'ENBIES', value: 'NB' },
-        { label: 'MEN', value: 'M' }
+    platform: [
+        {label: 'PATREON', value: 'patreon'},
+        {label: 'CASHAPP', value: 'cashapp'},
+        {label: 'VENMO', value: 'venmo'},
+        {label: 'WEBSITE', value: 'website'}
+        // {label: 'KICKSTARTER', value: 'kickstarter'},
+        // {label: 'GOFUNDME', value: 'gofundme'},
+        // {label: 'KO-FI', value: 'kofi'}
     ],
-    attracted: [
-        { label: 'WOMEN', value: 'F' },
-        { label: 'ENBIES', value: 'NB' },
-        { label: 'MEN', value: 'M' }
-    ],
-    type: [
-        { label: 'MONO', value: 'mono' },
-        { label: 'POLY', value: 'poly' },
-        { label: '??', value: 'unspecified' }
-    ],
-    ageBracket: [
-        { label: '<30', value: '<30'},
-        { label: '30-40', value: '30-40'},
-        { label: '>40', value: '>40'},
-        { label: '??', value: 'unspecified'}
-    ],
-    ldr: [
-        { label: 'LDR OK', value: 'Y' },
-        { label: 'NO LDR', value: 'N' },
-        { label: '??', value: 'unspecified' }
-    ],
-    loctype: [
-        { label: 'FIXED', value: 'fixed' },
-        { label: 'FLEXIBLE', value: 'flexible' },
-        { label: '??', value: 'unspecified' }
-    ],
-    continent: [
-        { label: 'AF', value: 'Africa'},
-        { label: 'AS', value: 'Asia'},
-        { label: 'EU', value: 'Europe'},
-        { label: 'NA', value: 'North America'},
-        { label: 'OC', value: 'Oceania'},
-        { label: 'SA', value: 'South America'},
-        { label: '??', value: 'unspecified'}
+    category: [
+        {label: 'ART', value: 'art'},
+        {label: 'ACTIVISM', value: 'activism'},
+        {label: 'BLOGGING', value: 'blogging'},
+        {label: 'COMMUNITY', value: 'community'},
+        {label: 'FICTION', value: 'fiction'},
+        {label: 'GAMES', value: 'games'},
     ]
 }
 
 // TODO add age filter
 // replace "age" in Profiles with output of Age function??
 
-export default function Tpot42() {
+export default function Fundraisers() {
 
     // arrays of directory entries to display
     // array being iterated over.map(format of individual item in array)
@@ -119,35 +105,17 @@ export default function Tpot42() {
     return (
         <div className='Directories'>
             <div className='Header'>
-                <h1>TPOT for two</h1>
-                <p className='Tagline'>an ingroup "date me" directory with {Profiles.length} entries</p>
+                <h1>TPOT FUNDRAISERS</h1>
+                <p className='Tagline'>an ingroup directory with {Profiles.length} entries</p>
             </div>
 
             <div className='FilterMenu'>
-                <h3 onClick={() => { toggleDropdown('gender') }} style={activeMenuStyle(filters['gender'])}>{menuDisplay('gender', 'GENDER')}</h3>
+                <h3 onClick={() => { toggleDropdown('platform') }} style={activeMenuStyle(filters['platform'])}>{menuDisplay('platform', 'PLATFORM')}</h3>
                 <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('ldr') }} style={activeMenuStyle(filters['ldr'])}>{menuDisplay('ldr', 'LDR?')}</h3>
-                <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('loctype') }} style={activeMenuStyle(filters['loctype'])}>{menuDisplay('loctype', 'LOCATION')}</h3>
+                <h3 onClick={() => { toggleDropdown('category') }} style={activeMenuStyle(filters['category'])}>{menuDisplay('category', 'CATEGORY')}</h3>
             </div>
 
-            {(activeDropdown === 'gender' || activeDropdown === 'ldr' || activeDropdown === 'loctype') && currentDropdown}
-
-            <div className='FilterMenu'>
-                <h3 onClick={() => { toggleDropdown('attracted') }} style={activeMenuStyle(filters['attracted'])}>{menuDisplay('attracted', 'ATTRACTED TO')}</h3>
-                <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('type') }} style={activeMenuStyle(filters['type'])}>{menuDisplay('type', 'MONO/POLY')}</h3>
-            </div>
-
-            {(activeDropdown === 'attracted' || activeDropdown === 'type') && currentDropdown}
-
-            <div className='FilterMenu'>
-            <h3 onClick={() => { toggleDropdown('ageBracket') }} style={activeMenuStyle(filters['ageBracket'])}>{menuDisplay('ageBracket', 'AGE')}</h3>
-                <p className='FilterSentence'>//</p>
-                <h3 onClick={() => { toggleDropdown('continent') }} style={activeMenuStyle(filters['continent'])}>{menuDisplay('continent', 'CONTINENT')}</h3>
-            </div>
-
-            {(activeDropdown === 'ageBracket' || activeDropdown === 'continent') && currentDropdown}
+            {(activeDropdown === 'platform' || activeDropdown === 'category') && currentDropdown}
 
             <div className='Directory'>
                 {Profiles
@@ -251,19 +219,20 @@ function Submenu({ currentValue, options, onSelect }) {
 function Profile(profile) {
     console.log(profile.ageBracket);
     return (
-        <div key={profile.link} className='Name'>
+        <div key={profile.name} className='Name'>
             {/* NAME with LINK */}
-            <p>⇨ <a href={profile.link} target='_blank' rel='noopener noreferrer'>
-                {profile.name}
-            </a>
+            <p>⇨ <a href={profile.twitter} target='_blank' rel='noopener noreferrer'>
+                    {profile.name}
+                </a>
             </p>
-            <Email item={profile.email} text='email'/>
-            <Link item={profile.twitter} text='twitter' />
-            <Link item={profile.featuredTweet} text='featured tweet' />
-            <Link item={profile.insta} text='instagram' />
-            <Item item={profile.ageDisplay} />
+            <Link item={profile.website} text='website' />
+            <Link item={profile.patreon} text='patreon' />
+            <Link item={profile.kickstarter} text='kickstarter' />
+            <Link item={profile.gofundme} text='gofundme' />
+            <Link item={profile.kofi} text='ko-fi' />            
+            <Link item={profile.cashapp} text='cashapp' />
+            <Link item={profile.venmo} text='venmo' />
             <Item item={profile.notes} />
-            <Item item={profile.location} />
         </div>
     )
 }
@@ -277,12 +246,6 @@ function Item({ item }) {
 function Link({ item, text }) {
     return (item ? (
         <p className='Info'>↳ <a href={item} target='_blank' rel='noopener noreferrer'>{text}</a></p>
-    ) : null)
-}
-
-function Email({ item }) {
-    return (item ? (
-        <p className='Info'>↳ email: {item}</p>
     ) : null)
 }
 
