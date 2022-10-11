@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Video from './pages/Video';
 import Illustration from './pages/Illustration';
 import GoblinFriender from './pages/GoblinFriender/GoblinFriender';
+import Fundraisers from './pages/Fundraisers/Fundraisers';
 import Tpot42 from './pages/Tpot42/Tpot42';
 // https://reactrouter.com/docs/en/v6/getting-started/overview
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -35,6 +36,9 @@ export function App() {
           </Route>
           <Route>
             <Route path='/goblinFriender' element={<GoblinFriender />}/>
+          </Route>
+          <Route>
+            <Route path='/fundraisers' element={<Fundraisers />}/>
           </Route>
         </Routes>
         <Footer />

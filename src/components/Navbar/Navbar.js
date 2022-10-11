@@ -29,6 +29,10 @@ const menus = [
                 link: 'tpot42'
             },
             {
+                label: 'fundraiser directory',
+                link: 'fundraisers'
+            },
+            {
                 label: 'friendship quiz',
                 link: 'goblinfriender'
             }

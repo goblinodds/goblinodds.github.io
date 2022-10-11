@@ -1,5 +1,9 @@
 const Directories = [
     {
+        name: "@strangestloop's general tpot directory",
+        link: 'https://strangestloop.io/a-tpot-directory'
+    },
+    {
         name: "@chanamessinger's dating profiles thread",
         link: 'https://twitter.com/ChanaMessinger/status/1372220440295407625?s=20&t=of75HWTw59EnOmKRrcraTA'
     },

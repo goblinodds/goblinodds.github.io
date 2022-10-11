@@ -1138,10 +1138,26 @@ const Profiles = [
         type: ['mono'],
         ageDisplay: `${ageDisplay(2001)}`,
         ageBracket: `${ageBracket(2001)}`,
-        ldr: ['Y']
+        ldr: ['Y'],
+        loctype: ['unspecified'],
+    },
+    {
+        name: 'kendric',
+        link: 'https://twitter.com/kendrictonn',
+        gender: ['M'],
+        attracted: ['M'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1982)}`,
+        ageBracket: `${ageBracket(1982)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Ohio',
+        continent: ['North America']
     }
 
-    // max is 61
+    // kendric is 62
+
+    // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
     // SUGGESTIONS
         // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
