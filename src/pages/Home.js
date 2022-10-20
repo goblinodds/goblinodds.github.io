@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import { useState, useEffect } from 'react';
 
-const text = ['looking for work', 'learning to code', 'a freelance animator']
+const text = ['a front-end engineer', 'on a quest for their first programming job']
 
 function Home() {
 
@@ -18,7 +18,6 @@ function Home() {
         return () => clearInterval(intervalId);
     }, []);
 
-    console.log(index);
     return <div className='Section'>
         {/* % text.length allows it to loop over the array within the bounds of the array */}
             <h2 id='Loop'>goblin is {text[index % text.length]}.</h2>
