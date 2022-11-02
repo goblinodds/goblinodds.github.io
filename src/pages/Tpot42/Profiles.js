@@ -1140,6 +1140,7 @@ const Profiles = [
         ageBracket: `${ageBracket(2001)}`,
         ldr: ['Y'],
         loctype: ['unspecified'],
+        continent: ['unspecified']
     },
     {
         name: 'kendric',
@@ -1153,10 +1154,78 @@ const Profiles = [
         loctype: ['fixed'],
         location: 'Ohio',
         continent: ['North America']
+    },
+    {
+        name: 'piyush',
+        link: 'https://piyushahuja.github.io/',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1990)}`,
+        ageBracket: `${ageBracket(1990)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Cambridge, UK',
+        continent: ['Europe'],
+        notes: 'these are qualities my partners have consistently found in me: kindness, intellligence, gentleness, sincerity, trustworthiness'
+    },
+    {
+        name: 'nocturne chic girl',
+        link: 'https://twitter.com/nocturnechic',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'NYC',
+        continent: ['North America']
+    },
+    {
+        name: 'rob',
+        link: 'https://twitter.com/yungcrichton?s=21&t=j6KIrrSWHbeS-nrzVrFFHw',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Atlanta',
+        continent: ['North America'],
+        notes: 'med student who likes movies '
+    },
+    {
+        name: 'simmo',
+        link: 'https://www.facebook.com/mrsimmosimpson/',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1983)}`,
+        ageBracket: `${ageBracket(1983)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'nomad seeking a base (Oxford this month) [november 2022]',
+        continent: ['unspecified']
+    },
+    {
+        name: 'norn',
+        link: 'https://twitter.com/CinnabonGarf',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1993)}`,
+        ageBracket: `${ageBracket(1993)}`,
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'Barcelona',
+        continent: ['Europe']
     }
 
-    // kendric is 62
+    // norn is #68
 
+    // #63 jacob chateau (ΘωΘ avatar) submitted a broken link and didn't confirm
     // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
     // SUGGESTIONS
