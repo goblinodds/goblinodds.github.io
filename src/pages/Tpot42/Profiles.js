@@ -483,20 +483,6 @@ const Profiles = [
         continent: ['Asia']
     },
     {
-        name: 'tess',
-        link: 'https://twitter.com/xsphi',
-        gender: ['F'],
-        attracted: ['F', 'NB'],
-        type: ['mono', 'poly'],
-        ageDisplay: `${ageDisplay(1997)}`,
-        ageBracket: `${ageBracket(1997)}`,
-        ldr: ['Y'],
-        loctype: ['flexible'],
-        notes: 'trans; tech; friendly',
-        location: 'Portland, OR',
-        continent: ['North America']
-    },
-    {
         name: 'catern',
         link: 'https://twitter.com/zcatern',
         gender: ['M'],
@@ -1221,16 +1207,99 @@ const Profiles = [
         loctype: ['fixed'],
         location: 'Barcelona',
         continent: ['Europe']
+    },
+    {
+        name: 'bryan mock',
+        link: 'https://twitter.com/bmock?t=geD6Lk2IiRoIkItpXXFSYA&s=09',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1988)}`,
+        ageBracket: `${ageBracket(1988)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Cedar Rapids, Iowa',
+        continent: ['North America']
+    },
+    {
+        name: 'aaron james munzer',
+        link: 'https://twitter.com/ajmunz?s=21&t=udwWEHJc0mh7gGygyvhCrA',
+        insta: 'https://instagram.com/ajmunzz?igshid=YmMyMTA2M2Y=',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1992)}`,
+        ageBracket: `${ageBracket(1992)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        continent: ['unspecified'],
+        notes: 'Long distance match okay but strongly not preferred. Location is fixed for now but can travel.'
+    },
+    {
+        name: 'jordan',
+        link: 'https://twitter.com/WickJordan',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1996)}`,
+        ageBracket: `${ageBracket(1996)}`,
+        ldr: ['N'],
+        loctype: ['flexible'],
+        location: 'SF',
+        continent: ['North America'],
+        notes: 'will potentially go to NYC'
+    },
+    {
+        name: 'lin',
+        link: 'https://twitter.com/Linialomdil',
+        gender: ['F', 'NB'],
+        attracted: ['F', 'NB'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'Triangle area, NC',
+        continent: ['North America'],
+        notes: 'looking for a long term relationship if possible. Not very experienced in dating, but I make really good spaghetti'
+    },
+    {
+        name: 'ein',
+        link: 'https://twitter.com/aria_ein',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(2000)}`,
+        ageBracket: `${ageBracket(2000)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'vancouver, bc',
+        continent: ['North America'],
+    },
+    {
+        name: 'hermes',
+        link: 'https://twitter.com/Hermes2110',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1998)}`,
+        ageBracket: `${ageBracket(1998)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'North Texas near the Denton area',
+        continent: ['North America'],
+        notes: 'im a pagan and fairly religious and interested in woo, so my match needs to be atleast open to this.'
     }
+    // #73 spookylinetime - check if she confirms
+    // vincent #67 - add if confirms???
+    // avv #72 - can't contact them, didn't contact us
 
-    // norn is #68
-
-    // #63 jacob chateau (ΘωΘ avatar) submitted a broken link and didn't confirm
     // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
     // SUGGESTIONS
         // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
         // @zcatern: "show me a random person and open their DMs" or something button, to motivate interactions
+        // lin/@linialomdil: Would be nice to be able to select multiple options at once in some of the finer categories (like gender or attracted to), but it's not a big deal due to the small number of entries I think
 ]
 
 export default Profiles;
