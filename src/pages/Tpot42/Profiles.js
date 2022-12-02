@@ -209,8 +209,8 @@ const Profiles = [
         name: 'gustavo lacerda',
         link: 'https://docs.google.com/document/d/1khmwYjPD7cjIC6ssSdH2pYB9BfGCsKvjbrvZoGThkzc/edit?usp=sharing',
         gender: ['M'],
-        attracted: ['unspecified'],
-        type: ['unspecified'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
         ageBracket: 'unspecified',
         ldr: ['unspecified'],
         loctype: ['unspecified'],
@@ -385,19 +385,6 @@ const Profiles = [
         ldr: ['Y'],
         loctype: ['unspecified'],
         location: 'Cincinnati, OH',
-        continent: ['North America']
-    },
-    {
-        name: 'violet',
-        link: 'https://twitter.com/violetvariant',
-        gender: ['F'],
-        attracted: ['M'],
-        type: ['mono'],
-        ageDisplay: `${ageDisplay(1984)}`,
-        ageBracket: `${ageBracket(1984)}`,
-        ldr: ['Y'],
-        loctype: ['flexible'],
-        location: 'Minneapolis',
         continent: ['North America']
     },
     {
