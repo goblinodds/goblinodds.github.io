@@ -1090,19 +1090,6 @@ const Profiles = [
         notes: 'three cats, many books'
     },
     {
-        name: 're',
-        link: 'https://twitter.com/Actualwebutante',
-        gender: ['F'],
-        attracted: ['F', 'NB', 'M'],
-        type: ['mono', 'poly'],
-        ageDisplay: `${ageDisplay(1995)}`,
-        ageBracket: `${ageBracket(1995)}`,
-        ldr: ['Y'],
-        loctype: ['flexible'],
-        location: 'Washington DC',
-        continent: ['North America']
-    },
-    {
         name: 'max',
         link: 'https://drive.google.com/file/d/1asj142baA-CqW9-MDZmiclXCBkSuKB2X/view?usp=sharing',
         twitter: 'https://twitter.com/absurdlymax',
@@ -1219,7 +1206,8 @@ const Profiles = [
         ageBracket: `${ageBracket(1992)}`,
         ldr: ['Y'],
         loctype: ['fixed'],
-        continent: ['unspecified'],
+        location: 'St. Louis, Missouri',
+        continent: ['North America'],
         notes: 'Long distance match okay but strongly not preferred. Location is fixed for now but can travel.'
     },
     {
@@ -1475,6 +1463,11 @@ const Profiles = [
     // #88 Big friendly kiwi - didnt contact us afaict, Marginality4life isn't on twitter anymore
 
     // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
+
+    // IDEAS
+    // distinguish "date me profile" from twitter account, insta, email...
+    // mention if bounty (and amount)
+    // clear options, select multiple
 
     // SUGGESTIONS
         // brian: "I thought the sentence-based interface was less confusing than the new one that just has gender lists in two places."
