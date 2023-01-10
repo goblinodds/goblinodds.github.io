@@ -1,5 +1,9 @@
 const Directories = [
     {
+        name: "vibecamp's vibefund",
+        link: 'https://vibe.camp/vibefund/'
+    },
+    {
         name: "@strangestloop's general tpot directory",
         link: 'https://strangestloop.io/a-tpot-directory'
     }
