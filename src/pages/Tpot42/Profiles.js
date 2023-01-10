@@ -1251,6 +1251,20 @@ const Profiles = [
         notes: 'looking for a long term relationship if possible. Not very experienced in dating, but I make really good spaghetti'
     },
     {
+        name: 'eris',
+        link: 'https://twitter.com/spookylinetime',
+        gender: ['F'],
+        attracted: ['F', 'NB'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1994)}`,
+        ageBracket: `${ageBracket(1994)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Boston',
+        continent: ['North America'],
+        notes: 'You probably don’t like me but here goes.'
+    },
+    {
         name: 'ein',
         link: 'https://twitter.com/aria_ein',
         gender: ['M'],
@@ -1276,10 +1290,189 @@ const Profiles = [
         location: 'North Texas near the Denton area',
         continent: ['North America'],
         notes: 'im a pagan and fairly religious and interested in woo, so my match needs to be atleast open to this.'
+    },
+    {
+        name: 'lulie',
+        link: 'https://www.lulie.co.uk/date-me/',
+        gender: ['F'],
+        attracted: ['M'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Oxford',
+        continent: ['Europe']
+    },
+    {
+        name: 'varun',
+        link: 'https://linktr.ee/kladhest',
+        gender: ['M'],
+        attracted: ['F', 'M'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1990)}`,
+        ageBracket: `${ageBracket(1990)}`,
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'Bangalore, India',
+        continent: ['Asia']
+    },
+    {
+        name: 'paul e',
+        link: 'mailto:pecheverri@protonmail.com',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['poly'],
+        ageDisplay: `${ageDisplay(1974)}`,
+        ageBracket: `${ageBracket(1974)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'San Jose, CA',
+        continent: ['North America']
+    },
+    {
+        name: 'mati roy',
+        link: 'https://matiroy.com/writings/My-dating-profile.html',
+        gender: ['M'],
+        attracted: ['F', 'NB'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1990)}`,
+        ageBracket: `${ageBracket(1990)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'North America',
+        continent: ['North America']
+    },
+    {
+        name: 'tim',
+        link: 'https://twitter.com/indictsGW?t=Nnbrxf87c9jO5VtWzErfnw&s=09',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1984)}`,
+        ageBracket: `${ageBracket(1984)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Florida',
+        continent: ['North America'],
+        notes: 'On Fetlife. Non-vanilla sub/switch, open to F/m or M/f Lifestyle bdsm.'
+    },
+    {
+        name: 'purpskurp',
+        link: 'https://twitter.com/purpleskurp',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1997)}`,
+        ageBracket: `${ageBracket(1997)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'Ohio',
+        continent: ['North America'],
+        notes: 'Please only contact if you have been invited to beautiful princess island'
+    },
+    {
+        name: 'frances kafka',
+        link: 'https://twitter.com/pachabelcanon',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(2002)}`,
+        ageBracket: `${ageBracket(2002)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'Singapore',
+        continent: ['Asia']
+    },
+    {
+        name: 'michael moody',
+        link: 'https://www.twitter.com/siahsargus',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1994)}`,
+        ageBracket: `${ageBracket(1994)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'São Paulo/Texas/Singapore',
+        continent: ['South America', 'North America', 'Asia']
+    },
+    {
+        name: 'kenzie',
+        link: 'https://www.twitter.com/kenzierecords',
+        gender: ['F'],
+        attracted: ['F', 'M'],
+        type: ['mono'],
+        ageDisplay: `${ageDisplay(1992)}`,
+        ageBracket: `${ageBracket(1992)}`,
+        ldr: ['Y'],
+        loctype: ['fixed'],
+        location: 'San Diego',
+        continent: ['North America'],
+        notes: ''
+    },
+    {
+        name: 'zev',
+        link: 'https://twitter.com/strangers_gate',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1985)}`,
+        ageBracket: `${ageBracket(1985)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'nomad in the US',
+        continent: ['North America'],
+        notes: 'seeking a partner to: build a beautiful life together; enjoy the blood, sweat, and tears together; seek awakening together; go further together'
+    },
+    {
+        name: 'will newsome',
+        link: 'https://twitter.com/willdoingthings',
+        gender: ['M'],
+        attracted: ['F'],
+        type: ['mono', 'poly'],
+        ageDisplay: `${ageDisplay(1991)}`,
+        ageBracket: `${ageBracket(1991)}`,
+        ldr: ['N'],
+        loctype: ['fixed'],
+        location: 'Berkeley, CA',
+        continent: ['North America'],
+        notes: 'into Jewish size queens who listen to post-punk'
+    },
+    {
+        name: 'talishabot',
+        link: 'https://twitter.com/TalishaBot',
+        gender: ['F'],
+        attracted: ['F'],
+        type: ['poly'],
+        ageDisplay: `${ageDisplay(1989)}`,
+        ageBracket: `${ageBracket(1989)}`,
+        ldr: ['Y'],
+        loctype: ['unspecified'],
+        location: 'Phoenix',
+        continent: ['North America']
     }
-    // #73 spookylinetime - check if she confirms
-    // vincent #67 - add if confirms???
-    // avv #72 - can't contact them, didn't contact us
+
+    // // FORMAT TO PASTE
+    // {
+    //     name: '',
+    //     link: '',
+    //     gender: [''],
+    //     attracted: [''],
+    //     type: [''],
+    //     ageDisplay: `${ageDisplay()}`,
+    //     ageBracket: `${ageBracket()}`,
+    //     ldr: [''],
+    //     loctype: [''],
+    //     location: '',
+    //     continent: [''],
+    //     notes: ``
+    // }
+
+    // WAITING
+    // #67 vincent - add if confirms???
+    // #72 avv - can't contact them, didn't contact us
+    // #88 Big friendly kiwi - didnt contact us afaict, Marginality4life isn't on twitter anymore
 
     // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
