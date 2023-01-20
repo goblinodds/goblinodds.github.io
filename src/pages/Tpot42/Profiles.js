@@ -133,7 +133,6 @@ const Profiles = [
         loctype: ['unspecified'],
         location: 'Venice (Los Angeles)',
         continent: ['North America']
-
     },
     {
         name: 'joshua nelson',
@@ -1090,19 +1089,6 @@ const Profiles = [
         notes: 'three cats, many books'
     },
     {
-        name: 'max',
-        link: 'https://drive.google.com/file/d/1asj142baA-CqW9-MDZmiclXCBkSuKB2X/view?usp=sharing',
-        twitter: 'https://twitter.com/absurdlymax',
-        gender: ['M'],
-        attracted: ['F'],
-        type: ['mono'],
-        ageDisplay: `${ageDisplay(2001)}`,
-        ageBracket: `${ageBracket(2001)}`,
-        ldr: ['Y'],
-        loctype: ['unspecified'],
-        continent: ['unspecified']
-    },
-    {
         name: 'kendric',
         link: 'https://twitter.com/kendrictonn',
         gender: ['M'],
@@ -1439,6 +1425,19 @@ const Profiles = [
         loctype: ['unspecified'],
         location: 'Phoenix',
         continent: ['North America']
+    },
+    {
+        name: 'celeste',
+        link: 'https://celeste.exposed',
+        gender: ['NB'],
+        attracted: ['F', 'NB', 'M'],
+        type: ['poly'],
+        ageDisplay: `${ageDisplay(2004)}`,
+        ageBracket: `${ageBracket(2004)}`,
+        ldr: ['Y'],
+        loctype: ['flexible'],
+        location: 'location: ???',
+        continent: ['unspecified']
     }
 
     // // FORMAT TO PASTE
@@ -1458,9 +1457,12 @@ const Profiles = [
     // }
 
     // WAITING
-    // #67 vincent - add if confirms???
-    // #72 avv - can't contact them, didn't contact us
-    // #88 Big friendly kiwi - didnt contact us afaict, Marginality4life isn't on twitter anymore
+    // #86 Big friendly kiwi - increase_la ??
+    // #88 paul/raver1975 - waiting on email reply to goblinodds
+
+    // ~#67 vincent - add if confirms???
+    // ~#71 avv - can't contact them, didn't contact us
+
 
     // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
