@@ -6,6 +6,7 @@ import Directories from './Directories.js';
 
 // shows profiles in a random order on page load
 shuffle(Profiles);
+shuffle(Directories);
 
 const menuOptions = {
     gender: [
