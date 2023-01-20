@@ -1,5 +1,5 @@
 # source
-published here (if it's not up to date, contact goblinodds@gmail.com): https://github.com/goblinodds/goblinodds.github.io/tree/src
+published [here](https://github.com/goblinodds/goblinodds.github.io/tree/source); if it's not up to date, contact goblinodds at gmail
 
-# notes
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# notes 
+this project was bootstrapped with [create react app](https://github.com/facebook/create-react-app).
