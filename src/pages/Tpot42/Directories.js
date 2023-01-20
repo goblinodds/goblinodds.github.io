@@ -4,6 +4,10 @@ const Directories = [
         link: 'https://strangestloop.io/a-tpot-directory'
     },
     {
+        name: "anon's ingroup kink matching directory",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSfEQ9EXKCMCcKnZrCS5QpVo71z3KHbfgnkzJe87vhTvpx28Yw/viewform'
+    },
+    {
         name: "@chanamessinger's dating profiles thread",
         link: 'https://twitter.com/ChanaMessinger/status/1372220440295407625?s=20&t=of75HWTw59EnOmKRrcraTA'
     },
