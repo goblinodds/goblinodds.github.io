@@ -1,8 +1,8 @@
 // gender: the profile's gender
 // attracted: who the profile is attracted TO
-/****************
+/*
  FORMATTING NOTES
-*****************/
+*/
 // any filter (that doesn't get displayed) must be formatted as an ARRAY
 // if there's a filter for it, there must be a field there, or "includes" breaks
 // links MUST start with http:// or https://
@@ -742,21 +742,6 @@ const Profiles = [
     continent: ["Asia"],
   },
   {
-    name: "hek",
-    link: "https://twitter.com/hekatonsure",
-    gender: ["M"],
-    attracted: ["F", "NB"],
-    type: ["mono", "poly"],
-    ageDisplay: `${ageDisplay(1998)}`,
-    ageBracket: `${ageBracket(1998)}`,
-    ldr: ["Y"],
-    loctype: ["flexible"],
-    notes:
-      "i bounce up and down the WC all the time, looking to split living between LA and PNW - open to BC coastal. Freq. climber/hiker/camping/hang gliding.",
-    location: "West Coast",
-    continent: ["North America"],
-  },
-  {
     name: "braverius",
     link: "https://twitter.com/braverius",
     gender: ["M"],
@@ -1464,26 +1449,79 @@ const Profiles = [
     location: "Vancouver, Canada",
     continent: ["North America"],
   },
+  {
+    name: "paul",
+    link: "https://twitter.com/raver1975",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1975)}`,
+    ageBracket: `${ageBracket(1975)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "New London, Wisconsin",
+    continent: ["North America"],
+    notes: `Windsurfer, Kiteboarder, Wingskater, Mathematician, Christian,`,
+  },
+  {
+    name: "aveline",
+    link: "https://twitter.com/yinvara",
+    gender: ["F"],
+    attracted: ["F", "NB", "M"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(2001)}`,
+    ageBracket: `${ageBracket(2001)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "San Diego, CA",
+    continent: ["North America"],
+    notes: `a little shy`,
+  },
+  {
+    name: "C.D.N.",
+    link: "https://twitter.com/nephew_jonathan",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1995)}`,
+    ageBracket: `${ageBracket(1995)}`,
+    ldr: ["N"],
+    loctype: ["flexible"],
+    location: "Washington, DC",
+    continent: ["North America"],
+    notes: `Latin teacher, but probably capable of doing many things; somewhat willing to travel for the right person. Would like children.`,
+  },
+  {
+    name: "andalib",
+    link: "https://linktr.ee/andalib33",
+    gender: ["M"],
+    attracted: ["F", "NB"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1998)}`,
+    ageBracket: `${ageBracket(1998)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Atlanta, GA, USA",
+    continent: ["North America"],
+  },
 
-  // // FORMAT TO PASTE
+  // FORMAT TO PASTE
   // {
-  //     name: '',
-  //     link: '',
-  //     gender: [''],
-  //     attracted: [''],
-  //     type: [''],
-  //     ageDisplay: `${ageDisplay()}`,
-  //     ageBracket: `${ageBracket()}`,
-  //     ldr: [''],
-  //     loctype: [''],
-  //     location: '',
-  //     continent: [''],
-  //     notes: ``
-  // }
+  //   name: "",
+  //   link: "",
+  //   gender: [""],
+  //   attracted: [""],
+  //   type: [""],
+  //   ageDisplay: `${ageDisplay()}`,
+  //   ageBracket: `${ageBracket()}`,
+  //   ldr: [""],
+  //   loctype: [""],
+  //   location: "",
+  //   continent: [""],
+  //   notes: ``
+  // },
 
   // WAITING
-  // #88 paul/raver1975 - waiting on email reply to goblinodds
-
   // ~#67 vincent - add if confirms???
   // ~#71 avv - can't contact them, didn't contact us
 
