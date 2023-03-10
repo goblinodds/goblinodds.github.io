@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import { useState, useEffect } from 'react';
 
-const text = ['a front-end engineer', 'on a quest for their first programming job']
+const text = ['a javascript dev', 'on a quest for their first programming job']
 
 function Home() {
 
