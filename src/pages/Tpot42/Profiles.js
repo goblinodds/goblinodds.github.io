@@ -1490,6 +1490,75 @@ const Profiles = [
     location: "Atlanta, GA, USA",
     continent: ["North America"],
   },
+  {
+    name: "ken",
+    link: "https://twitter.com/woolbeigecardi",
+    gender: ["F"],
+    attracted: ["M"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1993)}`,
+    ageBracket: `${ageBracket(1993)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Ottowa",
+    continent: ["North America"],
+  },
+  {
+    name: "drew schorno",
+    link: "https://paper.dropbox.com/doc/Drew-Schorno-Dating-Profile--Bz5WzQNF~sGTYvwVk1paNJDIAQ-amNKJuShTKeuFNackmmCE",
+    gender: ["M"],
+    attracted: ["F", "NB", "M"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(1989)}`,
+    ageBracket: `${ageBracket(1989)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Victoria, BC, Canada",
+    continent: ["North America"],
+  },
+  // {
+  //   name: "wes",
+  //   link: "https://docs.google.com/document/d/1w2jH3CRis1b8G8yuBEZnXLIc-wWCbpc_jr-rYOvcHvU/edit",
+  //   gender: ["M"],
+  //   attracted: ["F", "NB"],
+  //   type: ["poly"],
+  //   ageDisplay: `${ageDisplay(1983)}`,
+  //   ageBracket: `${ageBracket(1983)}`,
+  //   ldr: ["Y"],
+  //   loctype: ["fixed"],
+  //   location: "Collingswood, NJ",
+  //   continent: ["North America"],
+  //   notes: `Philadelphia area, married & poly with small child, looking for people who want to hang out, come to my parties/board game meetups, and maybe kiss once in a while. Planning on attending Vibecamp 2023`
+  // },
+  {
+    name: "eneasz",
+    link: "https://docs.google.com/document/d/1hK38_fYfwm8wxs4avMFXuuP1jf5FwjlJe7yrZHnPeAE/edit?usp=sharing",
+    email: "embrodski AT gmail DOT com",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1980)}`,
+    ageBracket: `${ageBracket(1980)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Denver, CO",
+    continent: ["North America"],
+    notes: `Friendly, Poly, Goth & Dance plz`
+  },
+  {
+    name: "alec",
+    link: "https://twitter.com/anti_stokes",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1995)}`,
+    ageBracket: `${ageBracket(1995)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "NJ",
+    continent: ["North America"],
+    notes: `graduate student, maybe moving in 6 months(to ?) [editor's note: as of March 20, 2023]`
+  },
 
   // FORMAT TO PASTE
   // {
@@ -1508,12 +1577,14 @@ const Profiles = [
   // },
 
   // WAITING
+  // WES already in here but un-comment if he confirms, delete if he doesn't
   // ~#67 vincent - add if confirms???
   // ~#71 avv - can't contact them, didn't contact us
 
   // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
   // IDEAS
+  // color code newest entries?
   // distinguish "date me profile" from twitter account, insta, email...
   // mention if bounty (and amount)
   // clear options, select multiple
