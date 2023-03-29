@@ -6,6 +6,7 @@ import fractal from '../assets/IMGportfolio/fractal.png';
 import frippery from '../assets/IMGportfolio/frippery.png';
 import koylee from '../assets/IMGportfolio/koylee.png';
 import lolly from '../assets/IMGportfolio/lolly.png';
+import lollyfen from '../assets/IMGportfolio/lollyfen.png';
 import luta from '../assets/IMGportfolio/luta.png';
 import mermay from '../assets/IMGportfolio/mermay.png';
 import meron from '../assets/IMGportfolio/meron.jpg';
@@ -16,11 +17,11 @@ import simler from '../assets/IMGportfolio/simler.jpg';
 import tinna from '../assets/IMGportfolio/tinna.jpeg';
 import visa from '../assets/IMGportfolio/visa.png';
 
-const images = [visa, petrin, fractal, simler, rowan, meron, tinna, lolly, luta, koylee, mermay, chalion, frippery, ripper]
+const images = [lollyfen, visa, petrin, fractal, simler, rowan, meron, tinna, lolly, luta, koylee, mermay, chalion, frippery, ripper]
 
 // MAIN FUNCTION
-// largely lifted from https://codepen.io/aradevich/pen/gOMwxVG?editors=1111
-// edited to loop through images rather than closing lightbox when finished
+// TODO
+// use thumbnails rather than cropping IMGs
 function Illustration () {
 
     const [imageToShow, setImageToShow] = useState('');
