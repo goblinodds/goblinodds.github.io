@@ -1,5 +1,4 @@
 import React from 'react';
-import './Video.css';
 import portfolio_BusyBee from '../assets/portfolio_BusyBee.png';
 import portfolio_CSOSummer2022 from '../assets/portfolio_CSOSummer2022.png';
 import portfolio_CalStateActiveShooter from '../assets/portfolio_CalStateActiveShooter.png';
@@ -8,7 +7,7 @@ import portfolio_PolarBears from '../assets/portfolio_PolarBears.png';
 const Gig = (props) => {
     return (
         <div className='GigWrapper'>
-            <div className='VideoImg'>
+            <div className='CardImg'>
                 <a href={props.video} target='_blank' rel='noopener noreferrer'>
                     <img src={props.videoImg} alt={props.videoAlt}/> 
                 </a>
