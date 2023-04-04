@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a62da43e.css",
-    "main.js": "/static/js/main.9c756b1d.js",
+    "main.css": "/static/css/main.34fb959f.css",
+    "main.js": "/static/js/main.dd7b0908.js",
     "static/media/lolly.png": "/static/media/lolly.1a8360ac877b4b70bd1f.png",
     "static/media/simler.jpg": "/static/media/simler.f2b913860232ae867739.jpg",
     "static/media/chalion.jpg": "/static/media/chalion.6764fe6e2e5ea6f07314.jpg",
@@ -13,8 +13,11 @@
     "static/media/visa.png": "/static/media/visa.3f35fed93abe506a964d.png",
     "static/media/portfolio_PolarBears.png": "/static/media/portfolio_PolarBears.fb16785921e45ae1e003.png",
     "static/media/portfolio_CSOSummer2022.png": "/static/media/portfolio_CSOSummer2022.7e23c19fdfc431192644.png",
+    "static/media/friender.png": "/static/media/friender.d58847f844c726dcd6ff.png",
+    "static/media/lollyfen.png": "/static/media/lollyfen.2fa755240760cfe1e887.png",
     "static/media/fractal.png": "/static/media/fractal.f3d853ea9f45b63670df.png",
     "static/media/portfolio_CalStateActiveShooter.png": "/static/media/portfolio_CalStateActiveShooter.b0c9449e2cece2ab4167.png",
+    "static/media/palette.png": "/static/media/palette.59c5fabc022a17570e72.png",
     "static/media/starrynight.jpeg": "/static/media/starrynight.a0594ed99a708de28ac0.jpeg",
     "static/media/ripper.jpg": "/static/media/ripper.aa51f1479f8a8b5d1b66.jpg",
     "static/media/ronitbaranga.png": "/static/media/ronitbaranga.a8900742cfd409de7738.png",
@@ -23,6 +26,8 @@
     "static/media/tinna.jpeg": "/static/media/tinna.aae20c0a3b8cf203371a.jpeg",
     "static/media/headempty.png": "/static/media/headempty.71c9df712bc18cb9475c.png",
     "static/media/rowan.jpeg": "/static/media/rowan.e6d9a7c143c685384011.jpeg",
+    "static/media/tpot.png": "/static/media/tpot.0b71a5412820b9d1ddd0.png",
+    "static/media/task.png": "/static/media/task.8f7526702a472c70a172.png",
     "static/media/petrin.png": "/static/media/petrin.35fda5f13a4513afedcc.png",
     "static/media/scorpios.jpeg": "/static/media/scorpios.aa4e3a780bbeb061c1d4.jpeg",
     "static/media/fightclub.jpg": "/static/media/fightclub.4f84557bd7fe03b15c7b.jpg",
@@ -33,11 +38,11 @@
     "static/media/waterhouse.jpeg": "/static/media/waterhouse.6946c157392d6dd20e5d.jpeg",
     "static/media/atmylimit.jpg": "/static/media/atmylimit.316eef206e8633d3f21e.jpg",
     "index.html": "/index.html",
-    "main.a62da43e.css.map": "/static/css/main.a62da43e.css.map",
-    "main.9c756b1d.js.map": "/static/js/main.9c756b1d.js.map"
+    "main.34fb959f.css.map": "/static/css/main.34fb959f.css.map",
+    "main.dd7b0908.js.map": "/static/js/main.dd7b0908.js.map"
   },
   "entrypoints": [
-    "static/css/main.a62da43e.css",
-    "static/js/main.9c756b1d.js"
+    "static/css/main.34fb959f.css",
+    "static/js/main.dd7b0908.js"
   ]
 }
