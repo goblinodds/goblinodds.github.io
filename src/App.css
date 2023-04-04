@@ -67,17 +67,13 @@ span:hover {
   background-color: yellow;
 }
 
-.AllVideos {
-  padding: 0vmin 0 10vmin 0;
-}
-
-.VideoList{
+.CardList{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-.GigWrapper {
+.CardWrapper {
   padding: 2vmin 0;
   height: 25vmin;
   width: 70vmin;

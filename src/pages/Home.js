@@ -3,6 +3,13 @@ import tpot from '../assets/projectthumbs/tpot.png';
 import palette from '../assets/projectthumbs/palette.png';
 import friender from '../assets/projectthumbs/friender.png';
 import task from '../assets/projectthumbs/task.png';
+import './Home.css';
+
+
+// TODO
+// take screenshots of projects except TPOT42
+// make the thumbnails identical sizes
+// finish CSS
 
 const projects = [
     {
@@ -27,7 +34,7 @@ const projects = [
         github: 'https://github.com/goblinodds/goblinodds.github.io/tree/src/src/pages/GoblinFriender'
     },
     {
-        name: 'task minimalist [in progress]',
+        name: '[WIP] task minimalist',
         img: [task],
         desc: 'task manager using Express, MongoDB',
         link: 'https://github.com/goblinodds/taskgen',
@@ -38,18 +45,21 @@ const projects = [
 // TODO
 // fix CSS
 // GigWraper --> ProjectWrapper with new CSS for that
+// MENU
+// when the menu's open and you click on the home title it should close the menu and go home
 
 const projectCards = projects.map((project) => {
     return (
-        <div className='GigWrapper'>
+        <div className='CardWrapper'>
             <div className='CardImg'>
                 <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                    <img src={project.img} alt='screenshot of project' /> 
+                    <img className='Thumbnail' src={project.img} alt='screenshot of project' /> 
                 </a>
             </div>
-            <div className='TextBox'>
-                <h1>{project.name}</h1>
+            <div className='TextBox ProjectDesc'>
+                <h1><a href={project.link} target='_blank' rel='noopener noreferrer'>{project.name}</a></h1>
                 <p>{project.desc}</p>
+                <p><a href={project.github} target='_blank' rel='noopener noreferrer'>github</a></p>
             </div>
         </div>
     )
@@ -58,8 +68,11 @@ const projectCards = projects.map((project) => {
 function Home() {
 
     return (
-        <div className='Section'>
-            {projectCards}
+        <div>
+            <h1>PROGRAMMING PROJECTS</h1>
+            <div className='CardList'>
+                {projectCards}
+            </div>
         </div>
     )
 }
