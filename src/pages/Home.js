@@ -36,9 +36,7 @@ const projects = [
     {
         name: '[WIP] task minimalist',
         img: [task],
-        desc: 'task manager using Express, MongoDB',
-        link: 'https://github.com/goblinodds/taskgen',
-        github: 'https://github.com/goblinodds/taskgen'
+        desc: 'task manager using Express, MongoDB (see resume or contact goblinodds @ gmail for link)'
     }
 ]
 
@@ -59,7 +57,9 @@ const projectCards = projects.map((project) => {
             <div className='TextBox ProjectDesc'>
                 <h1><a href={project.link} target='_blank' rel='noopener noreferrer'>{project.name}</a></h1>
                 <p>{project.desc}</p>
-                <p><a href={project.github} target='_blank' rel='noopener noreferrer'>github</a></p>
+                {
+                    project.link ? <p><a href={project.github} target='_blank' rel='noopener noreferrer'>github</a></p> : null
+                }
             </div>
         </div>
     )
