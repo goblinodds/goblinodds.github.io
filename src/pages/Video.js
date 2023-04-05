@@ -1,5 +1,4 @@
 import React from 'react';
-import './Video.css';
 import portfolio_BusyBee from '../assets/portfolio_BusyBee.png';
 import portfolio_CSOSummer2022 from '../assets/portfolio_CSOSummer2022.png';
 import portfolio_CalStateActiveShooter from '../assets/portfolio_CalStateActiveShooter.png';
@@ -7,8 +6,8 @@ import portfolio_PolarBears from '../assets/portfolio_PolarBears.png';
 
 const Gig = (props) => {
     return (
-        <div className='GigWrapper'>
-            <div className='VideoImg'>
+        <div className='CardWrapper'>
+            <div className='CardImg'>
                 <a href={props.video} target='_blank' rel='noopener noreferrer'>
                     <img src={props.videoImg} alt={props.videoAlt}/> 
                 </a>
@@ -26,11 +25,11 @@ const Gig = (props) => {
 function Video() {
     return (
 
-        <div className='AllVideos'>
+        <div>
                 <iframe src='https://www.youtube.com/embed/savAbVtgtT0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
                     Sorry, your browser doesn't support embedded videos.
                 </iframe>
-            <div className='VideoList'>
+            <div className='CardList'>
                 {/* CAL STATE ONLINE SUMMER 2022 */}
                 <Gig video={'https://youtu.be/r8IfKcmJR88'}
                 videoImg={portfolio_CSOSummer2022}
