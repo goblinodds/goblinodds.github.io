@@ -36,7 +36,7 @@ const projects = [
     {
         name: '[WIP] task minimalist',
         img: [task],
-        desc: 'task manager using Express, MongoDB (see resume or contact goblinodds @ gmail for link)'
+        desc: 'task manager using Express, MongoDB (contact goblinodds @ gmail for github collab access)'
     }
 ]
 
