@@ -1559,6 +1559,34 @@ const Profiles = [
     continent: ["North America"],
     notes: `graduate student, maybe moving in 6 months(to ?) [editor's note: as of March 20, 2023]`
   },
+  {
+    name: "tyler alterman",
+    link: "https://tyleralterman.com/Tyler-is-looking-for-his-lady-4ff34119d4f1412eb7f1cbd75c33ccbc",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono", "poly", "unspecified"],
+    ageDisplay: `${ageDisplay(1990)}`,
+    ageBracket: `${ageBracket(1990)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "NYC",
+    continent: ["North America"],
+    notes: `monogam-ish. What I’m looking for: First take: a partner-in-crime to raise kids with. Second take: I am open to __________ (as a general way of life). `
+  },
+  {
+    name: "kanishk arora",
+    link: "https://twitter.com/yoyo_galactic",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1998)}`,
+    ageBracket: `${ageBracket(1998)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "New Delhi India",
+    continent: ["India"],
+    notes: `I am chemical engineer working in IOT Field from India . Want to find smart people.`
+  },
 
   // FORMAT TO PASTE
   // {
@@ -1577,9 +1605,10 @@ const Profiles = [
   // },
 
   // WAITING
+  // #97 bzanderson
+  // #99 caleb
   // WES already in here but un-comment if he confirms, delete if he doesn't
   // ~#67 vincent - add if confirms???
-  // ~#71 avv - can't contact them, didn't contact us
 
   // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
