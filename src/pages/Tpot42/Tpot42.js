@@ -122,8 +122,8 @@ export default function Tpot42() {
             <div className='Header'>
                 <h1>TPOT for two</h1>
                 <p className='Tagline'>an ingroup "date me" directory with {Profiles.length} entries</p>
+                <p className='Tagline Description'><b>also check out:</b> <a href='https://app.impactmarkets.io/bounties' target='_blank' rel='noopener noreferrer'>dating bounty board</a></p>
             </div>
-
             <div className='FilterMenu'>
                 <h3 onClick={() => { toggleDropdown('gender') }} style={activeMenuStyle(filters['gender'])}>{menuDisplay('gender', 'GENDER')}</h3>
                 <p className='FilterSentence'>//</p>

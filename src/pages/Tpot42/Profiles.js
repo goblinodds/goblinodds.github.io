@@ -1587,6 +1587,33 @@ const Profiles = [
     continent: ["India"],
     notes: `I am chemical engineer working in IOT Field from India . Want to find smart people.`
   },
+  {
+    name: "caleb",
+    link: "https://docs.google.com/document/d/1nXcBa-tf5bTE-Do24DrwoJH3csD1LJGC55zM2HIKdF4/edit?usp=sharing",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(1995)}`,
+    ageBracket: `${ageBracket(1995)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Washington, DC",
+    continent: ["North America"],
+  },
+  {
+    name: "bzanderson",
+    link: "https://twitter.com/Beatriz20427952",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(2000)}`,
+    ageBracket: `${ageBracket(2000)}`,
+    ldr: ["N"],
+    loctype: ["fixed"],
+    location: "near Pittsburgh",
+    continent: ["North America"],
+    notes: `Recent uni graduate, autistic, looking for women in same age range with long hair and a non-mothering but empathetic personality`
+  },
 
   // FORMAT TO PASTE
   // {

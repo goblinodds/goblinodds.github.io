@@ -26,6 +26,10 @@ const Directories = [
     {
         name: "Swan: Dating for Humans",
         link: 'https://www.swan.date/'
+    },
+    {
+        name: "Impact Markets bounty board",
+        link: 'https://app.impactmarkets.io/bounties'
     }
 ]
 
