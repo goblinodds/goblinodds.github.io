@@ -77,6 +77,10 @@ h3.MenuItem:hover {
     font-size: 2.3vmin;
 }
 
+.Description{
+    padding-top: 1vmin;
+}
+
 @media (max-width: 460px) {
 
     .Name {
