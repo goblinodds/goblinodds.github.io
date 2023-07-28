@@ -30,6 +30,10 @@ const Directories = [
     {
         name: "Impact Markets bounty board",
         link: 'https://app.impactmarkets.io/bounties'
+    },
+    {
+        name: "Twitter Dating App (christineist)",
+        link: 'http://twitterdatingapp.com/'
     }
 ]
 
