@@ -77,7 +77,7 @@ const Profiles = [
     type: ["mono", "poly"],
     ageBracket: "unspecified",
     loctype: ["unspecified"],
-    location: "North Carolina",
+    location: "North Carolina, USA",
     continent: ["North America"],
   },
   {
@@ -101,7 +101,7 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Sao Paolo",
+    location: "Sao Paolo, Brazil",
     continent: ["South America"],
   },
   {
@@ -114,7 +114,7 @@ const Profiles = [
     notes: "cishet / (mostly) monogamous / long distance is scary but maybe?",
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Colorado",
+    location: "Colorado, USA",
     continent: ["North America"],
   },
   {
@@ -128,7 +128,7 @@ const Profiles = [
     featuredTweet: "https://twitter.com/AskYatharth/status/1384028089659707406",
     ldr: ["unspecified"],
     loctype: ["unspecified"],
-    location: "Venice (Los Angeles)",
+    location: "Venice (Los Angeles), California, USA",
     continent: ["North America"],
   },
   {
@@ -140,7 +140,7 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["unspecified"],
     loctype: ["unspecified"],
-    location: "Austin, TX",
+    location: "Austin, Texas, USA",
     continent: ["North America"],
   },
   {
@@ -152,7 +152,7 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["unspecified"],
     loctype: ["unspecified"],
-    location: "Chicago",
+    location: "Chicago, Illinois, USA",
     continent: ["North America"],
   },
   {
@@ -164,7 +164,7 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["unspecified"],
     loctype: ["unspecified"],
-    location: "Boston(ish)",
+    location: "Boston(ish), Massachusetts, USA",
     continent: ["North America"],
   },
   {
@@ -178,7 +178,6 @@ const Profiles = [
     loctype: ["unspecified"],
     continent: ["unspecified"],
   },
-  // TODO: UPDATE WITH ATTRACTED + TYPE
   {
     name: "david kobilnyk",
     link: "https://twitter.com/davidkobilnyk",
@@ -232,7 +231,7 @@ const Profiles = [
     attracted: ["unspecified"],
     ldr: ["unspecified"],
     loctype: ["unspecified"],
-    location: "Massachusetts",
+    location: "Massachusetts, USA",
     continent: ["North America"],
   },
   {
@@ -245,8 +244,8 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["Y"],
     loctype: ["flexible"],
+    location: "Tucson, Arizona, USA / actively looking for new places to move and put down roots",
     notes: "might be open to short-term long-distance",
-    location: "Tucson / actively looking for new places to move and put down roots",
     continent: ["North America"],
   },
   {
@@ -318,7 +317,7 @@ const Profiles = [
     loctype: ["unspecified"],
     notes:
       "if i don't communicate queer trans bi ADHD solo-poly by the end of the first date, i didn't overshare properly",
-    location: "Bay Area",
+    location: "Bay Area, California, USA",
     continent: ["North America"],
   },
   {
@@ -330,12 +329,12 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
   },
   {
     name: "brooke",
-    link: "https://twitter.com/gptbrooke/status/1286058376489660416?s=20&t=FiL3NG0ZkSCvLnZoEKLwJQ",
+    link: "https://twitter.com/gptbrooke/status/1677883886364430336?s=20",
     gender: ["F"],
     attracted: ["M"],
     type: ["mono"],
@@ -344,7 +343,7 @@ const Profiles = [
       "if the right person comes along and they don't check some of those boxes then i will change my boxes",
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "California",
+    location: "California, USA",
     continent: ["North America"],
   },
   {
@@ -358,7 +357,7 @@ const Profiles = [
       "interested in relationship as a container for growth, recovery, companionship, exploration",
     ldr: ["N"],
     loctype: ["unspecified"],
-    location: "St. Lous, MO",
+    location: "St. Louis, Missouri, USA",
     continent: ["North America"],
   },
   {
@@ -370,7 +369,7 @@ const Profiles = [
     ageBracket: "unspecified",
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Ann Arbor, MI",
+    location: "Ann Arbor, Michigan, USA",
     continent: ["North America"],
   },
   {
@@ -383,7 +382,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1982)}`,
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Cincinnati, OH",
+    location: "Cincinnati, Ohio, USA",
     continent: ["North America"],
   },
   {
@@ -397,7 +396,7 @@ const Profiles = [
     ldr: ["N"],
     loctype: ["fixed"],
     notes: "physicist doing AI safety, seeking life partner, can tell you lots more via DM :)",
-    location: "SF Bay Area (Berkeley)",
+    location: "San Francisco Bay Area (Berkeley), California, USA",
     continent: ["North America"],
   },
   {
@@ -416,14 +415,15 @@ const Profiles = [
     link: "https://twitter.com/INTPhilosopher",
     gender: ["M"],
     attracted: ["F"],
-    type: ["poly"],
+    type: ["mono", "poly"],
     ageDisplay: `${ageDisplay(1994)}`,
     ageBracket: `${ageBracket(1994)}`,
-    ldr: ["Y"],
-    loctype: ["flexible"],
-    notes:
-      "will be traveling to the west coast in a month or two. no permanent or even semi-permanent residence in my future yet.",
-    location: "Plattsburgh, NY",
+    ldr: ["N"],
+    loctype: ["fixed"],
+    location: "Minneapolis, Minnesota, USA",
+    continent: ["North America"],
+    notes: `INTP/ Center left person who loves analyzing the hell out of stuff`,
+    location: "Plattsburgh, New York, USA",
     continent: ["North America"],
   },
   {
@@ -436,7 +436,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1997)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Los Angeles / might be moving soon",
+    location: "Los Angeles, California, USA / might be moving soon",
     continent: ["North America"],
   },
   {
@@ -445,14 +445,14 @@ const Profiles = [
     twitter: "https://twitter.com/chriscassano",
     gender: ["M"],
     attracted: ["F"],
-    type: ["mono", "poly"],
+    type: ["mono"],
     ageDisplay: `${ageDisplay(1988)}`,
     ageBracket: `${ageBracket(1988)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    notes: "blessed with default happy brain and boundless optimism.  i sing to my cat everyday.",
-    location: "SF Bay Area / Orlando, FL",
+    location: "San Francisco, California, USA",
     continent: ["North America"],
+    notes: "looking for a partner on the adventure of having kids",
   },
   {
     name: "bhargab",
@@ -479,7 +479,7 @@ const Profiles = [
     type: ["mono", "poly"],
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
   },
   {
@@ -492,7 +492,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1998)}`,
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Madison, WI at the moment",
+    location: "Madison, Wisconsin, USA at the moment",
     continent: ["North America"],
   },
   {
@@ -517,7 +517,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Qc",
+    location: "Quebec, Canada",
     continent: ["North America"],
   },
   {
@@ -545,7 +545,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1997)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Pittsburgh, PA / will probably move back to LA at some point",
+    location: "Pittsburgh, Pennsylvania, USA / will probably move back to LA at some point",
     continent: ["North America"],
   },
   {
@@ -558,7 +558,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1988)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Boston, MA",
+    location: "Boston, Massachusetts, USA",
     continent: ["North America"],
   },
   {
@@ -573,7 +573,7 @@ const Profiles = [
     loctype: ["flexible"],
     notes:
       "avid lifter (🏋️‍♀️), amateur potter (🏺). writer by profession. mid-twenties, swolethicc, & greytribe. may not want kids but still wants to build together.",
-    location: "Austin, TX",
+    location: "Austin, Texas, USA",
     continent: ["North America"],
   },
   {
@@ -588,7 +588,7 @@ const Profiles = [
     loctype: ["fixed"],
     notes:
       "socialist, atheist, optimistic nihilist, spectrum member. into a wide variety of hobbies and esoterica like anime, video games, synthesizers, astronomy, scifi, programming, Magic, etc. no kids, no marriages, easy going. i lift and get outdoors sometimes.",
-    location: "Seattle",
+    location: "Seattle, Washington, USA",
     continent: ["North America"],
   },
   {
@@ -601,7 +601,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1998)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Detroit, Michigan",
+    location: "Detroit, Michigan, USA",
     continent: ["North America"],
   },
   {
@@ -657,7 +657,7 @@ const Profiles = [
     loctype: ["flexible"],
     notes:
       "uhhhh 6 foot at least, and really gorgeous goofy ambitious and genius creative men onlyyyy",
-    location: "Bay Area / LA",
+    location: "Bay Area / Los Angeles, California, USA",
     continent: ["North America"],
   },
   {
@@ -670,7 +670,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1989)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Chicago",
+    location: "Chicago, Illinois, USA",
     continent: ["North America"],
   },
   {
@@ -684,7 +684,7 @@ const Profiles = [
     ldr: ["Y"],
     loctype: ["flexible"],
     notes: "INFJ / sad about the past and worried for the future, but just living for tomorrow.",
-    location: "San Diego",
+    location: "San Diego, California, USA",
     continent: ["North America"],
   },
   {
@@ -697,7 +697,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1999)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
   },
   {
@@ -711,7 +711,7 @@ const Profiles = [
     ldr: ["Y"],
     loctype: ["fixed"],
     notes: "i'm pretty cool",
-    location: "Philadelphia",
+    location: "Philadelphia, Pennsylvania, USA",
     continent: ["North America"],
   },
   {
@@ -724,7 +724,7 @@ const Profiles = [
     ageBracket: `${ageBracket(2002)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Mumbai",
+    location: "Mumbai, India",
     continent: ["Asia"],
   },
   {
@@ -737,7 +737,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "~Seattle",
+    location: "~Seattle, Washington, USA",
     continent: ["North America"],
   },
   {
@@ -750,7 +750,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1988)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Central NJ",
+    location: "Central New Jersey, USA",
     continent: ["North America"],
   },
   {
@@ -763,7 +763,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
   },
   {
@@ -791,7 +791,7 @@ const Profiles = [
     ldr: ["Y"],
     loctype: ["fixed"],
     notes: `i love my (in-person) job, but, one way or another, i imagine i'll be free to move someday.`,
-    location: "Metro DC (Northern Virginia",
+    location: "Metro DC (Northern Virginia), USA",
     continent: ["North America"],
   },
   {
@@ -805,7 +805,7 @@ const Profiles = [
     ldr: ["Y"],
     loctype: ["flexible"],
     notes: `into left wing politics (though i am a bit idiosyncratic, see my tweets), lover of music (house/techno/ambient really any kind of electronic music). i tend to be a cynical but optimistic person. open to a lot of things but i am primary looking for a loving monogamous relationship.`,
-    location: "East Tennessee",
+    location: "East Tennessee, USA",
     continent: ["North America"],
   },
   {
@@ -847,7 +847,7 @@ const Profiles = [
     loctype: ["flexible"],
     notes:
       "i’m working on a date me doc atm. but in a nutshell i’m looking for a life partner, someone to go on a secular spiritual journey and build an amazing life together filled with love, books and mutual growth and support",
-    location: "Bay Area",
+    location: "Bay Area, California, USA",
     continent: ["North America"],
   },
   {
@@ -876,7 +876,7 @@ const Profiles = [
     ldr: ["Y"],
     loctype: ["fixed"],
     notes: `transitioning to blockchain developer. / owns every kind of chapstick. / default optimism. / weeeeeeeeeeee`,
-    location: "Stanford, CA",
+    location: "Stanford, California, USA",
     continent: ["North America"],
   },
   {
@@ -889,7 +889,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1991)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "SF Bay Area",
+    location: "SF Bay Area, California, USA",
     continent: ["North America"],
   },
   {
@@ -902,7 +902,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1990)}`,
     ldr: ["N"],
     loctype: ["flexible"],
-    location: "Berkeley",
+    location: "Berkeley, California, USA",
     continent: ["North America"],
   },
   {
@@ -915,7 +915,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1980)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Washington state",
+    location: "Washington state, USA",
     continent: ["North America"],
   },
   {
@@ -928,7 +928,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1990)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: ["London"],
+    location: ["London, UK"],
     continent: ["Europe"],
   },
   {
@@ -941,7 +941,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1974)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Red Bank, New Jersey",
+    location: "Red Bank, New Jersey, USA",
     continent: ["North America"],
   },
   {
@@ -958,19 +958,6 @@ const Profiles = [
     continent: ["Europe"],
   },
   {
-    name: "jade",
-    link: "https://jadecastillo.squarespace.com/",
-    gender: ["F"],
-    attracted: ["M"],
-    type: ["mono"],
-    ageDisplay: `${ageDisplay(1997)}`,
-    ageBracket: `${ageBracket(1997)}`,
-    ldr: ["Y"],
-    loctype: ["flexible"],
-    location: ["Texas/NY"],
-    continent: ["North America"],
-  },
-  {
     name: "johnson",
     link: "https://twitter.com/justavagrant_",
     gender: ["M"],
@@ -980,7 +967,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Seattle, France, unknown",
+    location: "Seattle, Washington, USA / France / unknown",
     continent: ["North America", "Europe"],
   },
   {
@@ -993,23 +980,9 @@ const Profiles = [
     ageBracket: `${ageBracket(1988)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Austin",
+    location: "Austin, Texas, USA",
     continent: ["North America"],
     notes: "regular in the Texas burner community",
-  },
-  {
-    name: "maryam",
-    link: "https://twitter.com/MaryamAli_Khan",
-    gender: ["F"],
-    attracted: ["M"],
-    type: ["mono"],
-    ageDisplay: `${ageDisplay(1995)}`,
-    ageBracket: `${ageBracket(1995)}`,
-    ldr: ["Y"],
-    loctype: ["flexible"],
-    location: "Oxford",
-    continent: ["Europe"],
-    notes: `psychologist doing moral psyc, here for a long-ish time. i make great playlists for everything (really), i think i'm funny, and i have great taste but sometimes i drink huel.`,
   },
   {
     name: "mindfroth",
@@ -1021,7 +994,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1982)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Portland, OR",
+    location: "Portland, Oregon, USA",
     continent: ["North America"],
   },
   {
@@ -1034,7 +1007,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1995)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Austin, Texas",
+    location: "Austin, Texas, USA",
     continent: ["North America"],
   },
   {
@@ -1048,7 +1021,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1995)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "Berkeley",
+    location: "Berkeley, California, USA",
     continent: ["North America"],
     notes: "currently not a face account but u can dm me for pics",
   },
@@ -1062,7 +1035,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1986)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "NY CO … independent",
+    location: "New York / Colorado, USA … independent",
     continent: ["North America"],
     notes: "three cats, many books",
   },
@@ -1076,7 +1049,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1982)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Ohio",
+    location: "Ohio, USA",
     continent: ["North America"],
   },
   {
@@ -1104,7 +1077,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
   },
   {
@@ -1117,7 +1090,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Atlanta",
+    location: "Atlanta, Georgia, USA",
     continent: ["North America"],
     notes: "med student who likes movies ",
   },
@@ -1131,7 +1104,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1983)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "nomad seeking a base (Oxford this month) [november 2022]",
+    location: "nomad seeking a base",
     continent: ["unspecified"],
   },
   {
@@ -1144,7 +1117,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "Barcelona",
+    location: "Barcelona, Spain",
     continent: ["Europe"],
   },
   {
@@ -1157,7 +1130,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1988)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Cedar Rapids, Iowa",
+    location: "Cedar Rapids, Iowa, USA",
     continent: ["North America"],
   },
   {
@@ -1171,7 +1144,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1992)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "St. Louis, Missouri",
+    location: "St. Louis, Missouri, USA",
     continent: ["North America"],
     notes:
       "Long distance match okay but strongly not preferred. Location is fixed for now but can travel.",
@@ -1186,7 +1159,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1996)}`,
     ldr: ["N"],
     loctype: ["flexible"],
-    location: "SF",
+    location: "San Francisco, California, USA",
     continent: ["North America"],
     notes: "will potentially go to NYC",
   },
@@ -1200,7 +1173,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1997)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "Triangle area, NC",
+    location: "Triangle area, North Carolina, USA",
     continent: ["North America"],
     notes:
       "looking for a long term relationship if possible. Not very experienced in dating, but I make really good spaghetti",
@@ -1215,7 +1188,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1994)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Boston",
+    location: "Boston, Massachusetts, USA",
     continent: ["North America"],
     notes: "You probably don’t like me but here goes.",
   },
@@ -1229,7 +1202,7 @@ const Profiles = [
     ageBracket: `${ageBracket(2000)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "vancouver, bc",
+    location: "Vancouver, BC, Canada",
     continent: ["North America"],
   },
   {
@@ -1242,7 +1215,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1998)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "North Texas near the Denton area",
+    location: "North Texas near the Denton area, USA",
     continent: ["North America"],
     notes:
       "im a pagan and fairly religious and interested in woo, so my match needs to be atleast open to this.",
@@ -1257,7 +1230,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1989)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Oxford",
+    location: "Oxford, UK",
     continent: ["Europe"],
   },
   {
@@ -1283,7 +1256,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1974)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "San Jose, CA",
+    location: "San Jose, California, USA",
     continent: ["North America"],
   },
   {
@@ -1309,7 +1282,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1984)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Florida",
+    location: "Florida, USA",
     continent: ["North America"],
     notes: "On Fetlife. Non-vanilla sub/switch, open to F/m or M/f Lifestyle bdsm.",
   },
@@ -1323,7 +1296,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1997)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Ohio",
+    location: "Ohio, USA",
     continent: ["North America"],
     notes: "Please only contact if you have been invited to beautiful princess island",
   },
@@ -1350,7 +1323,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1994)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "São Paulo/Texas/Singapore",
+    location: "São Paulo, Brazil / Texas, USA / Singapore",
     continent: ["South America", "North America", "Asia"],
   },
   {
@@ -1363,7 +1336,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1992)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "San Diego",
+    location: "San Diego, California, USA",
     continent: ["North America"],
     notes: "",
   },
@@ -1392,7 +1365,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1991)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "Berkeley, CA",
+    location: "Berkeley, California, USA",
     continent: ["North America"],
     notes: "into Jewish size queens who listen to post-punk",
   },
@@ -1406,7 +1379,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1989)}`,
     ldr: ["Y"],
     loctype: ["unspecified"],
-    location: "Phoenix",
+    location: "Phoenix, Arizona, USA",
     continent: ["North America"],
   },
   {
@@ -1432,7 +1405,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1989)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Vancouver, Canada",
+    location: "Vancouver, BC, Canada",
     continent: ["North America"],
   },
   {
@@ -1445,7 +1418,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1975)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "New London, Wisconsin",
+    location: "New London, Wisconsin, USA",
     continent: ["North America"],
     notes: `Windsurfer, Kiteboarder, Wingskater, Mathematician, Christian,`,
   },
@@ -1459,7 +1432,7 @@ const Profiles = [
     ageBracket: `${ageBracket(2001)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "San Diego, CA",
+    location: "San Diego, California, USA",
     continent: ["North America"],
     notes: `a little shy`,
   },
@@ -1473,7 +1446,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1995)}`,
     ldr: ["N"],
     loctype: ["flexible"],
-    location: "Washington, DC",
+    location: "Washington, DC, USA",
     continent: ["North America"],
     notes: `Latin teacher, but probably capable of doing many things; somewhat willing to travel for the right person. Would like children.`,
   },
@@ -1487,7 +1460,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1998)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Atlanta, GA, USA",
+    location: "Atlanta, Georgia, USA",
     continent: ["North America"],
   },
   {
@@ -1500,7 +1473,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1993)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Ottowa",
+    location: "Ottowa, Ontario, Canada",
     continent: ["North America"],
   },
   {
@@ -1526,7 +1499,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1983)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "Collingswood, NJ",
+    location: "Collingswood, New Jersey, USA",
     continent: ["North America"],
     notes: `Philadelphia area, married & poly with small child, looking for people who want to hang out, come to my parties/board game meetups, and maybe kiss once in a while. Planning on attending Vibecamp 2023`
   },
@@ -1541,7 +1514,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1980)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "Denver, CO",
+    location: "Denver, Colorado, USA",
     continent: ["North America"],
     notes: `Friendly, Poly, Goth & Dance plz`
   },
@@ -1555,7 +1528,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1995)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "NJ",
+    location: "New Jersey, USA",
     continent: ["North America"],
     notes: `graduate student, maybe moving in 6 months(to ?) [editor's note: as of March 20, 2023]`
   },
@@ -1569,7 +1542,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1990)}`,
     ldr: ["Y"],
     loctype: ["fixed"],
-    location: "NYC",
+    location: "New York City, New York, USA",
     continent: ["North America"],
     notes: `monogam-ish. What I’m looking for: First take: a partner-in-crime to raise kids with. Second take: I am open to __________ (as a general way of life). `
   },
@@ -1583,7 +1556,7 @@ const Profiles = [
     ageBracket: `${ageBracket(1998)}`,
     ldr: ["Y"],
     loctype: ["flexible"],
-    location: "New Delhi India",
+    location: "New Delhi, India",
     continent: ["India"],
     notes: `I am chemical engineer working in IOT Field from India . Want to find smart people.`
   },
@@ -1610,9 +1583,230 @@ const Profiles = [
     ageBracket: `${ageBracket(2000)}`,
     ldr: ["N"],
     loctype: ["fixed"],
-    location: "near Pittsburgh",
+    location: "near Pittsburgh, Pennsylvania, USA",
     continent: ["North America"],
     notes: `Recent uni graduate, autistic, looking for women in same age range with long hair and a non-mothering but empathetic personality`
+  },
+  {
+    name: "sanje",
+    link: "https://twitter.com/sanjehorah?s=21",
+    gender: ["F"],
+    attracted: ["F", "M"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(2001)}`,
+    ageBracket: `${ageBracket(2001)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Singapore",
+    continent: ["Asia"],
+  },
+  {
+    name: "box",
+    link: "https://twitter.com/untiltrees",
+    gender: ["M"],
+    attracted: ["F", "NB"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(1993)}`,
+    ageBracket: `${ageBracket(1993)}`,
+    ldr: ["N"],
+    loctype: ["fixed"],
+    location: "Paris, France",
+    continent: ["Europe"],
+  },
+  {
+    name: "flower",
+    link: "https://twitter.com/FlowerMage424",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1987)}`,
+    ageBracket: `${ageBracket(1987)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Southern New Hampshire, USA",
+    continent: ["North America"],
+    notes: `in all seriousness, AMA`
+  },
+  {
+    name: "maryzoso",
+    link: "https://twitter.com/MaryZoso",
+    gender: ["F"],
+    attracted: ["NB", "M"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1980)}`,
+    ageBracket: `${ageBracket(1980)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Indianapolis, Indiana, USA",
+    continent: ["North America"],
+  },
+  {
+    name: "phaent",
+    link: "https://twitter.com/PhaentGames",
+    gender: ["M"],
+    attracted: ["F", "NB"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1986)}`,
+    ageBracket: `${ageBracket(1986)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "DFW, Texas, USA",
+    continent: ["North America"],
+    notes: `I travel for work a fair bit, and may be near you more often than it seems!`
+  },
+  {
+    name: "dan hoffman",
+    link: "https://thedanhoffman.github.io/",
+    twitter: "https://twitter.com/thedanhoffman",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1999)}`,
+    ageBracket: `${ageBracket(1999)}`,
+    ldr: ["N"],
+    loctype: ["fixed"],
+    location: "Portland, Oregon, USA",
+    continent: ["North America"],
+    notes: `recreational math stuff, book worm (mostly obscure non-fiction), computer whiz bang, twitter is private but feel free to DM`
+  },
+  {
+    name: "lauren e",
+    link: "https://twitter.com/LaurenE_UX",
+    gender: ["F"],
+    attracted: ["M"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1983)}`,
+    ageBracket: `${ageBracket(1983)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Salt Lake City, Utah, USA",
+    continent: ["North America"],
+    notes: `I’m open to friends and mates!`
+  },
+  {
+    name: "keller",
+    link: "https://docs.google.com/document/d/1J83RuVzfrtNPGnARwOeisi5es77CeUApSpM3efazHfw/edit?usp=drivesdk",
+    gender: ["M"],
+    attracted: ["F", "NB", "M"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1994)}`,
+    ageBracket: `${ageBracket(1994)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Washington, DC, USA",
+    continent: ["North America"],
+  },
+  {
+    name: "neall",
+    link: "https://neall.org/",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1994)}`,
+    ageBracket: `${ageBracket(1994)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "San Francisco, California, USA",
+    continent: ["North America"],
+  },
+  {
+    name: "jose j",
+    link: "https://twitter.com/lizardinspring",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1994)}`,
+    ageBracket: `${ageBracket(1994)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Valladolid & Salamanca (Spain)",
+    continent: ["Europe"],
+    notes: `I'm an spanish guy interested in building creative endeavours in literature and philosophy`
+  },
+  {
+    name: "alexandra 💗",
+    twitter: "https://twitter.com/innerpathing",
+    link: "https://alexandraheller.substack.com",
+    link: "https://alexandraheller.com",
+    gender: ["F"],
+    attracted: ["M"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(1985)}`,
+    ageBracket: `${ageBracket(1985)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "nomadic",
+    continent: ["unspecified"],
+    notes: `into buddhism, psychedelics, helping the world, wholesomeness, etc :) `
+  },
+  {
+    name: "mission-junkie",
+    link: "https://www.notion.so/pareen-444d5977494a423ab61732f9bf861691?pvs=4",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1986)}`,
+    ageBracket: `${ageBracket(1986)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "India",
+    continent: ["Asia"],
+    notes: `Old school. Ambitious. Collectivist. Not “exploring”. Want someone solid.`
+  },
+  {
+    name: "autistic jewish edgelord person",
+    gender: ["M"],
+    attracted: ["F"],
+    type: ["mono"],
+    ageDisplay: `${ageDisplay(1996)}`,
+    ageBracket: `${ageBracket(1996)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "New York City, New York, USA",
+    continent: ["North America"],
+    notes: `i like cartoons, musical theater, and niche internet politics. my discord is notoriousp_i_g.`
+  },
+  {
+    name: "protoneutype",
+    link: "https://twitter.com/protoneutype",
+    gender: ["M"],
+    attracted: ["F", "NB"],
+    type: ["mono", "poly"],
+    ageDisplay: `${ageDisplay(1990)}`,
+    ageBracket: `${ageBracket(1990)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "mid-sized university town in midwest, USA",
+    continent: ["North America"],
+    notes: `pansexual who's dated men and is curious about women`
+  },
+  {
+    name: "bollu",
+    email: "siddu.druid AT gmail DOT com ",
+    gender: ["NB"],
+    attracted: ["F", "NB"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1996)}`,
+    ageBracket: `${ageBracket(1996)}`,
+    ldr: ["Y"],
+    loctype: ["flexible"],
+    location: "Edinburgh, UK",
+    continent: ["Europe"],
+    notes: `fuck around and find out :)`
+  },
+  {
+    name: "tipsy",
+    link: "https://twitter.com/tipsycaek",
+    gender: ["F"],
+    attracted: ["M"],
+    type: ["poly"],
+    ageDisplay: `${ageDisplay(1991)}`,
+    ageBracket: `${ageBracket(1991)}`,
+    ldr: ["Y"],
+    loctype: ["fixed"],
+    location: "Los Angeles, California, USA",
+    continent: ["North America"],
+    notes: `perpetually touch-starved, incessantly attention-seeking. generally into bigger dudes (soft and/or strong). subby, weeaboo, internet-poisoned, low-agency, not-actually-poly-just-slutty. slimegirl. let me smell you.`
   },
 
   // FORMAT TO PASTE
@@ -1632,14 +1826,13 @@ const Profiles = [
   // },
 
   // WAITING
-  // #97 bzanderson
-  // #99 caleb
-  // WES already in here but un-comment if he confirms, delete if he doesn't
-  // ~#67 vincent - add if confirms???
+   // ~#64 vincent - add if confirms
+  // ~#105 phaent - add if confirms
 
   // if location filter breaks it's probably bc you forogt to add "loctype: ['unspecified']" to a profile
 
   // IDEAS
+  // tipsy: "a slightly more standardized location input might make filtering better (searching the page for many variations of how one might refer to an area is a bit of a drag, esp since most ppl use 2-letter states which aren't v cmd-f'able considering pairs of letters often show up within words)""
   // color code newest entries?
   // distinguish "date me profile" from twitter account, insta, email...
   // mention if bounty (and amount)
